@@ -11,3 +11,8 @@ do
   curl -o $filename $url
 done
 
+cp Updated/*.csv .
+
+ruby update.rb
+
+rm *.csv
