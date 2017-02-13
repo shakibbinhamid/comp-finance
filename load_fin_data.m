@@ -1,4 +1,7 @@
+%% -------------------------------------------------------------
 data_dir = '/home/shakibbinhamid/Documents/comp fin/lab 1 2015/data/Updated/';
+
+%% -------------------------------------------------------------
 ftse = csvread(strcat(data_dir, '^FTSE.csv'), 1, 6);
 
 stocks(:, 1) = csvread(strcat(data_dir, 'AAL.L.csv'), 1, 6);
@@ -31,6 +34,8 @@ stocks(:,27) = csvread(strcat(data_dir, 'STAN.L.csv'), 1, 6);
 stocks(:,28) = csvread(strcat(data_dir, 'TSCO.L.csv'), 1, 6);
 stocks(:,29) = csvread(strcat(data_dir, 'TW.L.csv'), 1, 6);
 stocks(:,30) = csvread(strcat(data_dir, 'VOD.L.csv'), 1, 6);
+
+%% -------------------------------------------------------------
 
 y = tick2ret(ftse);
 R = tick2ret(stocks);
