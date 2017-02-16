@@ -35,7 +35,7 @@ p = setAssetMoments(p, rMean, rCovar);
 p = setDefaultConstraints(p);
 
 effWeights = estimateFrontier(p, num_points);
-[effRisk, effReturn] = estimatePortMoments(p, effWeights);
+[effRisk, effReturns] = estimatePortMoments(p, effWeights);
 effWeights = effWeights';
 
 % plot the E-V graph (efficient frontier we get from the train data)
@@ -56,19 +56,17 @@ naiveWeights = ones(1, nAssets) *(1/nAssets);
 
 %% --------- calculate returns for both naive and eff portfolio -----------
 
-% calcuate the returns for the test data using the 2 different
-% weights: the efficient-frontier weights, and the naiive weights
-returnsEfficient = zeros(nTest, num_points);
+effReturns = zeros(nTest, num_points);
 for i=1:num_points
-    returnsEfficient(:,i) = returnsTest * effWeights(i,:)';
+    effReturns(:,i) = returnsTest * effWeights(i,:)';
 end
-returnsNaive = returnsTest*naiveWeights';
+naiveReturn = returnsTest*naiveWeights';
 
 % get the average of all efficient returns
-% notice, we only want to get the average on non
+% notice, we only want to get the average on non zeroes
 returnsEfficientAverage = zeros(nTest, 1);
 for i=1:nTest
-    returnsEfficientAverage(i) = mean(returnsEfficient(i,:));
+    returnsEfficientAverage(i) = mean(effReturns(i,:));
 end
 
 % now, we want to calcuate the Sharpe Ratio for the returns
@@ -76,9 +74,9 @@ end
 riskFree = 20/100;
 sharpeEfficient = zeros(1, num_points);
 for i=1:num_points
-    sharpeEfficient(i) = (mean(returnsEfficient(:,i)) - riskFree)/std(returnsEfficient(:,i));
+    sharpeEfficient(i) = (mean(effReturns(:,i)) - riskFree)/std(effReturns(:,i));
 end
-sharpeNaive = (mean(returnsNaive) - riskFree)/std(returnsNaive);
+sharpeNaive = (mean(naiveReturn) - riskFree)/std(naiveReturn);
 sharpeEfficientAverage = mean(sharpeEfficient);
 
 % % visualize the pair-wise correlation
@@ -116,13 +114,13 @@ figure(4); clf;
 box on;
 grid on;
 hold on;
-plot(returnsNaive, 'b', 'LineWidth', 3);
+plot(naiveReturn, 'b', 'LineWidth', 3);
 plot(returnsEfficientAverage, 'LineWidth', 3, 'Color', [0 0.7 0.2]);
-returnsEfficient = fliplr(returnsEfficient);
+effReturns = fliplr(effReturns);
 for i=1:num_points
-    plot(returnsEfficient(:,i), 'LineWidth', 1, 'Color', colormap(i,:));
+    plot(effReturns(:,i), 'LineWidth', 1, 'Color', colormap(i,:));
 end
-returnsEfficient = fliplr(returnsEfficient);
+effReturns = fliplr(effReturns);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Portfolio Return Over Time', 'FontSize', 18);
