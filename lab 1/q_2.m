@@ -56,24 +56,35 @@ naiveWeights = ones(1, nAssets) *(1/nAssets);
 
 %% --------- calculate returns for both naive and eff portfolio -----------
 
-effReturns = zeros(nTest, num_points);
-for i=1:num_points
-    effReturns(:,i) = returnsTest * effWeights(i,:)';
-end
-naiveReturn = returnsTest*naiveWeights';
+% which effWeight to pick on the efficient frontier? currently it's the
+% middle one. we probably want to target a return and get the wts for that
+
+effReturns = returnsTest * effWeights(num_points/2, :)';
+naiveReturn = returnsTest * naiveWeights';
+
+% plot the returns for the efficient protfolios vs. return from the naive portfolio
+figure(2); clf;
+box on;
+grid on;
+hold on;
+plot(naiveReturn, 'b', 'LineWidth', 2);
+plot(effReturns, 'r', 'LineWidth', 2);
+xlabel('Time (Days)', 'FontSize', 18);
+ylabel('Return (%)', 'FontSize', 18);
+title('Portfolio Return Over Time', 'FontSize', 18);
+fig_legend = legend('Naive Portfolio', 'Efficient Portfolios', 'Location', 'northwest');
+set(fig_legend,'FontSize',16);
+
+%% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
 % get the average of all efficient returns
-% notice, we only want to get the average on non zeroes
-returnsEfficientAverage = zeros(nTest, 1);
-for i=1:nTest
-    returnsEfficientAverage(i) = mean(effReturns(i,:));
-end
+effReturnAvg = mean(effReturns');
 
 % now, we want to calcuate the Sharpe Ratio for the returns
 % with risk free = 5%
-riskFree = 20/100;
-sharpeEfficient = zeros(1, num_points);
-for i=1:num_points
+riskFree = 5/100;
+sharpeEfficient = zeros(1, nAssets);
+for i=1:nAssets
     sharpeEfficient(i) = (mean(effReturns(:,i)) - riskFree)/std(effReturns(:,i));
 end
 sharpeNaive = (mean(naiveReturn) - riskFree)/std(naiveReturn);
@@ -106,37 +117,18 @@ sharpeEfficientAverage = mean(sharpeEfficient);
 
 
 
-% plot the returns for the efficient protfolios
-% vs. return from the naive portfolio
-colormap = autumn(num_points+2);
-colormap = colormap(1:end-2,:);
-figure(4); clf;
-box on;
-grid on;
-hold on;
-plot(naiveReturn, 'b', 'LineWidth', 3);
-plot(returnsEfficientAverage, 'LineWidth', 3, 'Color', [0 0.7 0.2]);
-effReturns = fliplr(effReturns);
-for i=1:num_points
-    plot(effReturns(:,i), 'LineWidth', 1, 'Color', colormap(i,:));
-end
-effReturns = fliplr(effReturns);
-xlabel('Time (Days)', 'FontSize', 18);
-ylabel('Return (%)', 'FontSize', 18);
-title('Portfolio Return Over Time', 'FontSize', 18);
-fig_legend = legend('Naive Portfolio', 'Efficient Portfolio Avg.', 'Efficient Portfolios', 'Location', 'northwest');
-set(fig_legend,'FontSize',16);
+
 
 % plot the sharpe values
-colormap = autumn(num_points);
+colormap = autumn(nAssets);
 figure(5); clf;
 box on;
 grid on;
 hold on;
-plot([1 num_points], [sharpeNaive sharpeNaive], 'LineWidth', 2, 'Color', 'b');
-plot([1 num_points], [sharpeEfficientAverage sharpeEfficientAverage], 'LineWidth', 2, 'Color', [0 0.7 0.2]);
+plot([1 nAssets], [sharpeNaive sharpeNaive], 'LineWidth', 2, 'Color', 'b');
+plot([1 nAssets], [sharpeEfficientAverage sharpeEfficientAverage], 'LineWidth', 2, 'Color', [0 0.7 0.2]);
 sharpeEfficient = fliplr(sharpeEfficient);
-for i=1:num_points
+for i=1:nAssets
     plot(i, sharpeEfficient(i), '.r', 'MarkerSize', 30, 'Color', colormap(i,:));
     plot(i, sharpeEfficient(i), '.k', 'MarkerSize', 10);
 end
