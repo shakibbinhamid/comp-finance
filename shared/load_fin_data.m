@@ -1,7 +1,11 @@
+clc;
 %% -------------------------------------------------------------
 data_dir = '/home/shakibbinhamid/Documents/MATLAB/comp-finance/data/Updated/';
 
 %% -------------------------------------------------------------
+ftse = [];
+returns = [];
+
 ftse = csvread(strcat(data_dir, '^FTSE.csv'), 1, 6);
 
 returns(:, 1) = csvread(strcat(data_dir, 'AAL.L.csv'), 1, 6);

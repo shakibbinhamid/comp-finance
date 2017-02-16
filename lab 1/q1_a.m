@@ -70,10 +70,10 @@ box on;
 % plot(effRisk, effReturn, 'r', 'LineWidth', 2);
 % plot(pRisk, pReturn, '.', 'MarkerSize', 10, 'Color', 'r');
 
-% plot(effRisk_, effReturn_, 'r', 'LineWidth', 3);
-% plot(pRisk_, pReturn_, '.', 'MarkerSize', 8, 'Color', 'b');
-% xlabel('Risk (V)', 'FontSize', 18);
-% ylabel('Expected Return (E)', 'FontSize', 18);
-% title('Efficient Portfolio Frontier', 'FontSize', 18);
-% fig_legend = legend('Frontier', 'Portfolio', 'Location', 'southeast');
-% set(fig_legend,'FontSize',16);
+plot(effRisk_, effReturn_, 'r', 'LineWidth', 3);
+plot(pRisk_, pReturn_, '.', 'MarkerSize', 8, 'Color', 'b');
+xlabel('Risk (V)', 'FontSize', 18);
+ylabel('Expected Return (E)', 'FontSize', 18);
+title('Efficient Portfolio Frontier', 'FontSize', 18);
+fig_legend = legend('Frontier', 'Portfolio', 'Location', 'southeast');
+set(fig_legend,'FontSize',16);

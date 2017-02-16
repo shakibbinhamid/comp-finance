@@ -1,18 +1,17 @@
-%% --------------------- clear and load the data --------------------------
 clc;
 load_fin_data;
-%% ---------converting the returns for each asset to percentages-----------
-% returns is T x N portfolio returns where T = time ticks, N = #assets
+% ---------------------------------------
+% start by converting the returns for each asset to percentages
 % row(i+1) = (row(i) - row(1))/row(1)
-% remove row(1) since it's just 0's
 
-first_invest = returns(1, :);
-for i=1:size(returns,1)
-    returns(i,:) = (returns(i, :) - first_invest) ./ first_invest;
+for i=1:size(returns,2)
+    value = returns(1,i);
+    returns(:,i) = (returns(:,i) - value)/value;
 end
+% now remove the first opservation (it is only zeros
+% as it was used to convert returns to percentages)
 returns = returns(2:end,:);
 
-%% ------- calculate the training and testing data in 50-50 ratio ---------
 nAssets = size(returns,2);
 nTotal = size(returns,1);
 nTrain = int16(nTotal/2);
