@@ -35,7 +35,7 @@ p = setAssetMoments(p, rMean, rCovar);
 p = setDefaultConstraints(p);
 
 effWeights = estimateFrontier(p, num_points);
-[effRisk, effReturns] = estimatePortMoments(p, effWeights);
+[effRisk, effReturn] = estimatePortMoments(p, effWeights);
 effWeights = effWeights';
 
 % plot the E-V graph (efficient frontier we get from the train data)
@@ -59,7 +59,7 @@ naiveWeights = ones(1, nAssets) *(1/nAssets);
 % which effWeight to pick on the efficient frontier? currently it's the
 % middle one. we probably want to target a return and get the wts for that
 
-effReturns = returnsTest * effWeights(num_points/2, :)';
+effReturn = returnsTest * effWeights(num_points/2, :)';
 naiveReturn = returnsTest * naiveWeights';
 
 % plot the returns for the efficient protfolios vs. return from the naive portfolio
@@ -68,9 +68,7 @@ box on;
 grid on;
 hold on;
 plot(naiveReturn, 'b', 'LineWidth', 2);
-effReturns = fliplr(effReturns);
-plot(effReturns, 'r', 'LineWidth', 2);
-effReturns = fliplr(effReturns);
+plot(effReturn, 'r', 'LineWidth', 2);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Portfolio Return Over Time', 'FontSize', 18);
@@ -79,47 +77,10 @@ set(fig_legend,'FontSize',16);
 
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
-% get the average of all efficient returns
-effReturnAvg = mean(effReturns');
-
-% now, we want to calcuate the Sharpe Ratio for the returns
-% with risk free = 5%
+% risk free = 5%
 riskFree = 5/100;
-sharpeEfficient = zeros(1, nAssets);
-for i=1:nAssets
-    sharpeEfficient(i) = (mean(effReturns(:,i)) - riskFree)/std(effReturns(:,i));
-end
-sharpeNaive = (mean(naiveReturn) - riskFree)/std(naiveReturn);
-sharpeEfficientAverage = mean(sharpeEfficient);
-
-% % visualize the pair-wise correlation
-% % for the pair-wise returns of 2 stocks
-% figure(1);clf;
-% box on;
-% grid on;
-% hold on;
-% daspect([1 1 1]);
-% plot(returnsTrain(:,1), returnsTrain(:,2), '.r');
-% plot(returnsTrain(:,2), returnsTrain(:,3), '.b');
-% plot(returnsTrain(:,1), returnsTrain(:,3), '.k');
-% plot(returnsTest(:,1), returnsTest(:,2), '.g');
-% plot(returnsTest(:,2), returnsTest(:,3), '.g');
-% plot(returnsTest(:,1), returnsTest(:,3), '.g');
-% 
-% % visualize the pair-wise correlation but
-% % on the simulated return
-% figure(2);clf;
-% box on;
-% grid on;
-% hold on;
-% daspect([1 1 1]);
-% plot(returnsTrainSim(:,1), returnsTrainSim(:,2), '.r');
-% plot(returnsTrainSim(:,2), returnsTrainSim(:,3), '.b');
-% plot(returnsTrainSim(:,1), returnsTrainSim(:,3), '.k');
-
-
-
-
+naiveSharpe = (mean(naiveReturn) - riskFree)/std(naiveReturn);
+effSharpe = (mean(effReturn) - riskFree)/std(effReturn);
 
 % plot the sharpe values
 colormap = autumn(nAssets);
@@ -127,14 +88,13 @@ figure(5); clf;
 box on;
 grid on;
 hold on;
-plot([1 nAssets], [sharpeNaive sharpeNaive], 'LineWidth', 2, 'Color', 'b');
-plot([1 nAssets], [sharpeEfficientAverage sharpeEfficientAverage], 'LineWidth', 2, 'Color', [0 0.7 0.2]);
-sharpeEfficient = fliplr(sharpeEfficient);
+plot([1 nAssets], [naiveSharpe naiveSharpe], 'LineWidth', 2, 'Color', 'b');
+effSharpe = fliplr(effSharpe);
 for i=1:nAssets
-    plot(i, sharpeEfficient(i), '.r', 'MarkerSize', 30, 'Color', colormap(i,:));
-    plot(i, sharpeEfficient(i), '.k', 'MarkerSize', 10);
+    plot(i, effSharpe(i), '.r', 'MarkerSize', 30, 'Color', colormap(i,:));
+    plot(i, effSharpe(i), '.k', 'MarkerSize', 10);
 end
-sharpeEfficient = fliplr(sharpeEfficient);
+effSharpe = fliplr(effSharpe);
 xlabel('Portfolio', 'FontSize', 18);
 ylabel('Ratio', 'FontSize', 18);
 title(strcat('Sharpe Ratio - Risk Free:', int2str(riskFree*100) ,'%' ), 'FontSize', 18);

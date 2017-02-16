@@ -38,13 +38,3 @@ returns(:,27) = csvread(strcat(data_dir, 'STAN.L.csv'), 1, 6);
 returns(:,28) = csvread(strcat(data_dir, 'TSCO.L.csv'), 1, 6);
 returns(:,29) = csvread(strcat(data_dir, 'TW.L.csv'), 1, 6);
 returns(:,30) = csvread(strcat(data_dir, 'VOD.L.csv'), 1, 6);
-
-%% -------------------------------------------------------------
-
-% y = price2ret(ftse);
-% R = price2ret(stocks);
-
-y = tick2ret(ftse);
-R = tick2ret(returns);
-
-[T, N] = size(R);
