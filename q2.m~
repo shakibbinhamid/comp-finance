@@ -24,7 +24,7 @@ total_1 = sum(R_1 * w);
 total_2 = sum(R_1 * w2);
 
 %% ------------- compare efficient vs 1/N portfolio ----
-figure(2), clf;
+su
 title('Cumulative return over time for efficient and 1/N portfolios');
 ylabel('Return');
 xlabel('Time');

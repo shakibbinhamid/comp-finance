@@ -1,22 +1,21 @@
 %% --------------------- clear and load the data --------------------------
 clc;
 load_fin_data;
-returns = flipud(returns);
 %% ---------converting the returns for each asset to percentages-----------
 % returns is T x N portfolio returns where T = time ticks, N = #assets
 % row(i+1) = (row(i) - row(1))/row(1)
 % remove row(1) since it's just 0's
 % then select n columns or assets to look at. here n = 3
-nAssets = 3;
+
 first_invest = returns(1, :);
 returns = (returns - first_invest) ./ first_invest;
 returns = returns(2:end,:);
-returns = returns(:,randperm(30, nAssets));
+returns = returns(:,randperm(30, 10));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------
-
+nAssets = size(returns,2);
 nTotal = size(returns,1);
-nTrain = floor(nTotal/2);
+nTrain = int16(nTotal/2);
 nTest = nTotal - nTrain;
 
 % split the returns to train and test
@@ -40,7 +39,6 @@ effWeights = estimateFrontier(p, num_points);
 effWeights = effWeights';
 
 % plot the E-V graph (efficient frontier we get from the train data)
-set(gcf, 'Units', 'Inches', 'Position', [0, 0, 20, 6], 'PaperUnits', 'Inches', 'PaperSize', [7.25, 9.125])
 figure(1); clf;
 subplot(1,4,1);
 box on;
@@ -61,8 +59,8 @@ naiveWeights = ones(1, nAssets) *(1/nAssets);
 
 % which effWeight to pick on the efficient frontier? currently it's the
 % middle one. we probably want to target a return and get the wts for that
-max_risk = 0.08;
-effReturn = returnsTest * calculateEfficientPortfolio(returnsTrain, nTotal, nAssets, max_risk);
+max_risk = 0.0088;
+effReturn = returnsTest * calculateEfficientPortfolio(returnsTrain, nTrain, nA, max_risk)';
 naiveReturn = returnsTest * naiveWeights';
 
 % plot the returns for the efficient protfolios vs. return from the naive portfolio
@@ -78,7 +76,13 @@ title('Portfolio Return Over Time', 'FontSize', 18);
 fig_legend = legend('Naive Portfolio', 'Efficient Portfolios', 'Location', 'northwest');
 set(fig_legend,'FontSize',16);
 
-cumulativeComparison;
+subplot(1,4,3);
+title('Cumulative return over time for efficient and 1/N portfolios');
+ylabel('Return');
+xlabel('Time');
+plot(cumsum(effReturn)), hold on;
+plot(cumsum(naiveReturn));
+legend('Efficient portfolio','1/N portfolio')
 
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
