@@ -9,7 +9,7 @@ C = 100 * [
 [PRisk2, PRoR2, PWts2] = naiveMV_CVX(m, C, 10);
 plot(PRisk1, PRoR1);
 hold on;
-plot(PRisk2, PRoR2);
+plot(PRisk2, PRoR2, 'b*');
 title('Efficient frontier');
 xlabel('Risk (Variance)');
 ylabel('Expected Return');

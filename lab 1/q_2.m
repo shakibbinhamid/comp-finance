@@ -1,7 +1,8 @@
 %% --------------------- clear and load the data --------------------------
-clc;
+clc; clear;
 load_fin_data;
 returns = flipud(returns);
+
 %% ---------converting the returns for each asset to percentages-----------
 % returns is T x N portfolio returns where T = time ticks, N = #assets
 % row(i+1) = (row(i) - row(1))/row(1)
@@ -11,6 +12,7 @@ nAssets = 3;
 first_invest = returns(1, :);
 returns = (returns - first_invest) ./ first_invest;
 returns = returns(2:end,:);
+% returns = R;
 returns = returns(:,randperm(30, nAssets));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------
@@ -34,6 +36,7 @@ num_points = 100;
 p = Portfolio;
 p = setAssetMoments(p, rMean, rCovar);
 p = setDefaultConstraints(p);
+p = setBounds(p, 0, 1);
 
 effWeights = estimateFrontier(p, num_points);
 [effRisk, effReturn] = estimatePortMoments(p, effWeights);
@@ -78,7 +81,15 @@ title('Portfolio Return Over Time', 'FontSize', 18);
 fig_legend = legend('Naive Portfolio', 'Efficient Portfolios', 'Location', 'northwest');
 set(fig_legend,'FontSize',16);
 
-cumulativeComparison;
+subplot(1,4,3);
+title('Cumulative return over time for efficient and 1/N portfolios');
+ylabel('Return');
+xlabel('Time');
+plot(cumsum(naiveReturn)), hold on;
+plot(cumsum(effReturn));
+%plot(cumsum(R_ * w)), hold on;
+%plot(cumsum(R_1 * w2));
+legend('1/N portfolio', 'Efficient portfolio');
 
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
