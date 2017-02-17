@@ -1,0 +1,20 @@
+function [ weights, assetIdx ] = sparseIndexTracking( returns, index, maxAssets, taw )
+
+[T, N] = size(returns);
+
+% it is a minimization problem, so use cvx to do it
+cvx_begin quiet
+   variable w(m,1)
+   minimize(norm(index - (returns * w), 2) + norm((taw*w), 1))
+   subject to
+   w >= zeros(N,1)
+cvx_end
+
+% sort the weights
+[weights, assetIdx] = sort(w, 'descend');
+
+% select the top k weights
+weights = weights(1:maxAssets);
+assetIdx = assetIdx(1:maxAssets);
+
+end
