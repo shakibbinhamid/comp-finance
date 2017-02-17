@@ -29,26 +29,23 @@ returnsTest = returns(nTrain+1:nTotal,:);
 ftseTrain = ftse(1:nTrain);
 ftseTest = ftse(nTrain+1:nTotal);
 
-%% run the GFFS algorithm -------------------------------------------------
-
+%% run the GFFS 
 % now, with the Greedy-Forward Feature Selection (GFFS) algorithm
 % how many assets we want our portfolio to contain
 maxSelectedAssets = 6;
 
 % array to contain the indeces of selected assets
-selectedAssetsIdx = zeros(1, maxSelectedAssets);
-unSelectedAssetsIdx = 1:nAssets;
+selectedAssets = zeros(1, maxSelectedAssets);
+unSelectedAssets = 1:nAssets;
 
 % max-1 iterations to select the next max-1 assets
 for i=1:maxSelectedAssets
-    
-    avgReturns = zeros(1,length(unSelectedAssetsIdx));
-    sharpeRatios = zeros(1,length(unSelectedAssetsIdx));
-    rmse = zeros(1,length(unSelectedAssetsIdx));
-    
-    for j=1:length(unSelectedAssetsIdx)
+    avgReturns = zeros(1,length(unSelectedAssets));
+    sharpeRatios = zeros(1,length(unSelectedAssets));
+    rmse = zeros(1,length(unSelectedAssets));
+    for j=1:length(unSelectedAssets)
         % collect the assets inside the portfolio
-        idx = [nonzeros(selectedAssetsIdx)' unSelectedAssetsIdx(j)];
+        idx = [nonzeros(selectedAssets)' unSelectedAssets(j)];
         portfolioReturns = returnsTrain(:,idx);
         avgReturns(j) = portfolioAverageReturn(portfolioReturns);
         sharpeRatios(j) = portfolioSharpeRatio(portfolioReturns);
@@ -63,13 +60,13 @@ for i=1:maxSelectedAssets
     %[~, idx] = max(avgReturns);
     %[~, idx] = max(sharpeRatios);
     [~, idx] = min(rmse);
-    selectedAssetsIdx(i) = unSelectedAssetsIdx(idx);
-    unSelectedAssetsIdx(unSelectedAssetsIdx==selectedAssetsIdx(i)) = [];
+    selectedAssets(i) = unSelectedAssets(idx);
+    unSelectedAssets(unSelectedAssets==selectedAssets(i)) = [];
 end
 
 % returns of our final portfolio
-[~, avgReturnTrain] = portfolioAverageReturn(returnsTrain(:, selectedAssetsIdx));
-[~, avgReturnTest] = portfolioAverageReturn(returnsTest(:, selectedAssetsIdx));
+[~, avgReturnTrain] = portfolioAverageReturn(returnsTrain(:, selectedAssets));
+[~, avgReturnTest] = portfolioAverageReturn(returnsTest(:, selectedAssets));
 
 % plot results
 figure(1); clf;
@@ -79,7 +76,7 @@ hold on;
 grid on;
 box on;
 for i=1:20
-    if (ismember(i, selectedAssetsIdx))
+    if (ismember(i, selectedAssets))
         w = 1;
         c = [0 0.7 0.2];
         plot1 = plot(returnsTrain(:,i), 'LineWidth', w, 'Color', c);
@@ -102,7 +99,7 @@ hold on;
 grid on;
 box on;
 for i=1:20
-    if (ismember(i, selectedAssetsIdx))
+    if (ismember(i, selectedAssets))
         w = 1;
         c = [0 0.7 0.2];
         plot1 = plot(returnsTest(:,i), 'LineWidth', w, 'Color', c);
