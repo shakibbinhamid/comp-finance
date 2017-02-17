@@ -10,7 +10,7 @@ load_fin_data;
 first_invest = returns(1, :);
 returns = (returns - first_invest) ./ first_invest;
 returns = returns(2:end,:);
-returns = returns(:,randperm(30, 3));
+returns = returns(:,randperm(30, 10));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------
 nAssets = size(returns,2);
@@ -40,6 +40,7 @@ effWeights = effWeights';
 
 % plot the E-V graph (efficient frontier we get from the train data)
 figure(1); clf;
+subplot(1,4,1);
 box on;
 grid on;
 hold on;
@@ -63,7 +64,7 @@ effReturn = returnsTest * effWeights(num_points/2, :)';
 naiveReturn = returnsTest * naiveWeights';
 
 % plot the returns for the efficient protfolios vs. return from the naive portfolio
-figure(2); clf;
+subplot(1,4,2);
 box on;
 grid on;
 hold on;
@@ -75,6 +76,14 @@ title('Portfolio Return Over Time', 'FontSize', 18);
 fig_legend = legend('Naive Portfolio', 'Efficient Portfolios', 'Location', 'northwest');
 set(fig_legend,'FontSize',16);
 
+subplot(1,4,3);
+title('Cumulative return over time for efficient and 1/N portfolios');
+ylabel('Return');
+xlabel('Time');
+plot(cumsum(effReturn)), hold on;
+plot(cumsum(naiveReturn));
+legend('Efficient portfolio','1/N portfolio')
+
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
 % risk free = 5%
@@ -83,7 +92,7 @@ naiveSharpe = (mean(naiveReturn) - riskFree)/std(naiveReturn);
 effSharpe = (mean(effReturn) - riskFree)/std(effReturn);
 
 % plot the sharpe values
-figure(3); clf;
+subplot(1,4,4);
 box on;
 grid on;
 hold on;

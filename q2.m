@@ -1,12 +1,12 @@
 %% ------------- load ftse data first ---------------
 load_fin_data;
 max_risk = 0.0088;
-%% ------------- calculate the avg ret and cov over T days and N assets ---------
+%% ------- calculate the avg ret and cov over T days and N assets ---------
 
 % first half of the time series for 3 assets
 T = size(R, 1) / 2;
 N = 10;
-R_ = R(1:T, 1:N);
+R_ = R(1:T, randperm(30, N));
 
 %% ------------- calculate efficient portfolio
 
@@ -14,8 +14,7 @@ w = calculateEfficientPortfolio(R_, T, N, max_risk);
 
 %% ------------- calculate 1/N portfolio ---------------
 
-w2 = ones(N, 1);
-w2 = w2 / norm(w2, 1);
+w2 = ones(N, 1) / N;
 
 R_1= R(T: size(R, 1), 1:N);
 m = sum(R_1) / T;

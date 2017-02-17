@@ -2,7 +2,7 @@ clc;
 
 % mean and covariance for all the assets the portfolio
 mean = [0.1; 0.2; 0.15];
-covariance = 100 * [0.005, -0.010, 0.004; -0.010 0.040 -0.002; 0.004, -0.002, 0.023];
+covariance = [0.005, -0.010, 0.004; -0.010 0.040 -0.002; 0.004, -0.002, 0.023];
 N = 500;
 
 % generate N random returns (normally distributed)
@@ -62,14 +62,6 @@ figure(1); clf;
 grid on;
 hold on;
 box on;
-% daspect([20 1 1]);
-% axis([-0.2,2.3,0.12,0.21]);
-% scatter(pRisk, pReturn, 'filled', 'LineWidth', 0.2);
-% plot(pRisk, pReturn, 'r', 'LineWidth', 1);
-% plot(pRisk, pReturn, 'o', 'MarkerFaceColor','b', 'Color', 'w', 'MarkerSize', 5);
-% plot(effRisk, effReturn, 'r', 'LineWidth', 2);
-% plot(pRisk, pReturn, '.', 'MarkerSize', 10, 'Color', 'r');
-
 plot(effRisk_, effReturn_, 'r', 'LineWidth', 3);
 plot(pRisk_, pReturn_, '.', 'MarkerSize', 8, 'Color', 'b');
 xlabel('Risk (V)', 'FontSize', 18);
