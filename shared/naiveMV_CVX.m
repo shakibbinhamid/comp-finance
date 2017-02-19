@@ -18,7 +18,7 @@ V1 = ones(1, NAssets);
 % we'll use CVX to do the linear programming
 % instead of using the linprog function
 % MaxReturnWeights = linprog(-ERet, [], [], V1, 1, V0, []);
-cvx_begin
+cvx_begin quiet
    variable x(NAssets,1)
    minimize( -ERet'*x )
    subject to
@@ -32,7 +32,7 @@ MaxReturn = MaxReturnWeights' * ERet;
 % we'll use CVX to do the quadratic programming
 % instead of using the linprog function
 %MinVarWeights_ = quadprog(ECov,V0,[],[],V1,1,V0,[],[],options);
-cvx_begin
+cvx_begin quiet
    variable x(NAssets,1)
    minimize( 0.5*x'*ECov*x + V0'*x)
    subject to
@@ -71,7 +71,7 @@ for point = 2:NumFrontPoints
     % we'll use CVX to do the linear programming
     % instead of using the linprog function
     % Weights_ = quadprog(ECov,V0,[],[],A,B,V0,[],[],options);
-    cvx_begin
+    cvx_begin quiet
        variable x(NAssets,1)
        minimize( 0.5*x'*ECov*x + V0'*x)
        subject to

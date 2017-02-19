@@ -40,5 +40,13 @@ returns(:,30) = csvread(strcat(data_dir, 'VOD.L.csv'), 1, 6);
 
 y = tick2ret(ftse);
 R = tick2ret(returns);
+% first_invest = returns(1, :);
+% returns = (returns - first_invest) ./ first_invest;
+% returns = returns(2:end,:);
+% R = returns;
 
-[T, N] = size(R);
+% ftse = (ftse - ftse(1)) ./ ftse(1);
+% ftse = ftse(2:end,:);
+% y = ftse;
+
+[T, N] = size(returns);

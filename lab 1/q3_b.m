@@ -31,7 +31,7 @@ ftseTest = ftse(nTrain+1:nTotal);
 maxSelectedAssets = 6;
 taw = 0.42;
 % get the weights and assets by doing lasso regression
-[weights, selectedAssets] = sparseIndexTracking(returnsTrain, ftseTrain, maxSelectedAssets, taw);
+[weights, selectedAssets] = calculateKSparseIndex(returnsTrain, ftseTrain, maxSelectedAssets, taw);
 
 % returns of sparse portfolio
 avgReturnTrain = returnsTrain(:, selectedAssets) * weights;
