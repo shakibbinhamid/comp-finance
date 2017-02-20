@@ -38,8 +38,10 @@ returns(:,28) = csvread(strcat(data_dir, 'TSCO.L.csv'), 1, 6);
 returns(:,29) = csvread(strcat(data_dir, 'TW.L.csv'), 1, 6);
 returns(:,30) = csvread(strcat(data_dir, 'VOD.L.csv'), 1, 6);
 
-% returns = flipud(returns);
-% ftse = flipud(ftse);
+%% flip the days to get chronological series ------------------------------
+
+returns = flipud(returns);
+ftse = flipud(ftse);
 
 %% returns as a day to day change percentage ------------------------------
 
@@ -54,6 +56,8 @@ returns = returns(2:end,:);
 
 ftse = (ftse - ftse(1)) ./ ftse(1);
 ftse = ftse(2:end,:);
+
+%% make even number of rows -----------------------------------------------
 
 T = size(returns, 1);
 

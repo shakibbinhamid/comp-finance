@@ -2,7 +2,7 @@
 
 clc; clear;
 load_fin_data;
-returns = flipud(returns);
+% returns = flipud(returns);
 
 %% ---------converting the returns for each asset to percentages-----------
 

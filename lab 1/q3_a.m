@@ -1,6 +1,5 @@
 clc;
 load_fin_data;
-ftse = flipud(ftse);
 
 %% divide into train and test set as 50-50 --------------------------------
 
