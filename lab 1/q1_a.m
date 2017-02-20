@@ -15,15 +15,7 @@ effWeights = estimateFrontier(portfolio);
 
 %% generate N random sets of weights and calculate return for them --------
 
-risk = zeros(N,1);
-returns = zeros(N,1);
-for i=1:N
-    randomWeight = rand(3, 1);
-    randomWeight = randomWeight / norm(randomWeight, 1);
-%     risk(i) = mean' * randomWeight;
-%     returns(i) = returns(i) + randomWeight' * covariance * randomWeight;
-    [risk(i), returns(i)] = estimatePortMoments(portfolio, randomWeight);
-end
+[ risk, returns ] = generateRandomPortfolio(N, mean, covariance, true);
 
 %% plot E-V ---------------------------------------------------------------
 
@@ -32,7 +24,7 @@ grid on;
 hold on;
 box on;
 plot(effRisk, effReturn, 'r', 'LineWidth', 3);
-plot(risk, returns, '.', 'MarkerSize', 8, 'Color', 'b');
+plot(risk, returns, 'b.', 'MarkerSize', 8);
 xlabel('Risk (V)', 'FontSize', 18);
 ylabel('Expected Return (E)', 'FontSize', 18);
 title('Efficient Portfolio Frontier', 'FontSize', 18);
