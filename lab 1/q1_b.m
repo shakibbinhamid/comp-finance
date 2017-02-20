@@ -38,6 +38,21 @@ for i=1:3
     eff_2_Risks(:, i) = effRisk;
     eff_2_Returns(:, i) = effReturn;
     eff_2_Weights(:, i:i+size(effWeight, 2) - 1) = effWeight;
+
+%% plot the efficient frontier with random portfolio EV -------------------
+    [ risk_2, returns_2 ] = generateRandomPortfolio(N, mean_2assets, covariance_2assets, false);
+    figure(i); clf;
+    box on;
+    grid on;
+    hold on;
+    plot(effRisk, effReturn, 'Linewidth', 2);
+    scatter(risk_2, returns_2, 'rx');
+
+    xlabel('Risk', 'FontSize', 18);
+    ylabel('Expected Return', 'FontSize', 18);
+    title(sprintf('Efficient Portfolio Frontier for Porfolio %d', i), 'FontSize', 18);
+    fig_legend = legend( 'Efficient Frontier', 'Scatter of Random E-V', 'Location', 'southeast');
+    set(fig_legend,'FontSize',12);
 end
 
 %% generate the total eff portfolio ---------------------------------------
@@ -47,7 +62,7 @@ end
 
 %% plot the efficient portfolios ------------------------------------------
 
-figure(1); clf;
+figure(i+1); clf;
 box on;
 grid on;
 hold on;
@@ -55,6 +70,7 @@ plot(eff_3_Risk(:), eff_3_Return(:), '-.', 'LineWidth', 4, 'Color', [0.7 0.7 0.7
 plot(eff_2_Risks(:,1), eff_2_Returns(:,1), 'r', 'LineWidth', 2);
 plot(eff_2_Risks(:,2), eff_2_Returns(:,2), 'b', 'LineWidth', 2);
 plot(eff_2_Risks(:,3), eff_2_Returns(:,3), 'LineWidth', 2, 'Color', [0 0.7 0.2]);
+
 xlabel('Risk', 'FontSize', 18);
 ylabel('Expected Return', 'FontSize', 18);
 title('Efficient Portfolio Frontiers', 'FontSize', 18);
@@ -67,7 +83,8 @@ N = 600;
 returns = mvnrnd(mean_3assets, covariance_3assets, N);
 
 %% plot how the 2 assets are distributed ----------------------------------
-figure(2); clf;
+figure(i+2); clf;
+set(gcf, 'Units', 'Inches', 'Position', [0, 0, 20, 6], 'PaperUnits', 'Inches', 'PaperSize', [7.25, 9.125])
 
 subplot(1,3,1);
 plot(returns(:,1), returns(:,2), '.r');
