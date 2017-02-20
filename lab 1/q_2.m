@@ -2,11 +2,11 @@
 
 clc; clear;
 load_fin_data;
-% returns = flipud(returns);
 
 %% ---------converting the returns for each asset to percentages-----------
 
 nAssets = 3;
+% returns = R;
 returns = returns(:,randperm(30, nAssets));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------
@@ -81,8 +81,6 @@ ylabel('Return');
 xlabel('Time');
 plot(cumsum(naiveReturn)), hold on;
 plot(cumsum(effReturn));
-%plot(cumsum(R_ * w)), hold on;
-%plot(cumsum(R_1 * w2));
 legend('1/N portfolio', 'Efficient portfolio');
 
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
