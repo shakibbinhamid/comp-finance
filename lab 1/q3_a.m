@@ -54,14 +54,7 @@ for i=1:maxSelectedAssets
         sharpeRatios(j) = portfolioSharpeRatio(portfolioReturns);
         rmse(j) = portfolioError(portfolioReturns, ftseTest);
     end
-    % we have 3 ways to measure the performance
-    % 1. Average Return
-    % 2. Sharpe Ratio
-    % 3. Compare to market index
-    % pick up the asset with the highest average return/
-    % highest Sharpe ratio/min error
-    %[~, idx] = max(avgReturns);
-    %[~, idx] = max(sharpeRatios);
+    
     [~, idx] = min(rmse);
     selectedAssetsIdx(i) = unSelectedAssetsIdx(idx);
     unSelectedAssetsIdx(unSelectedAssetsIdx==selectedAssetsIdx(i)) = [];

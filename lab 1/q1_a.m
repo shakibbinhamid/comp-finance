@@ -44,11 +44,6 @@ pRisk_ = zeros(N,1);
 pReturn_ = zeros(N,1);
 for i=1:N
     
-    % wrong way to calcuate the return and risk
-    % only required to get data cool to draw (well scattered)
-    %pReturn(i) = sum(returns(i, :))/3;
-    %pRisk(i) = norm(returns(i, :) - mean')^2;
-    
     % the correct way to get risk and return
     pReturn(i) = pWeights(i, :) * returns(i, :)';
     pRisk(i) = norm(returns(i, :)*covariance*returns(i, :)');

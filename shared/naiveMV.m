@@ -15,7 +15,7 @@ V0 = zeros(NAssets, 1);
 V1 = ones(1, NAssets);
 
 % set medium scale option
-options = optimset('LargeScale', 'off');
+options = optimset('LargeScale', 'off', 'Display', 'None');
 
 % Find the maximum expected return
 MaxReturnWeights = linprog(-ERet, [], [], V1, 1, V0);
