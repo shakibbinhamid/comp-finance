@@ -1,18 +1,12 @@
 %% --------------------- clear and load the data --------------------------
+
 clc; clear;
 load_fin_data;
 returns = flipud(returns);
 
 %% ---------converting the returns for each asset to percentages-----------
-% returns is T x N portfolio returns where T = time ticks, N = #assets
-% row(i+1) = (row(i) - row(1))/row(1)
-% remove row(1) since it's just 0's
-% then select n columns or assets to look at. here n = 3
+
 nAssets = 3;
-first_invest = returns(1, :);
-returns = (returns - first_invest) ./ first_invest;
-returns = returns(2:end,:);
-% returns = R;
 returns = returns(:,randperm(30, nAssets));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------

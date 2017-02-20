@@ -1,19 +1,6 @@
 clc;
 load_fin_data;
 ftse = flipud(ftse);
-%% calculate percentage returns -------------------------------------------
-first_invest = returns(1, :);
-returns = (returns - first_invest) ./ first_invest;
-returns = returns(2:end,:);
-
-ftse = (ftse - ftse(1)) ./ ftse(1);
-ftse = ftse(2:end,:);
-
-% for testing purpose, if we want the
-% index to be the avarage of 20 assets we have
-% not the real market index
-% [~, ftse] = portfolioAverageReturn(returns);
-% ftse = ftse';
 
 %% divide into train and test set as 50-50 --------------------------------
 nAssets = size(returns,2);

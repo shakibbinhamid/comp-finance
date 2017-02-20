@@ -38,15 +38,28 @@ returns(:,28) = csvread(strcat(data_dir, 'TSCO.L.csv'), 1, 6);
 returns(:,29) = csvread(strcat(data_dir, 'TW.L.csv'), 1, 6);
 returns(:,30) = csvread(strcat(data_dir, 'VOD.L.csv'), 1, 6);
 
+% returns = flipud(returns);
+% ftse = flipud(ftse);
+
+%% returns as a day to day change percentage ------------------------------
+
 y = tick2ret(ftse);
 R = tick2ret(returns);
-% first_invest = returns(1, :);
-% returns = (returns - first_invest) ./ first_invest;
-% returns = returns(2:end,:);
-% R = returns;
 
-% ftse = (ftse - ftse(1)) ./ ftse(1);
-% ftse = ftse(2:end,:);
-% y = ftse;
+%% convert returns as a percentage compared to first day ------------------
+
+first_invest = returns(1, :);
+returns = (returns - first_invest) ./ first_invest;
+returns = returns(2:end,:);
+
+ftse = (ftse - ftse(1)) ./ ftse(1);
+ftse = ftse(2:end,:);
+
+T = size(returns, 1);
+
+if (mod(T, 2) == 1)
+    returns = returns(1:T-1,:);
+    ftse = ftse(1:end, :);
+end
 
 [T, N] = size(returns);
