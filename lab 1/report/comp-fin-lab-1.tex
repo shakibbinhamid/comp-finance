@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper, margin=0.7in]{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{bm}
+\usetikzlibrary{arrows}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{pgfplots,wrapfig}  
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false} 
+\newlength\figureheight 
+\newlength\figurewidth 
+
+\begin{document}
+
+\begin{center}
+
+\end{center}
+
+\begin{figure}[!h]
+   \centering 
+   \begin{subfigure}[b]{0.30\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q1_b_efficient_frontier_1.tex} }
+		\label{fig:q1-b-efficient-frontier-1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.30\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q1_b_efficient_frontier_2.tex} }
+        \label{fig:q1-b-efficient-frontier-2}
+    \end{subfigure}
+	~
+    \begin{subfigure}[b]{0.30\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q1_b_efficient_frontier_3.tex} }
+        \label{fig:q1-b-efficient-frontier-3}
+    \end{subfigure}
+    \caption{Efficient Frontier for 2 Asset Portfolios}\label{fig:naive_v_cvx}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering 
+	\resizebox {\textwidth} {!} {\input{q1_b_return_distribution.tex} }
+	\caption{Distribution of 2 Asset Returns}
+	\label{fig:q1-b-return-distribution}
+\end{figure}
+
+%\begin{figure}[!h]
+%    \centering 
+%   \begin{subfigure}[b]{0.45\textwidth}
+%     	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx.tex} }
+%     \caption{Similarity}
+%    \label{fig:q1-d-naive-v-cvx}
+%    \end{subfigure}
+%    ~
+%    \begin{subfigure}[b]{0.45\textwidth}
+%       	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx_difference.tex} }
+%        \caption{Difference}
+%        \label{fig:q1-d-naive-v-cvx-difference}
+%    \end{subfigure}
+%    \caption{NaiveMV vs Using CVX}\label{fig:naive_v_cvx}
+%\end{figure}
+
+\end{document}

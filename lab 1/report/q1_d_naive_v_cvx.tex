@@ -1,0 +1,60 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.636in,
+height=5.068in,
+at={(1.113in,0.684in)},
+scale only axis,
+xmin=0.02,
+xmax=0.2,
+xlabel style={font=\color{white!15!black}},
+xlabel={Risk (V)},
+ymin=0.12,
+ymax=0.2,
+ylabel style={font=\color{white!15!black}},
+ylabel={Expected Return (E)},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Efficient frontier},
+legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0.0392232276044563	0.123076923837406\\
+0.044513425166475	0.131623932299916\\
+0.0558620054759074	0.140170940762427\\
+0.0700946313080072	0.148717949224937\\
+0.08578768016033	0.157264957687447\\
+0.102271060633265	0.165811966149958\\
+0.11921740085025	0.174358974612468\\
+0.138250341424608	0.182905983074978\\
+0.16612887185339	0.191452991537489\\
+0.199999999999997	0.199999999999999\\
+};
+\addlegendentry{Naive MV}
+
+\addplot [color=red, draw=none, mark=*, mark options={solid, red}]
+  table[row sep=crcr]{%
+0.0392232574289652	0.123072791068251\\
+0.0445095141835318	0.131620258270131\\
+0.0558570698081448	0.14016772547201\\
+0.0700897553762092	0.14871519267389\\
+0.0857833371662177	0.157262659875769\\
+0.102267456049702	0.165810127077649\\
+0.119214637210211	0.174357594279528\\
+0.138247796277184	0.182905061481407\\
+0.166127190941462	0.191452528683287\\
+0.199999984117505	0.199999995885166\\
+};
+\addlegendentry{CVX MV}
+
+\end{axis}
+\end{tikzpicture}%
