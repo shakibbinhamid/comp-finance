@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 17:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1043,37 +1043,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--69
  []
 
 (./q1_b_return_distribution.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
  []
 
 (./q1_b_efficient_frontier_1.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 [][]
  []
 
 (./q1_b_efficient_frontier_2.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 [][]
  []
 
 (./q1_b_efficient_frontier_3.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 [][]
  []
 
 (./q1_b_efficient_frontier_all.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 [][]
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
-
- []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 108.
@@ -1111,10 +1106,6 @@ C113FB5EA17.pygtex)
 C113FB5EA17.pygtex)
 \openout4 = `comp-fin-lab-1.pyg'.
 
-runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
-minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5C113
-FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
-
 
 (./_minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex) (./q1_d_naive_v_cvx.tex)
@@ -1130,7 +1121,7 @@ to.pdf>
 (epstopdf)             \includegraphics on input line 176.
 Package epstopdf Info: Output file is already uptodate.
 
-<q1_d_naive_v_cvx_difference-eps-converted-to.pdf, id=21, 363.3575pt x 270.0087
+<q1_d_naive_v_cvx_difference-eps-converted-to.pdf, id=25, 363.3575pt x 270.0087
 4pt>
 File: q1_d_naive_v_cvx_difference-eps-converted-to.pdf Graphic file (type pdf)
  <use q1_d_naive_v_cvx_difference-eps-converted-to.pdf>
@@ -1142,12 +1133,7 @@ Overfull \hbox (27.7415pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
-[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>]
-runsystem(rm _minted-comp-fin-lab-1/6880C044A8DC56AC869266E36074AFDCBD76D709355
-9B2E24E3F5C113FB5EA17.pygtex)...executed.
-
- [3]
-(./comp-fin-lab-1.aux)
+[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1155,30 +1141,33 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30801 strings out of 493013
- 740665 string characters out of 6139317
- 1756714 words of memory out of 5000000
- 33779 multiletter control sequences out of 15000+600000
- 12605 words of font info for 47 fonts, out of 8000000 for 9000
+ 30803 strings out of 493013
+ 740641 string characters out of 6139317
+ 1756725 words of memory out of 5000000
+ 33781 multiletter control sequences out of 15000+600000
+ 13211 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
  </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sha
 kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.t
-exlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive
-/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-
-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </usr/share/texmf-dist/fonts/pk/ljf
-our/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
-public/cm/cmsy8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
-cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmb
-x12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.65
-7pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> 
-</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home
-/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shaki
-b/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (3 pages, 281422 bytes).
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texliv
+e/texmf-var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf
+-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/f
+onts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk
+/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
+r/public/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi60
+0/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600
+pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </
+home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/s
+hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/
+.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texl
+ive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/te
+xmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-va
+r/fonts/pk/ljfour/public/cm/cmr10.657pk>
+Output written on comp-fin-lab-1.pdf (2 pages, 299132 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 379 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
