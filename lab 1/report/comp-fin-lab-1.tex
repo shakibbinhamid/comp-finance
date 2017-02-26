@@ -8,6 +8,7 @@
 \usepackage{multicol}
 \usepackage{tikz}
 \usepackage{bm}
+\usepackage{minted}
 \usetikzlibrary{arrows}
 \usepackage{wrapfig}
 \usepackage{amsmath}
@@ -18,20 +19,39 @@
 \pgfplotsset{plot coordinates/math parser=false} 
 \newlength\figureheight 
 \newlength\figurewidth 
+\setlength{\parindent}{0pt}
 
 \begin{document}
 
 \section{Efficient Frontier}
 
+Let a portfolio of $N$ assets be $\bm{\pi}$, whose expected return is $\bm{\mu}$ and the 
+co-variance is $\bm{\Sigma}$. 
+
 \subsection{Efficient Frontier with 3 Assets}
 
 \begin{wrapfigure}{!h}{0.45\textwidth}
+	\vspace{-2cm}
   \begin{center}
     \resizebox {0.45\textwidth} {!} {\input{q1_a_efficient_frontier.tex} }
 	\caption{Efficient Portfolio}
 	\label{fig:q1-a-efficient-portfolio}
   \end{center}
+	\vspace{-1cm}
 \end{wrapfigure}
+
+According to the paper, the expected return of the portfolio, 
+$E = \sum_{i=1}^N\pi_i\mu_i = \bm{\pi}^t\bm{\mu}$. The risk is analogous to the variance of
+the returns, i.e. $V = \sum_{i=1}^N\sum_{j=1}^N\sigma_{ij}\pi_i\pi_j = \bm{\pi}^t\bm{\Sigma}\bm{\pi}$.\\
+
+Given $\bm{\mu} = \bm{m}$ and $\bm{\Sigma} = \bm{C}$ for a $3$ assets, we can generate 100 random
+portfolios, where each portfolio $\bm{\pi} = (\pi_1 \pi_2 \pi_3)^t$ s.t. $\bm{1}^t\bm{\pi} = 1$ by
+\mintinline{matlab}|y=randn(3,1); y=y/norm(y,1)|. Then we can calculate $E-V$ for each of the portfolios by
+\mintinline{matlab}|E=y'*m; V=sqrt(y'*C*y)|.\\
+
+Finally I make the scatter plot and on the same figure I plot the efficient frontier using
+\mintinline{matlab}|estimateFrontier| function. As expected all the random portfolios were on the
+correct one side of the frontier. 
 
 \subsection{Efficient Frontier with 2 Assets}
 

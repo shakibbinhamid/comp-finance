@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 15:54
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **comp-fin-lab-1.tex
 (./comp-fin-lab-1.tex
@@ -439,25 +439,177 @@ Package: bm 2016/07/07 v1.2b Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
 LaTeX Info: Redefining \bm on input line 208.
 )
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2016/07/20 v2.4 Yet another Pygments shim for LaTeX
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+b
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count130
+)
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count131
+\FV@InFile=\read2
+\FV@TabBox=\box65
+\c@FancyVerbLine=\count132
+\FV@StepNumber=\count133
+\FV@OutFile=\write4
+) (/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count134
+\output=\toks29
+\linenoprevgraf=\count135
+\linenumbersep=\dimen179
+\linenumberwidth=\dimen180
+\c@linenumber=\count136
+\c@pagewiselinenumber=\count137
+\c@LN@truepage=\count138
+\c@internallinenumber=\count139
+\c@internallinenumbers=\count140
+\quotelinenumbersep=\dimen181
+\bframerule=\dimen182
+\bframesep=\dimen183
+\bframebox=\box66
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count141
+\c@FV@TrueTabCounter=\count142
+\FV@TabBox@Group=\box67
+\FV@TmpLength=\skip45
+\c@FV@HighlightLinesStart=\count143
+\c@FV@HighlightLinesStop=\count144
+\FV@BreakIndent=\dimen184
+\FV@BreakSymbolSepLeft=\dimen185
+\FV@BreakSymbolSepRight=\dimen186
+\FV@BreakSymbolIndentLeft=\dimen187
+\FV@BreakSymbolIndentRight=\dimen188
+\c@FancyVerbLineBreakLast=\count145
+\FV@LineBox=\box68
+\FV@LineIndentBox=\box69
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count146
+\float@exts=\toks30
+\float@box=\box70
+\@float@everytoks=\toks31
+\@floatcapt=\box71
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count147
+\calc@Bcount=\count148
+\calc@Adimen=\dimen189
+\calc@Bdimen=\dimen190
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count149
+\calc@Cskip=\skip48
+)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+)
+(/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "comp-fin-lab-1.w18")...executed.
+
+
+(./comp-fin-lab-1.w18)
+runsystem(rm -- "comp-fin-lab-1.w18")...executed.
+
+) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count150
+\decimalpart=\count151
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/share/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip49
+\fb@frw=\dimen191
+\fb@frh=\dimen192
+\FrameRule=\dimen193
+\FrameSep=\dimen194
+)
+\minted@appexistsfile=\read3
+\minted@bgbox=\box72
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count152
+\c@minted@pygmentizecounter=\count153
+\@float@every@listing=\toks32
+\c@listing=\count154
+)
+runsystem(mkdir -p _minted-comp-fin-lab-1)...executed.
+
+
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 arrows.code.tex
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen179
+\arrowsize=\dimen195
 ))
 (/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen180
-\WF@size=\dimen181
-\c@WF@wrappedlines=\count130
-\WF@box=\box65
-\WF@everypar=\toks29
+\wrapoverhang=\dimen196
+\WF@size=\dimen197
+\c@WF@wrappedlines=\count155
+\WF@box=\box73
+\WF@everypar=\toks33
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/06/28 v2.15d AMS math features
-\@mathmargin=\skip45
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -465,52 +617,52 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks30
-\ex@=\dimen182
+\@emptytoks=\toks34
+\ex@=\dimen198
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 LaTeX Info: Redefining \boldsymbol on input line 28.
-\pmbraise@=\dimen183
+\pmbraise@=\dimen199
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count131
+\inf@bad=\count156
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count132
-\leftroot@=\count133
+\uproot@=\count157
+\leftroot@=\count158
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count134
-\DOTSCASE@=\count135
+\classnum@=\count159
+\DOTSCASE@=\count160
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box66
-\strutbox@=\box67
-\big@size=\dimen184
+\Mathstrutbox@=\box74
+\strutbox@=\box75
+\big@size=\dimen256
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count136
-\c@MaxMatrixCols=\count137
+\macc@depth=\count161
+\c@MaxMatrixCols=\count162
 \dotsspace@=\muskip10
-\c@parentequation=\count138
-\dspbrk@lvl=\count139
-\tag@help=\toks31
-\row@=\count140
-\column@=\count141
-\maxfields@=\count142
-\andhelp@=\toks32
-\eqnshift@=\dimen185
-\alignsep@=\dimen186
-\tagshift@=\dimen187
-\tagwidth@=\dimen188
-\totwidth@=\dimen189
-\lineht@=\dimen190
-\@envbody=\toks33
-\multlinegap=\skip46
-\multlinetaggap=\skip47
-\mathdisplay@stack=\toks34
+\c@parentequation=\count163
+\dspbrk@lvl=\count164
+\tag@help=\toks35
+\row@=\count165
+\column@=\count166
+\maxfields@=\count167
+\andhelp@=\toks36
+\eqnshift@=\dimen257
+\alignsep@=\dimen258
+\tagshift@=\dimen259
+\tagwidth@=\dimen260
+\totwidth@=\dimen261
+\lineht@=\dimen262
+\@envbody=\toks37
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
@@ -533,12 +685,12 @@ Package: pgfplots 2016/08/10 v1.14 Data Visualization (1.14)
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks35
-\t@pgfplots@tokb=\toks36
-\t@pgfplots@tokc=\toks37
-\pgfplots@tmpa=\dimen191
-\c@pgfplots@coordindex=\count143
-\c@pgfplots@scanlineindex=\count144
+\t@pgfplots@toka=\toks39
+\t@pgfplots@tokb=\toks40
+\t@pgfplots@tokc=\toks41
+\pgfplots@tmpa=\dimen263
+\c@pgfplots@coordindex=\count168
+\c@pgfplots@scanlineindex=\count169
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
@@ -551,7 +703,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 gflibraryfpu.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
 gfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count145
+\c@pgfmathroundto@lastzeros=\count170
 ))
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
@@ -560,14 +712,14 @@ gfmathfloat.code.tex
 ext.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
 x
-\c@pgfplotsarray@tmp=\count146
+\c@pgfplotsarray@tmp=\count171
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
 ex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
 ex
-\c@pgfplotstable@counta=\count147
-\t@pgfplotstable@a=\toks38
+\c@pgfplotstable@counta=\count172
+\t@pgfplotstable@a=\toks42
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
 x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
@@ -575,7 +727,7 @@ x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
 .code.tex
-\c@pgfplotslibrarysurf@no=\count148
+\c@pgfplotslibrarysurf@no=\count173
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
 pgfsys-pdftex.def)))
@@ -594,16 +746,16 @@ pgfsys-pdftex.def)))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen192
-\pgfdecoratedremainingdistance=\dimen193
-\pgfdecoratedinputsegmentcompleteddistance=\dimen194
-\pgfdecoratedinputsegmentremainingdistance=\dimen195
-\pgf@decorate@distancetomove=\dimen196
-\pgf@decorate@repeatstate=\count149
-\pgfdecorationsegmentamplitude=\dimen197
-\pgfdecorationsegmentlength=\dimen198
+\pgfdecoratedcompleteddistance=\dimen264
+\pgfdecoratedremainingdistance=\dimen265
+\pgfdecoratedinputsegmentcompleteddistance=\dimen266
+\pgfdecoratedinputsegmentremainingdistance=\dimen267
+\pgf@decorate@distancetomove=\dimen268
+\pgf@decorate@repeatstate=\count174
+\pgfdecorationsegmentamplitude=\dimen269
+\pgfdecorationsegmentlength=\dimen270
 )
-\tikz@lib@dec@box=\box68
+\tikz@lib@dec@box=\box76
 )
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.pathmorphing.code.tex
@@ -613,13 +765,13 @@ ons.pathmorphing.code.tex))
 decorations.pathreplacing.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
 ons.pathreplacing.code.tex))
-\pgfplots@numplots=\count150
-\pgfplots@xmin@reg=\dimen199
-\pgfplots@xmax@reg=\dimen256
-\pgfplots@ymin@reg=\dimen257
-\pgfplots@ymax@reg=\dimen258
-\pgfplots@zmin@reg=\dimen259
-\pgfplots@zmax@reg=\dimen260
+\pgfplots@numplots=\count175
+\pgfplots@xmin@reg=\dimen271
+\pgfplots@xmax@reg=\dimen272
+\pgfplots@ymin@reg=\dimen273
+\pgfplots@ymax@reg=\dimen274
+\pgfplots@zmin@reg=\dimen275
+\pgfplots@zmax@reg=\dimen276
 )
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 plotmarks.code.tex
@@ -628,23 +780,27 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
-\figureheight=\skip48
-\figurewidth=\skip49
+\figureheight=\skip53
+\figurewidth=\skip54
+runsystem(which pygmentize && touch comp-fin-lab-1.aex)...executed.
+
+runsystem(rm comp-fin-lab-1.aex)...executed.
+
  (./comp-fin-lab-1.aux)
 \openout1 = `comp-fin-lab-1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -682,31 +838,18 @@ LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen261
-\scratchbox=\box69
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen262
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks40
-) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+\scratchcounter=\count176
+\scratchdimen=\dimen277
+\scratchbox=\box77
+\nofMPsegments=\count177
+\nofMParguments=\count178
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count179
+\MPscratchDim=\dimen278
+\MPnumerator=\count180
+\makeMPintoPDFobject=\count181
+\everyMPtoPDFconversion=\toks44
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -715,19 +858,6 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 (/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -740,65 +870,197 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count157
+
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2016/06/19 v1.99m Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+\c@lstlisting=\count182
 
 ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.14}).
 
-(./q1_a_efficient_frontier.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 149.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 149.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-(./q1_b_efficient_frontier_1.tex) (./q1_b_efficient_frontier_2.tex)
-(./q1_b_efficient_frontier_3.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+)
+(./q1_a_efficient_frontier.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+\openout6 = `comp-fin-lab-1.pyg'.
+
+(./_minted-comp-fin-lab-1/default-pyg-prefix.pygstyle)
+(./_minted-comp-fin-lab-1/default.pygstyle)
+(./_minted-comp-fin-lab-1/024F7FEA90CD6D0CE119BECC04DC39DBBD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/62F84B69BAD34E475E63850F4D2F8D06BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+Underfull \hbox (badness 5756) in paragraph at lines 47--51
+[]\OT1/cmr/m/n/10.95 Given $\OML/cmm/b/it/10.95 ^^V \OT1/cmr/m/n/10.95 = \OML/c
+mm/b/it/10.95 m$ \OT1/cmr/m/n/10.95 and $\OT1/cmr/bx/n/10.95 ^^F \OT1/cmr/m/n/1
+0.95 = \OML/cmm/b/it/10.95 C$ \OT1/cmr/m/n/10.95 for a $3$ as-
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 47--51
+\OT1/cmr/m/n/10.95 each port-fo-lio $\OML/cmm/b/it/10.95 ^^Y \OT1/cmr/m/n/10.95
+ = (\OML/cmm/m/it/10.95 ^^Y[]^^Y[]^^Y[]\OT1/cmr/m/n/10.95 )[]$ s.t. $\OT1/cmr/b
+x/n/10.95 1[]\OML/cmm/b/it/10.95 ^^Y \OT1/cmr/m/n/10.95 = 1$
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 47--51
+\OT1/cmr/m/n/10.95 by []. Then we can
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 47--51
+\OT1/cmr/m/n/10.95 cal-cu-late $\OML/cmm/m/it/10.95 E \OMS/cmsy/m/n/10.95 ^^@ \
+OML/cmm/m/it/10.95 V$ \OT1/cmr/m/n/10.95 for each of the port-fo-lios by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
+
+ []
+
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/839A915C1B37EFC8236BF481D4581D7DBD76D7093559B2E24E3F5
+C113FB5EA17.pygtex) (./q1_b_efficient_frontier_1.tex)
+(./q1_b_efficient_frontier_2.tex) (./q1_b_efficient_frontier_3.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
 [][]
  []
 
 (./q1_b_return_distribution.tex)
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 64.
- (./q1_d_naive_v_cvx.tex)
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 84.
+ (./q1_d_naive_v_cvx.tex) [1
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./comp-fin-lab-1.aux)
+runsystem(rm comp-fin-lab-1.pyg)...executed.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./comp-fin-lab-1.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 27448 strings out of 493013
- 674753 string characters out of 6139317
- 1722930 words of memory out of 5000000
- 30540 multiletter control sequences out of 15000+600000
- 12437 words of font info for 46 fonts, out of 8000000 for 9000
+ 30739 strings out of 493013
+ 737258 string characters out of 6139317
+ 1831218 words of memory out of 5000000
+ 33745 multiletter control sequences out of 15000+600000
+ 12605 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,23n,120p,737b,2438s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publi
-c/cm/cmtt12.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr1
-0.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> 
-</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </usr/
-share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.texli
-ve/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/shakib/.texlive/texm
-f-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/
-fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
-k/ljfour/public/cm/cmbx12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
-ur/public/cm/cmbx12.720pk>
-Output written on comp-fin-lab-1.pdf (2 pages, 231176 bytes).
+ 69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sha
+kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.t
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive
+/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-
+var/fonts/pk/ljfour/public/cm/cmex10.657pk> </usr/share/texmf-dist/fonts/pk/ljf
+our/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
+public/cm/cmsy8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
+cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmb
+x12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.65
+7pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> 
+</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home
+/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk>
+Output written on comp-fin-lab-1.pdf (2 pages, 249018 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 256 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
