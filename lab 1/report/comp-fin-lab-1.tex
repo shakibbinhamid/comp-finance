@@ -136,22 +136,52 @@ Thus the efficient portfolio is created.
 
 \subsection{Efficient Frontier : NaiveMV vs CVX}
 
+Using the CVX tool we can declarively perform the convex optimisations we performed earlier with
+\mintinline{matlab}|linprog| and \mintinline{matlab}|quadprog|, as follows -
+
+\vspace{0.5cm}
+
+\begin{minipage}{.4\textwidth}
+  	\begin{minted}{matlab}
+	cvx_begin quiet
+		variable w(N,1)
+		minimize( -ERet'*w )
+		subject to
+			ones(1,N)*w == 1;
+			w >= zeros(N,1);
+	cvx_end
+	\end{minted}
+\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.6\textwidth}
+  	\begin{minted}{matlab}
+	cvx_begin quiet
+		variable w(N,1)
+		minimize( 0.5*w'*ECov*w + zeros(N,1)'*w)
+		subject to
+			ones(1,N) * x == 1;
+			x >= zeros(N,1);
+	cvx_end
+	\end{minted}
+\end{minipage}
 
 \begin{figure}[!h]
     \centering 
-   \begin{subfigure}[b]{0.45\textwidth}
+   \begin{subfigure}[b]{0.30\textwidth}
      	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx.tex} }
      \caption{Similarity}
     \label{fig:q1-d-naive-v-cvx}
     \end{subfigure}
-%    ~
-%    \begin{subfigure}[b]{0.45\textwidth}
-%       	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx_difference.tex} }
-%        \caption{Difference}
-%        \label{fig:q1-d-naive-v-cvx-difference}
-%    \end{subfigure}
-%    \caption{NaiveMV vs Using CVX}\label{fig:naive_v_cvx}
+    ~
+    \begin{subfigure}[b]{0.30\textwidth}
+       	\includegraphics[scale=.5] {q1_d_naive_v_cvx_difference.eps}
+       \caption{Difference}
+        \label{fig:q1-d-naive-v-cvx-difference}
+    \end{subfigure}
+    \caption{NaiveMV vs Using CVX}\label{fig:naive_v_cvx}
 \end{figure}
+
+The results are extremely similar, since differences only show up in $10^{-7}$ scale. However, the
+CVX tool was noticeably slower.
 
 \end{document}
 

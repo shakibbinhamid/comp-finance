@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{cvx\PYGZus{}begin} \PYG{n}{quiet}
+		\PYG{n}{variable} \PYG{n}{w}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}
+		\PYG{n}{minimize}\PYG{p}{(} \PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{w}\PYG{o}{\PYGZsq{}*}\PYG{n}{ECov}\PYG{o}{*}\PYG{n}{w} \PYG{o}{+} \PYG{n+nb}{zeros}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{\PYGZsq{}*}\PYG{n}{w}\PYG{p}{)}
+		\PYG{n}{subject} \PYG{n}{to}
+			\PYG{n+nb}{ones}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)} \PYG{o}{*} \PYG{n}{x} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{;}
+			\PYG{n}{x} \PYG{o}{\PYGZgt{}}\PYG{p}{=} \PYG{n+nb}{zeros}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{);}
+	\PYG{n}{cvx\PYGZus{}end}
+\end{Verbatim}

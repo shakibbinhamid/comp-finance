@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{cvx\PYGZus{}begin} \PYG{n}{quiet}
+		\PYG{n}{variable} \PYG{n}{w}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}
+		\PYG{n}{minimize}\PYG{p}{(} \PYG{o}{\PYGZhy{}}\PYG{n}{ERet}\PYG{o}{\PYGZsq{}*}\PYG{n}{w} \PYG{p}{)}
+		\PYG{n}{subject} \PYG{n}{to}
+			\PYG{n+nb}{ones}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)}\PYG{o}{*}\PYG{n}{w} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{;}
+			\PYG{n}{w} \PYG{o}{\PYGZgt{}}\PYG{p}{=} \PYG{n+nb}{zeros}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{);}
+	\PYG{n}{cvx\PYGZus{}end}
+\end{Verbatim}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 17:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -786,7 +786,14 @@ runsystem(which pygmentize && touch comp-fin-lab-1.aex)...executed.
 
 runsystem(rm comp-fin-lab-1.aex)...executed.
 
- (./comp-fin-lab-1.aux)
+ (./comp-fin-lab-1.aux
+
+LaTeX Warning: Label `fig:naive_v_cvx' multiply defined.
+
+
+LaTeX Warning: Label `fig:naive_v_cvx@cref' multiply defined.
+
+)
 \openout1 = `comp-fin-lab-1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -1086,21 +1093,75 @@ C113FB5EA17.pygtex)
 
 
 (./_minted-comp-fin-lab-1/63AC280ED31C231535BCC7108E455F25BD76D7093559B2E24E3F5
-C113FB5EA17.pygtex) (./q1_d_naive_v_cvx.tex) [2] (./comp-fin-lab-1.aux)
+C113FB5EA17.pygtex)
+\openout6 = `comp-fin-lab-1.pyg'.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+(./_minted-comp-fin-lab-1/BA43BF61FF3B4CD6CF8D24F3B17FBA27BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/63AC280ED31C231535BCC7108E455F25BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout4 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/87919E57C33DAF4D19FBD77E98D34F99BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout4 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
+
+(./_minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex) (./q1_d_naive_v_cvx.tex)
+Package epstopdf Info: Source file: <q1_d_naive_v_cvx_difference.eps>
+(epstopdf)                    date: 2017-02-26 17:24:29
+(epstopdf)                    size: 16651 bytes
+(epstopdf)             Output file: <q1_d_naive_v_cvx_difference-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-02-26 17:24:35
+(epstopdf)                    size: 8459 bytes
+(epstopdf)             Command: <epstopdf --outfile=q1_d_naive_v_cvx_difference
+-eps-converted-to.pdf q1_d_naive_v_cvx_difference.eps>
+(epstopdf)             \includegraphics on input line 176.
+Package epstopdf Info: Output file is already uptodate.
+
+<q1_d_naive_v_cvx_difference-eps-converted-to.pdf, id=21, 363.3575pt x 270.0087
+4pt>
+File: q1_d_naive_v_cvx_difference-eps-converted-to.pdf Graphic file (type pdf)
+ <use q1_d_naive_v_cvx_difference-eps-converted-to.pdf>
+Package pdftex.def Info: q1_d_naive_v_cvx_difference-eps-converted-to.pdf used 
+on input line 176.
+(pdftex.def)             Requested size: 181.6783pt x 135.00403pt.
+
+Overfull \hbox (27.7415pt too wide) in paragraph at lines 176--177
+[][] 
+ []
+
+[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>]
+runsystem(rm _minted-comp-fin-lab-1/6880C044A8DC56AC869266E36074AFDCBD76D709355
+9B2E24E3F5C113FB5EA17.pygtex)...executed.
+
+ [3]
+(./comp-fin-lab-1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
 
 runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30778 strings out of 493013
- 739147 string characters out of 6139317
- 1755170 words of memory out of 5000000
- 33769 multiletter control sequences out of 15000+600000
+ 30801 strings out of 493013
+ 740665 string characters out of 6139317
+ 1756714 words of memory out of 5000000
+ 33779 multiletter control sequences out of 15000+600000
  12605 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,23n,120p,851b,2451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
  </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sha
 kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.t
 exlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive
@@ -1114,10 +1175,10 @@ x12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.65
 </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home
 /shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shaki
 b/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (2 pages, 269783 bytes).
+Output written on comp-fin-lab-1.pdf (3 pages, 281422 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 328 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
