@@ -12,7 +12,7 @@
 \usepackage{wrapfig}
 \usepackage{amsmath}
 \usepackage{amssymb}
-
+\usepackage[section]{placeins}
 \usepackage{pgfplots,wrapfig}  
 \pgfplotsset{compat=newest} 
 \pgfplotsset{plot coordinates/math parser=false} 
@@ -21,9 +21,19 @@
 
 \begin{document}
 
-\begin{center}
+\section{Efficient Frontier}
 
-\end{center}
+\subsection{Efficient Frontier with 3 Assets}
+
+\begin{wrapfigure}{!h}{0.45\textwidth}
+  \begin{center}
+    \resizebox {0.45\textwidth} {!} {\input{q1_a_efficient_frontier.tex} }
+	\caption{Efficient Portfolio}
+	\label{fig:q1-a-efficient-portfolio}
+  \end{center}
+\end{wrapfigure}
+
+\subsection{Efficient Frontier with 2 Assets}
 
 \begin{figure}[!h]
    \centering 
@@ -51,13 +61,16 @@
 	\label{fig:q1-b-return-distribution}
 \end{figure}
 
-%\begin{figure}[!h]
-%    \centering 
-%   \begin{subfigure}[b]{0.45\textwidth}
-%     	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx.tex} }
-%     \caption{Similarity}
-%    \label{fig:q1-d-naive-v-cvx}
-%    \end{subfigure}
+\subsection{Use of \texttt{linprog} in NaiveMV}
+
+\subsection{Efficient Frontier : NaiveMV vs CVX}
+\begin{figure}[!h]
+    \centering 
+   \begin{subfigure}[b]{0.45\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx.tex} }
+     \caption{Similarity}
+    \label{fig:q1-d-naive-v-cvx}
+    \end{subfigure}
 %    ~
 %    \begin{subfigure}[b]{0.45\textwidth}
 %       	\resizebox {\textwidth} {!} {\input{q1_d_naive_v_cvx_difference.tex} }
@@ -65,6 +78,6 @@
 %        \label{fig:q1-d-naive-v-cvx-difference}
 %    \end{subfigure}
 %    \caption{NaiveMV vs Using CVX}\label{fig:naive_v_cvx}
-%\end{figure}
+\end{figure}
 
 \end{document}
