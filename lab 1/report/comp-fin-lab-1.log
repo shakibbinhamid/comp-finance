@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  26 FEB 2017 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 10:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,13 @@ Overfull \hbox (27.7415pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
-[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] (./comp-fin-lab-1.aux)
+(./q2_ftse.tex) (./q2_returns.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+[][]
+ []
+
+[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] [3]
+(./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1141,33 +1147,34 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30803 strings out of 493013
- 740641 string characters out of 6139317
- 1756725 words of memory out of 5000000
- 33781 multiletter control sequences out of 15000+600000
- 13211 words of font info for 49 fonts, out of 8000000 for 9000
+ 30857 strings out of 493013
+ 741465 string characters out of 6139317
+ 3967947 words of memory out of 5000000
+ 33825 multiletter control sequences out of 15000+600000
+ 17966 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
- </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sha
-kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.t
-exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texliv
-e/texmf-var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf
--var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/f
-onts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk
-/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
-r/public/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi60
-0/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600
-pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </
-home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/s
-hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/
-.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texl
-ive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/te
-xmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-va
-r/fonts/pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (2 pages, 299132 bytes).
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </u
+sr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.t
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive
+/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texm
+f-var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/f
+onts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
+k/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
+r/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publ
+ic/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8
+.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </
+home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/s
+hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/
+.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texli
+ve/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/te
+xmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-va
+r/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/font
+s/pk/ljfour/public/cm/cmr10.657pk>
+Output written on comp-fin-lab-1.pdf (3 pages, 520268 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 439 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

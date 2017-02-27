@@ -183,7 +183,62 @@ Using the CVX tool we can declarively perform the convex optimisations we perfor
 The results are extremely similar, since differences only show up in $10^{-7}$ scale. However, the
 CVX tool was noticeably slower.
 
+\section{Markowitz vs Naive $1/N$ Strategy on FTSE 100}
+
+\subsection{Getting FTSE 100 Data}
+
+\begin{figure}[!h]
+   \centering 
+   \begin{subfigure}[b]{0.23\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q2_ftse.tex} }
+		\label{fig:q2-ftse}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.23\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q2_returns.tex} }
+        \label{fig:q2_returns}
+    \end{subfigure}
+	\vspace{-0.5cm}
+    \caption{FTSE 100 and Top 30 Most Traded Company Adjusted Close over 3 Years}\label{fig:naive_v_cvx}
+\end{figure}
+
+\subsection{Returns and Efficient Portfolio of 3 Random Assets}
+
+\subsection{Comparison with Naive Strategy}
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
