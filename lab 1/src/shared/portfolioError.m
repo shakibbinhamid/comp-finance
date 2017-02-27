@@ -1,19 +1,21 @@
 % calcuate the root-mean-square error between the given
 % portfolio and the target
-function [ rmse ] = portfolioError( portfolio, target )
+function [ rmse ] = portfolioError( portfolioReturns, targetReturns )
 
-% given portfolio of n*m
-% n: opeservations
-% m: assets
+% given portfolio of T*N
+% T: opeservations
+% N: assets
 % required to calcuate the return per observation
 % then calcuate the sharpe ratio for these returns
 
-n = size(portfolio, 1);
-returns = zeros(1, n);
-for i=1:n
-    returns(i) = mean(portfolio(i,:));
-end
+% T = size(portfolioReturns, 1);
+% returns = zeros(1, T);
+% for i=1:T
+%     returns(i) = mean(portfolioReturns(i,:));
+% end
 
-rmse = sqrt(mean((returns' - target).^2));
+returns = mean(portfolioReturns, 2);
+
+rmse = sqrt(mean((returns - targetReturns).^2));
 
 end
