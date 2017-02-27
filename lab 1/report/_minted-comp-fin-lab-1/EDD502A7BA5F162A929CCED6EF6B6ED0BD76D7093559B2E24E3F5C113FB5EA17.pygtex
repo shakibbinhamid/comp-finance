@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{effReturn} \PYG{p}{=} \PYG{n}{returnsTest} \PYG{o}{*} \PYG{n}{efficientWeights}\PYG{o}{\PYGZsq{}}\PYG{p}{;}
+\PYG{n}{naiveReturn} \PYG{p}{=} \PYG{n}{returnsTest} \PYG{o}{*} \PYG{n}{naiveWeights}\PYG{o}{\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

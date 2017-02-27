@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{naiveSharpe} \PYG{p}{=} \PYG{p}{(}\PYG{n}{mean}\PYG{p}{(}\PYG{n}{naiveReturn}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{riskFree}\PYG{p}{)}\PYG{o}{/}\PYG{n}{std}\PYG{p}{(}\PYG{n}{naiveReturn}\PYG{p}{);}
+\PYG{n}{effSharpe} \PYG{p}{=} \PYG{p}{(}\PYG{n}{mean}\PYG{p}{(}\PYG{n}{effReturn}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{riskFree}\PYG{p}{)}\PYG{o}{/}\PYG{n}{std}\PYG{p}{(}\PYG{n}{effReturn}\PYG{p}{);}
+\end{Verbatim}

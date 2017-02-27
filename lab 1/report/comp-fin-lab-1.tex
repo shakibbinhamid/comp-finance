@@ -209,9 +209,9 @@ returns plots the data.
        	\resizebox {\textwidth} {!} {\input{q2_random_assets_return.tex} }
         \label{fig:q2_random_assets_return}
     \end{subfigure}	
-	\vspace{-0.5cm}
-	\label{fig:q2_return}
+	\vspace{-0.5cm}	
     \caption{FTSE 100, Top 30 Most Traded Company and Selected 3 Company Adjusted Close over 3 Years}\label{fig:naive_v_cvx}
+	\label{fig:q2_return}	
 	\vspace{-0.5cm}
 \end{figure}
 
@@ -236,7 +236,7 @@ Their adjusted closing values were plotted in Figure \ref{fig:q2_return}.
  	\resizebox {\textwidth} {!} {\input{q2_all_assets_all_based_on_daily.tex} }
     \caption{Portfolio of \textbf{all} 30 assets analysis where returns are based on \textbf{daily} change}
 	\label{fig:q2-all-assets-all-based-on-daily}
-	\vspace{-0.5cm}
+	\vspace{-0.3cm}
 \end{figure}
 
 As expected, the portfolio returns over time were moving between ($\pm0.02$) if we calculated returns
@@ -248,7 +248,7 @@ both cases were of expected shape.
  	\resizebox {\textwidth} {!} {\input{q2_all_based_on_daily.tex} }
     \caption{Portfolio of \textbf{3 random} assets analysis where returns are based on \textbf{daily} change}
 	\label{fig:q2-all-based-on-daily}
-	\vspace{-0.5cm}
+	\vspace{-0.3cm}
 \end{figure}
 
 \begin{figure}[!h]
@@ -256,7 +256,7 @@ both cases were of expected shape.
  	\resizebox {\textwidth} {!} {\input{q2_all_assets_all_based_on_first.tex} }
     \caption{Portfolio of \textbf{all} 30 assets analysis where returns are based on \textbf{first return}}
 	\label{fig:q2-all-assets-all-based-on-first}
-	\vspace{-0.5cm}
+	\vspace{-0.3cm}
 \end{figure}
 
 \begin{figure}[!h]
@@ -268,6 +268,44 @@ both cases were of expected shape.
 \end{figure}
 
 \subsection{Comparison with Naive Strategy}
+
+After chronologically sorting the data, I picked the first half of the data as the training set and the
+rest as the validation set. Using the first half, I calculated the Expected Return as the mean and the
+Risk as the covariance using \mintinline{matlab}|m = mean(returnsTrain);C = cov(returnsTrain);|. Then
+Financial Toolbox calculated the efficient frontier. Then I picked $E_{max}/2$ to be the target return 
+and calculated the weights, which I picked as the Markowitz portfolio for comparison. Similarly 
+\mintinline{matlab}|1/N*ones(N,1)| was the naive 1/N strategy portfolio.\\
+
+I started the comparison by calculating the returns over the validation set. I used the Markowitz
+portfolio selected from the training data and the 1/N portfolio stated above -
+
+\begin{minted}{matlab}
+effReturn = returnsTest * efficientWeights';
+naiveReturn = returnsTest * naiveWeights';
+\end{minted}
+
+I plotted them in the second subfigures in the figures in this section. In this particular
+selection of assets, the markowitz portfolio beat the naive one. However, it was not the case every time.
+On some runs of the experiment, the naive strategy was giving better returns on the graph.\\
+
+Then I calculated the sharpe ratio, defined as - $r = (m - r_0)/\sigma$, where $r_0$ is the risk free return.
+I set \mintinline{matlab}|riskFree = 0.05| and calculated the following -
+
+\begin{minted}{matlab}
+naiveSharpe = (mean(naiveReturn) - riskFree)/std(naiveReturn);
+effSharpe = (mean(effReturn) - riskFree)/std(effReturn);
+\end{minted}
+
+The sharpe ratio is plotted in the 4th subfigures in the figures in this section. Surprisingly the sharpe
+ratios in both cases were often negative, meaning that risk free assets, if it returned 5\%, would be better.
+The reason for this is that the assets actually performed poorly in adjusted close values during this
+time, as seen in Figure \ref{fig:q2_return}. Unsurprisingly, if we set $r_0 = 0$, i.e. no returns are risk free,
+then the sharpe ratios are positive. Also, a larger sharpe ratio can suggest a better performing portfolio. So, whichever portfolio showed
+better returns on the 2nd subfigures had the larger sharpe ratio on the 4th subfigures. I think the sharpe ratio
+is a reasonable measure of performance, but it depends largely on the estimate of the risk free assets like -
+government bonds etc.
+
+\section{Index Tracking}
 
 \end{document}
 

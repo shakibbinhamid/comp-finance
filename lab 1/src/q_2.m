@@ -4,8 +4,8 @@ clc; clear;
 load_fin_data;
 
 %% ---------converting the returns for each asset to percentages-----------
-rng(1);
-nAssets = 30;
+rng(1)
+nAssets = 3;
  returns = R;
 returns = returns(:,randperm(30, nAssets));
 
@@ -89,7 +89,7 @@ legend('1/N portfolio', 'Efficient portfolio');
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------
 
 % risk free = 5%
-riskFree = 5/100;
+riskFree = 0;
 naiveSharpe = (mean(naiveReturn) - riskFree)/std(naiveReturn);
 effSharpe = (mean(effReturn) - riskFree)/std(effReturn);
 

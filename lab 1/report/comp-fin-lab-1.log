@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 12:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1165,7 +1165,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--211
 [][]
  []
 
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 222.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 223.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1174,12 +1174,8 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 
 (./_minted-comp-fin-lab-1/9D2FFE9C22DE60933AAA2C803547CC2DBD76D7093559B2E24E3F5
-C113FB5EA17.pygtex)
-
-LaTeX Warning: Reference `fig:q2_return' on page 3 undefined on input line 231.
-
-
-(./q2_all_assets_all_based_on_daily.tex) (./q2_all_based_on_daily.tex)
+C113FB5EA17.pygtex) (./q2_all_assets_all_based_on_daily.tex)
+(./q2_all_based_on_daily.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1191,7 +1187,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3] [4] (./comp-fin-lab-1.aux)
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/3BD1858D35C611615B9C5BAF29CDAC21BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/E2DC0BB05B6558EDC0EE002AA0693DAEBD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 272--278
+
+ []
+
+[3]
+\openout4 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/EDD502A7BA5F162A929CCED6EF6B6ED0BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 287--290
+
+ []
+
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/7694365086054EED14F6D504E16E7F13BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+\openout4 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5
+C113FB5EA17.pygtex) [4] [5] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1202,10 +1231,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31137 strings out of 493013
- 747826 string characters out of 6139317
- 3912315 words of memory out of 5000000
- 34083 multiletter control sequences out of 15000+600000
+ 31157 strings out of 493013
+ 749521 string characters out of 6139317
+ 3910709 words of memory out of 5000000
+ 34088 multiletter control sequences out of 15000+600000
  18307 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1227,10 +1256,10 @@ exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive
 f-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/
 fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/
 pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (4 pages, 644612 bytes).
+Output written on comp-fin-lab-1.pdf (5 pages, 650914 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 499 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
