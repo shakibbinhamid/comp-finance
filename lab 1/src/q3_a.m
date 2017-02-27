@@ -47,8 +47,7 @@ ftseTest = ftse(nTrain+1:nTotal);
 
 %% Proper greedy search ---------------------------------------------------
 numberOfDesiredAssets = floor(nAssets/5);
-min_ret = mean(ftse);
-selectedAssetsIdx = [];%zeros(numberOfDesiredAssets, 1);
+selectedAssetsIdx = [];
 
 for i=1:numberOfDesiredAssets
 
@@ -61,19 +60,16 @@ for i=1:numberOfDesiredAssets
             tmp = [selectedAssetsIdx j];
             tmpRet = returnsTrain(:, tmp);
             n = length(tmp);
-            
-            m = mean(tmpRet)';
 
             cvx_begin quiet
             variable w(n)
-                maximize(w' * m)
+                minimize(norm(returnsTrain(:, tmp) * w - ftseTrain))
                 subject to
-                    w' * m >= min_ret; % min return
                     w' * ones(n, 1) == 1; % proportions add to 1
                     w >= 0; % no short selling
             cvx_end
             
-            rmse(j) = sqrt(mean((tmpRet * w - ftseTrain).^2));
+            rmse(j) = sqrt(mean((returnsTrain(:, tmp) * w - ftseTrain).^2));
         end    
     end
     
@@ -85,11 +81,36 @@ end
 %% ------------------------------------------------------------------------
 
 % returns of our final portfolio
-[~, avgReturnTrain] = portfolioAverageReturn(returnsTrain(:, selectedAssetsIdx));
-[~, avgReturnTest] = portfolioAverageReturn(returnsTest(:, selectedAssetsIdx));
+% [~, avgReturnTrain] = portfolioAverageReturn(returnsTrain(:, selectedAssetsIdx));
+% [~, avgReturnTest] = portfolioAverageReturn(returnsTest(:, selectedAssetsIdx));
+
+disp('Selected Assets Are');
+disp(selectedAssetsIdx);
+
+%% calculate the desired tracking portfolio -------------------------------
+
+cvx_begin quiet
+    variable weights(n)
+        minimize(norm(returnsTrain(:, tmp) * weights - ftseTrain))
+        subject to
+            weights' * ones(n, 1) == 1; % proportions add to 1
+            weights >= 0; % no short selling
+cvx_end
+
+disp('Selected weights Are');
+disp(weights);
+%%
+avgReturnTrain = returnsTrain(:, selectedAssetsIdx) * w;
+avgReturnTest = returnsTest(:, selectedAssetsIdx) * w;
+
+figure(1);clf
+plot(selectedAssetsIdx, w, 'b*', 'Linewidth', 5);
+xlabel('Assets', 'FontSize', 18);
+ylabel('Return (%)', 'FontSize', 18);
+title('Index Tracking (Training)', 'FontSize', 18);
 
 % plot results
-figure(1); clf;
+figure(2); clf;
 
 subplot(1,2,1);
 hold on;
@@ -100,10 +121,10 @@ for i=1:20
         w = 1;
         c = [0 0.7 0.2];
         plot1 = plot(returnsTrain(:,i), 'LineWidth', w, 'Color', c);
-    else
-        w = 0.1;
-        c = [0.7 0.7 0.7];
-        plot2 = plot(returnsTrain(:,i), 'LineWidth', w, 'Color', c);
+%     else
+%         w = 0.1;
+%         c = [0.7 0.7 0.7];
+%         plot2 = plot(returnsTrain(:,i), 'LineWidth', w, 'Color', c);
     end    
 end
 plot3 = plot(ftseTrain, 'b', 'LineWidth', 2);
@@ -111,7 +132,7 @@ plot4 = plot(avgReturnTrain, 'r', 'LineWidth', 2);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Index Tracking (Training)', 'FontSize', 18);
-fig_legend = legend([plot4, plot3, plot1, plot2], {'Our Portfolio', 'Market Index', 'Selected Assets', 'Unselected Assets'}, 'Location', 'northwest');
+fig_legend = legend([plot4, plot3, plot1], {'Our Portfolio', 'Market Index', 'Selected Assets'}, 'Location', 'northwest');
 set(fig_legend,'FontSize',14);
 
 subplot(1,2,2);
@@ -123,10 +144,10 @@ for i=1:20
         w = 1;
         c = [0 0.7 0.2];
         plot1 = plot(returnsTest(:,i), 'LineWidth', w, 'Color', c);
-    else
-        w = 0.1;
-        c = [0.7 0.7 0.7];
-        plot2 = plot(returnsTest(:,i), 'LineWidth', w, 'Color', c);
+%     else
+%         w = 0.1;
+%         c = [0.7 0.7 0.7];
+%         plot2 = plot(returnsTest(:,i), 'LineWidth', w, 'Color', c);
     end
     
 end
@@ -135,5 +156,5 @@ plot4 = plot(avgReturnTest, 'r', 'LineWidth', 2);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Index Tracking (Testing)', 'FontSize', 18);
-fig_legend = legend([plot4, plot3, plot1, plot2], {'Our Portfolio', 'Market Index', 'Selected Assets', 'Unselected Assets'}, 'Location', 'northwest');
+fig_legend = legend([plot4, plot3, plot1], {'Our Portfolio', 'Market Index', 'Selected Assets'}, 'Location', 'northwest');
 set(fig_legend,'FontSize',14);
