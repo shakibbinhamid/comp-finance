@@ -4,9 +4,9 @@ clc; clear;
 load_fin_data;
 
 %% ---------converting the returns for each asset to percentages-----------
-
-nAssets = 3;
-% returns = R;
+rng(1);
+nAssets = 30;
+ returns = R;
 returns = returns(:,randperm(30, nAssets));
 
 %% ------- calculate the training and testing data in 50-50 ratio ---------
@@ -81,6 +81,9 @@ ylabel('Return');
 xlabel('Time');
 plot(cumsum(naiveReturn)), hold on;
 plot(cumsum(effReturn));
+xlabel('Cumulative Return', 'FontSize', 18);
+ylabel('Time (Days)', 'FontSize', 18);
+title(strcat('Cumulative Return over Time' ), 'FontSize', 18);
 legend('1/N portfolio', 'Efficient portfolio');
 
 %% ------- calculate sharpe ratio for both naive and eff portfolio --------

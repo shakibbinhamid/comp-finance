@@ -1,6 +1,6 @@
 clc;
 %% -------------------------------------------------------------
-data_dir = '/home/shakibbinhamid/Documents/MATLAB/comp-finance/data/Updated/';
+data_dir = '/home/shakib/Documents/MATLAB/comp-finance/lab 1/data/Updated/';
 
 %% -------------------------------------------------------------
 returns = [];
