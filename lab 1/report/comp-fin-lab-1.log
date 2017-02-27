@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 10:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -793,6 +793,12 @@ LaTeX Warning: Label `fig:naive_v_cvx' multiply defined.
 
 LaTeX Warning: Label `fig:naive_v_cvx@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:naive_v_cvx' multiply defined.
+
+
+LaTeX Warning: Label `fig:naive_v_cvx@cref' multiply defined.
+
 )
 \openout1 = `comp-fin-lab-1.aux'.
 
@@ -1138,8 +1144,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--200
 [][]
  []
 
-[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] [3]
-(./comp-fin-lab-1.aux)
+[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>]
+(./q2_all_assets_all_based_on_daily.tex) (./q2_all_based_on_daily.tex)
+(./q2_all_assets_all_based_on_first.tex) (./q2_all_based_on_first.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3] [4] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1147,10 +1158,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30857 strings out of 493013
- 741465 string characters out of 6139317
- 3967947 words of memory out of 5000000
- 33825 multiletter control sequences out of 15000+600000
+ 31087 strings out of 493013
+ 746110 string characters out of 6139317
+ 3969274 words of memory out of 5000000
+ 34043 multiletter control sequences out of 15000+600000
  17966 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1171,10 +1182,10 @@ ve/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/te
 xmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-va
 r/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/font
 s/pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (3 pages, 520268 bytes).
+Output written on comp-fin-lab-1.pdf (4 pages, 613512 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 462 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
