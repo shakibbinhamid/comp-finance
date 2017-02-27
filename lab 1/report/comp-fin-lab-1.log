@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 12:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -996,11 +996,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--52
 
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-comp-fi
+n-lab-1/default-pyg-prefix.pygstyle)...executed.
+
 (./_minted-comp-fin-lab-1/default-pyg-prefix.pygstyle)
+runsystem(pygmentize -S default -f latex -P commandprefix=PYGdefault > _minted-
+comp-fin-lab-1/default.pygstyle)...executed.
+
+
 (./_minted-comp-fin-lab-1/default.pygstyle)
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/024F7FEA90CD6D0CE119BECC04DC39DBBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
+
 (./_minted-comp-fin-lab-1/024F7FEA90CD6D0CE119BECC04DC39DBBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout6 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/62F84B69BAD34E475E63850F4D2F8D06BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/62F84B69BAD34E475E63850F4D2F8D06BD76D7093559B2E24E3F5
@@ -1036,10 +1052,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/839A915C1B37EFC8236BF481D4581D7DBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/839A915C1B37EFC8236BF481D4581D7DBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout6 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/7411B745E55B26D0771B9D7F20287B8BBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/7411B745E55B26D0771B9D7F20287B8BBD76D7093559B2E24E3F5
@@ -1080,6 +1104,10 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 108.
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/BA43BF61FF3B4CD6CF8D24F3B17FBA27BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/BA43BF61FF3B4CD6CF8D24F3B17FBA27BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex) [1
@@ -1087,10 +1115,18 @@ C113FB5EA17.pygtex) [1
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/7F50AE5B2428C996DFCDE621CFEFF17DBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/7F50AE5B2428C996DFCDE621CFEFF17DBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout6 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/63AC280ED31C231535BCC7108E455F25BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/63AC280ED31C231535BCC7108E455F25BD76D7093559B2E24E3F5
@@ -1107,10 +1143,18 @@ C113FB5EA17.pygtex)
 C113FB5EA17.pygtex)
 \openout4 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/87919E57C33DAF4D19FBD77E98D34F99BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/87919E57C33DAF4D19FBD77E98D34F99BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout4 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5
@@ -1139,38 +1183,31 @@ Overfull \hbox (27.7415pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
-
-Package caption Warning: \label without proper reference on input line 200.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:q2-ftse' on page 2 undefined on input line 193.
-
-
-Package caption Warning: \label without proper reference on input line 205.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:q2_returns' on page 2 undefined on input line 193
-.
-
 [2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] (./q2_ftse.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+[][]
+ []
+
 (./q2_returns.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 [][]
  []
 
 (./q2_random_assets_return.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 [][]
  []
 
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 223.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 222.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 \openout6 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/9D2FFE9C22DE60933AAA2C803547CC2DBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/9D2FFE9C22DE60933AAA2C803547CC2DBD76D7093559B2E24E3F5
@@ -1189,41 +1226,58 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/3BD1858D35C611615B9C5BAF29CDAC21BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/3BD1858D35C611615B9C5BAF29CDAC21BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout6 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/E2DC0BB05B6558EDC0EE002AA0693DAEBD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/E2DC0BB05B6558EDC0EE002AA0693DAEBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 271--277
 
  []
 
 [3]
 \openout4 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/EDD502A7BA5F162A929CCED6EF6B6ED0BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/EDD502A7BA5F162A929CCED6EF6B6ED0BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
 \openout6 = `comp-fin-lab-1.pyg'.
+
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/7694365086054EED14F6D504E16E7F13BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
 
 
 (./_minted-comp-fin-lab-1/7694365086054EED14F6D504E16E7F13BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
 \openout4 = `comp-fin-lab-1.pyg'.
 
+runsystem(pygmentize -l matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5C113
+FB5EA17.pygtex comp-fin-lab-1.pyg)...executed.
+
 
 (./_minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex) [4] [5] (./comp-fin-lab-1.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1231,35 +1285,36 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31157 strings out of 493013
- 749521 string characters out of 6139317
- 3910709 words of memory out of 5000000
- 34088 multiletter control sequences out of 15000+600000
- 18307 words of font info for 68 fonts, out of 8000000 for 9000
+ 31158 strings out of 493013
+ 749538 string characters out of 6139317
+ 3913682 words of memory out of 5000000
+ 34089 multiletter control sequences out of 15000+600000
+ 18606 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk>
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </usr
-/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.tex
-live/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive/t
-exmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texmf-
-var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/fon
-ts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/
-ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
-public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public
-/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.p
-k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </ho
-me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/sha
-kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/.t
-exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive
-/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/texm
-f-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/
-fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/
-pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (5 pages, 650914 bytes).
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr17.720pk> </home
+/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </usr/share/
+texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.texlive/te
+xmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive/texmf-va
+r/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texmf-var/fon
+ts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/fonts/pk/l
+jfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
+public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
+cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr
+12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </ho
+me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/shak
+ib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.te
+xlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/.texlive/
+texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive/texmf-
+var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/texmf-var/f
+onts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
+k/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
+ur/public/cm/cmr10.657pk>
+Output written on comp-fin-lab-1.pdf (5 pages, 660934 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 525 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
