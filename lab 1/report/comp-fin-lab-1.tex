@@ -318,37 +318,23 @@ I first selected the first half of the data as training data and the rest as the
 \caption{Greedy Asset Selection for Index Tracking}
 \label{alg:greedy-index}
 \begin{algorithmic}
-
 \State S = \{\}
-
 \For {$i \in \{1,...,N/5\}$}
-
 \State $e = \{\}$
-
 \For {$j \in \{1,...,N\}$}
-
 \If {$j \in \{S\}$}
-
 \State $e(j) = \infty$
-
 \Else
-
 \State $s = S \bigcup \{j\}$
 \State $\bm{r_t} = R(:, s)$
-\State $\underset{\bm{w}}{min}(||\bm{r_t} * \bm{w}' - \bm{y_t}||_2) s.t. \bm{1}^t\bm{w} = 1, \bm{w} \geq \bm{0}$
+\State $\bm{w} = \underset{\bm{w}}{min}(||\bm{w}'\bm{r_t} - \bm{y_t}||_2) s.t. \bm{1}^t\bm{w} = 1, \bm{w} \geq \bm{0}$
 \State $e(j) = \sqrt{mean(||\bm{r_t} * \bm{w}' - \bm{y_t}||_2^2)}$
-
 \EndIf
-
 \EndFor
-
 \State $idx = minIdx(e)$
 \State $S = S \bigcup \{idx\}$
-
 \EndFor
-
 \end{algorithmic}
-
 \end{algorithm}
 
 \begin{figure}[!h]
@@ -359,6 +345,19 @@ I first selected the first half of the data as training data and the rest as the
 	\vspace{-0.5cm}
 \end{figure}
 
+\subsection{Sparse Portfolio for Index Tracking}
+
+\begin{algorithm}[H]
+\caption{Sparse Asset Selection for Index Tracking}
+\label{alg:sparse-index}
+\begin{algorithmic}
+
+\State $\bm{w} = \underset{\bm{w}}{min}(||\bm{w}'\bm{r_t} - \bm{y_t}||_2 + \tau||\bm{w}||_1) s.t. \bm{1}^t\bm{w} = 1, \bm{w} \geq \bm{0}$
+\State $S = sortIdx(w)$
+\State $S = S(1:N/5)$
+
+\end{algorithmic}
+\end{algorithm}
 
 \begin{figure}[!h]
    \centering 

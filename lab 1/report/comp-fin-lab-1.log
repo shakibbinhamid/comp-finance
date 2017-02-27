@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 21:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1248,19 +1248,15 @@ C113FB5EA17.pygtex)
 
 (./_minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex) [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 322.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 321.
 
  (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 322.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 321.
 
-(./q3_greedy.tex) (./q3_sparse.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5] [6] (./comp-fin-lab-1.aux)
+(./q3_greedy.tex) [5] (./q3_sparse.tex) [6] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1268,10 +1264,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31758 strings out of 493013
- 758539 string characters out of 6139317
- 3921436 words of memory out of 5000000
- 34669 multiletter control sequences out of 15000+600000
+ 31760 strings out of 493013
+ 758580 string characters out of 6139317
+ 3921500 words of memory out of 5000000
+ 34671 multiletter control sequences out of 15000+600000
  18606 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1295,9 +1291,9 @@ e/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/tex
 mf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var
 /fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts
 /pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (6 pages, 787317 bytes).
+Output written on comp-fin-lab-1.pdf (6 pages, 790085 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
+ 569 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
