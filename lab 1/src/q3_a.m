@@ -27,16 +27,16 @@ unSelectedAssetsIdx = 1:nAssets;
 % max-1 iterations to select the next max-1 assets
 for i=1:maxSelectedAssets
     
-    avgReturns = zeros(1,length(unSelectedAssetsIdx));
-    sharpeRatios = zeros(1,length(unSelectedAssetsIdx));
+    %avgReturns = zeros(1,length(unSelectedAssetsIdx));
+    %sharpeRatios = zeros(1,length(unSelectedAssetsIdx));
     rmse = zeros(1,length(unSelectedAssetsIdx));
     
     for j=1:length(unSelectedAssetsIdx)
         % collect the assets inside the portfolio
         idx = [nonzeros(selectedAssetsIdx)' unSelectedAssetsIdx(j)];
         portfolioReturns = returnsTrain(:,idx);
-        avgReturns(j) = portfolioAverageReturn(portfolioReturns);
-        sharpeRatios(j) = portfolioSharpeRatio(portfolioReturns);
+        %avgReturns(j) = portfolioAverageReturn(portfolioReturns);
+        %sharpeRatios(j) = portfolioSharpeRatio(portfolioReturns);
         rmse(j) = portfolioError(portfolioReturns, ftseTest);
     end
     
