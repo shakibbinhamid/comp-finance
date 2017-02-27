@@ -45,7 +45,6 @@ ftseTest = ftse(nTrain+1:nTotal);
 %     unSelectedAssetsIdx(unSelectedAssetsIdx==selectedAssetsIdx(i)) = [];
 % end
 
-%% Proper greedy search ---------------------------------------------------
 numberOfDesiredAssets = floor(nAssets/5);
 min_ret = mean(ftse);
 selectedAssetsIdx = [];%zeros(numberOfDesiredAssets, 1);
@@ -59,30 +58,29 @@ for i=1:numberOfDesiredAssets
             rmse(j) = Inf;
         else
             tmp = [selectedAssetsIdx j];
-            tmpRet = returnsTrain(:, tmp);
+            tmpRet = returns(:, tmp);
             n = length(tmp);
             
             m = mean(tmpRet)';
+            C = cov(tmpRet);
 
             cvx_begin quiet
             variable w(n)
-                maximize(w' * m)
+                maximize(w' * m')
                 subject to
-                    w' * m >= min_ret; % min return
+                    w * m >= min_ret; % min return
                     w' * ones(n, 1) == 1; % proportions add to 1
                     w >= 0; % no short selling
             cvx_end
             
-            rmse(j) = sqrt(mean((tmpRet * w - ftseTrain).^2));
-        end    
+            rmse
+            
+            rmse(j) = sqrt(mean((w' * tmpRet - ftse).^2));
+        end
+
     end
     
-    [~, idx] = min(rmse);
-    
-    selectedAssetsIdx = [selectedAssetsIdx idx];
 end
-
-%% ------------------------------------------------------------------------
 
 % returns of our final portfolio
 [~, avgReturnTrain] = portfolioAverageReturn(returnsTrain(:, selectedAssetsIdx));
