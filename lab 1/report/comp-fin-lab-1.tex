@@ -187,6 +187,12 @@ CVX tool was noticeably slower.
 
 \subsection{Getting FTSE 100 Data}
 
+I downloaded the FTSE 100 index and the top 30 most traded companies' data over the last 3 years using
+a \texttt{bash} script. Then I used a \texttt{ruby} script to fill in the missing days (which may be
+weekends) with the previous day's data. As a result all data had the same number of rows. The returns 
+will be calculated based on the adjusted close values. Figure \ref{fig:q2-ftse} and \ref{fig:q2_returns}
+returns plots the data.
+
 \begin{figure}[!h]
    \centering 
    \begin{subfigure}[b]{0.23\textwidth}
@@ -198,11 +204,32 @@ CVX tool was noticeably slower.
        	\resizebox {\textwidth} {!} {\input{q2_returns.tex} }
         \label{fig:q2_returns}
     \end{subfigure}
+	~
+    \begin{subfigure}[b]{0.23\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q2_random_assets_return.tex} }
+        \label{fig:q2_random_assets_return}
+    \end{subfigure}	
 	\vspace{-0.5cm}
-    \caption{FTSE 100 and Top 30 Most Traded Company Adjusted Close over 3 Years}\label{fig:naive_v_cvx}
+	\label{fig:q2_return}
+    \caption{FTSE 100, Top 30 Most Traded Company and Selected 3 Company Adjusted Close over 3 Years}\label{fig:naive_v_cvx}
+	\vspace{-0.5cm}
 \end{figure}
 
 \subsection{Returns and Efficient Portfolio of 3 Random Assets}
+
+I started by calculating the returns as percentage. I defined the return in two ways - 
+
+\begin{itemize}
+	\item $return(i+1) = (val(i+1) - \bm{val(i)})/val(i+1)$, return based on daily investment
+	\item $return(i+1) = (val(i+1) - \bm{val(1)})/val(i+1)$, return based on first investment
+\end{itemize}
+
+I expected portfolio returns in first definition to be jittery in a small window since daily returns
+go up and down. Whereas the second definition would be smoother, although it implicitly imposes a correlation. 
+Figure \ref{fig:q2-all-assets-all-based-on-daily} and \ref{fig:q2-all-assets-all-based-on-first} build a portfolio out of \textbf{all} 30 assets, whereas
+Figure \ref{fig:q2-all-based-on-daily} and \ref{fig:q2-all-based-on-first} select \textbf{3} random assets,
+which were controlled using \mintinline{matlab}|rng(1)|. The resultant assets were AAL, KGF and RDSB.
+Their adjusted closing values were plotted in Figure \ref{fig:q2_return}.
 
 \begin{figure}[!h]
    \centering 
@@ -211,6 +238,10 @@ CVX tool was noticeably slower.
 	\label{fig:q2-all-assets-all-based-on-daily}
 	\vspace{-0.5cm}
 \end{figure}
+
+As expected, the portfolio returns over time were moving between ($\pm0.02$) if we calculated returns
+based on daily investment and were smoother compared to first investment. The efficient frontier in
+both cases were of expected shape.
 
 \begin{figure}[!h]
    \centering 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 11:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1139,18 +1139,62 @@ Overfull \hbox (27.7415pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
-(./q2_ftse.tex) (./q2_returns.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
+
+Package caption Warning: \label without proper reference on input line 200.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:q2-ftse' on page 2 undefined on input line 193.
+
+
+Package caption Warning: \label without proper reference on input line 205.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:q2_returns' on page 2 undefined on input line 193
+.
+
+[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] (./q2_ftse.tex)
+(./q2_returns.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
 [][]
  []
 
-[2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>]
+(./q2_random_assets_return.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+[][]
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 222.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+\openout6 = `comp-fin-lab-1.pyg'.
+
+
+(./_minted-comp-fin-lab-1/9D2FFE9C22DE60933AAA2C803547CC2DBD76D7093559B2E24E3F5
+C113FB5EA17.pygtex)
+
+LaTeX Warning: Reference `fig:q2_return' on page 3 undefined on input line 231.
+
+
 (./q2_all_assets_all_based_on_daily.tex) (./q2_all_based_on_daily.tex)
-(./q2_all_assets_all_based_on_first.tex) (./q2_all_based_on_first.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./q2_all_assets_all_based_on_first.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./q2_all_based_on_first.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3] [4] (./comp-fin-lab-1.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1158,34 +1202,35 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31087 strings out of 493013
- 746110 string characters out of 6139317
- 3969274 words of memory out of 5000000
- 34043 multiletter control sequences out of 15000+600000
- 17966 words of font info for 67 fonts, out of 8000000 for 9000
+ 31137 strings out of 493013
+ 747826 string characters out of 6139317
+ 3912315 words of memory out of 5000000
+ 34083 multiletter control sequences out of 15000+600000
+ 18307 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </u
-sr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.t
-exlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive
-/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texm
-f-var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/f
-onts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
-k/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
-r/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publ
-ic/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8
-.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </
-home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/s
-hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/
-.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texli
-ve/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/te
-xmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-va
-r/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/font
-s/pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (4 pages, 613512 bytes).
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk>
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </usr
+/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.tex
+live/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive/t
+exmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texmf-
+var/fonts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/fon
+ts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/
+ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
+public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public
+/cm/cmr12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.p
+k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </ho
+me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/sha
+kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/.t
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive
+/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/texm
+f-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/
+pk/ljfour/public/cm/cmr10.657pk>
+Output written on comp-fin-lab-1.pdf (4 pages, 644612 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 484 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
