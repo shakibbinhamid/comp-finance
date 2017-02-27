@@ -44,8 +44,6 @@ grey = [0.7 0.7 0.7];
 for i=1:nAssets
     if (ismember(i, selectedAssets))
         plot1 = plot(returnsTrain(:,i), 'LineWidth', 1, 'Color', green);
-    else
-        plot2 = plot(returnsTrain(:,i), 'LineWidth', 0.1, 'Color', grey);
     end    
 end
 plot3 = plot(ftseTrain, 'b', 'LineWidth', 2);
@@ -53,10 +51,10 @@ plot4 = plot(avgReturnTrain, 'r', 'LineWidth', 2);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Index Tracking (Training)', 'FontSize', 18);
-fig_legend = legend([plot4, plot3, plot1, plot2], {'Our Portfolio', 'Market Index', 'Selected Assets', 'Unselected Assets'}, 'Location', 'northwest');
+fig_legend = legend([plot4, plot3, plot1], {'Our Portfolio', 'Market Index', 'Selected Assets'}, 'Location', 'northwest');
 set(fig_legend,'FontSize',14);
 
-%% testing data -----------------------------------------------------------
+% testing data -----------------------------------------------------------
 subplot(1,2,2);
 hold on;
 grid on;
@@ -64,15 +62,12 @@ box on;
 for i=1:nAssets
     if (ismember(i, selectedAssets))
         plot1 = plot(returnsTest(:,i), 'LineWidth', 1, 'Color', green);
-    else
-        plot2 = plot(returnsTest(:,i), 'LineWidth', 0.1, 'Color', grey);
     end
-    
 end
 plot3 = plot(ftseTest, 'b', 'LineWidth', 2);
 plot4 = plot(avgReturnTest, 'r', 'LineWidth', 2);
 xlabel('Time (Days)', 'FontSize', 18);
 ylabel('Return (%)', 'FontSize', 18);
 title('Index Tracking (Testing)', 'FontSize', 18);
-fig_legend = legend([plot4, plot3, plot1, plot2], {'Our Portfolio', 'Market Index', 'Selected Assets', 'Unselected Assets'}, 'Location', 'northwest');
+fig_legend = legend([plot4, plot3, plot1], {'Our Portfolio', 'Market Index', 'Selected Assets'}, 'Location', 'northwest');
 set(fig_legend,'FontSize',14);
