@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  27 FEB 2017 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  28 FEB 2017 21:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1087,27 +1087,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--73
  []
 
 (./q1_b_return_distribution.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
+Underfull \hbox (badness 10000) in paragraph at lines 83--87
 
  []
 
 (./q1_b_efficient_frontier_1.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 [][]
  []
 
 (./q1_b_efficient_frontier_2.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 [][]
  []
 
 (./q1_b_efficient_frontier_3.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 [][]
  []
 
 (./q1_b_efficient_frontier_all.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 [][]
  []
 
@@ -1115,7 +1115,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 112.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 118.
 \openout6 = `comp-fin-lab-1.pyg'.
 
 
@@ -1162,37 +1162,37 @@ to.pdf>
 (epstopdf)                    size: 8459 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_d_naive_v_cvx_difference
 -eps-converted-to.pdf q1_d_naive_v_cvx_difference.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
-<q1_d_naive_v_cvx_difference-eps-converted-to.pdf, id=25, 363.3575pt x 270.0087
+<q1_d_naive_v_cvx_difference-eps-converted-to.pdf, id=24, 363.3575pt x 270.0087
 4pt>
 File: q1_d_naive_v_cvx_difference-eps-converted-to.pdf Graphic file (type pdf)
  <use q1_d_naive_v_cvx_difference-eps-converted-to.pdf>
 Package pdftex.def Info: q1_d_naive_v_cvx_difference-eps-converted-to.pdf used 
-on input line 180.
+on input line 186.
 (pdftex.def)             Requested size: 181.6783pt x 135.00403pt.
 
-Overfull \hbox (27.7415pt too wide) in paragraph at lines 180--181
+Overfull \hbox (27.7415pt too wide) in paragraph at lines 186--187
 [][] 
  []
 
 [2 <./q1_d_naive_v_cvx_difference-eps-converted-to.pdf>] (./q2_ftse.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 [][]
  []
 
 (./q2_returns.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 [][]
  []
 
 (./q2_random_assets_return.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 [][]
  []
 
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 226.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 232.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1224,7 +1224,7 @@ C113FB5EA17.pygtex)
 
 (./_minted-comp-fin-lab-1/E2DC0BB05B6558EDC0EE002AA0693DAEBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 275--281
+Underfull \hbox (badness 10000) in paragraph at lines 281--287
 
  []
 
@@ -1234,10 +1234,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--281
 
 (./_minted-comp-fin-lab-1/EDD502A7BA5F162A929CCED6EF6B6ED0BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 290--293
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
+[4]
 \openout6 = `comp-fin-lab-1.pyg'.
 
 
@@ -1247,16 +1248,16 @@ C113FB5EA17.pygtex)
 
 
 (./_minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5
-C113FB5EA17.pygtex) [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 321.
+C113FB5EA17.pygtex)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 337.
 
  (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 321.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 337.
 
-(./q3_greedy.tex) [5] (./q3_sparse.tex) [6] (./comp-fin-lab-1.aux)
+(./q3_greedy.tex) [5] (./q3_sparse.tex) [6] [7] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1266,7 +1267,7 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 Here is how much of TeX's memory you used:
  31760 strings out of 493013
  758580 string characters out of 6139317
- 3921500 words of memory out of 5000000
+ 3916607 words of memory out of 5000000
  34671 multiletter control sequences out of 15000+600000
  18606 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1291,10 +1292,10 @@ e/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/tex
 mf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var
 /fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts
 /pk/ljfour/public/cm/cmr10.657pk>
-Output written on comp-fin-lab-1.pdf (6 pages, 790085 bytes).
+Output written on comp-fin-lab-1.pdf (7 pages, 794063 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 577 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

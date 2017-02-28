@@ -82,7 +82,13 @@ correlated.\\
 
 As done previously with all three assets, I generate 100 random portfolios for each of the three 2 asset
 combinations and plot the $E-V$ scatters along with the efficient frontiers. Notice that in case of 2 asset portfolios, every portfolio construction is efficient and the frontier
-has a bend, i.e. risk increases for the lowest returns.\\
+has a bend, i.e. risk increases for the lowest returns. The reason for all portfolios lying on the efficient porfolio
+is as follows - \\
+
+Represent porfolio for two assets as $\bm{\pi} = (\pi, 1-\pi), \bm{\mu} = (\mu_1, \mu_2), \bm{\Sigma}=(\sigma_1, \sigma; \sigma, \sigma_2)$.
+Then $E = \pi\mu_1 + (1-\pi)\mu_2, V = \pi^2(\sigma_1 + \sigma_2) +2\pi(\sigma - \sigma_2) + \sigma_2$. The second derivative
+of both are devoid of $\pi$, because of this reduction of degree of freedom. So, the $E-V$ will always be the extremum
+regardless of the portfolio.
 
 \begin{figure}[!h]
    \centering 
@@ -310,9 +316,19 @@ government bonds etc.
 
 \section{Index Tracking}
 
-I first selected the first half of the data as training data and the rest as the validation data.
+Since the index is improving over the years, a passive investor will likely want to invest in the index as a whole.
+However, investing in a large number of companies comes with the problem of tackling transaction costs. So, it is
+desirable to invest in a subset of the index assets that, as combination, closely matches the performance of the index
+itself. I investigated two ways of selecting one fifth of the assets ($N$) that represent the index. I first selected
+ =the first half of the data as training data and the rest as the validation data.
 
 \subsection{Greedy Forward Search Asset Selection}
+
+During each iteration of the greedy algortithm, I go through each of the unselected assets and try to find the most
+effective linear combination containing it and the assets already chosen. The Root Mean Squeared Error (RMSE) is then
+recorded for that asset combination. At the end of the iteration, I choose the asset combination that produced the 
+least RMSE. Finally, after $N/5$ iterations, I find the overall desired subset of assets. The algorithm is described in
+Algorithm \ref{alg:greedy-index}.
 
 \begin{algorithm}[H]
 \caption{Greedy Asset Selection for Index Tracking}
@@ -326,7 +342,7 @@ I first selected the first half of the data as training data and the rest as the
 \State $e(j) = \infty$
 \Else
 \State $s = S \bigcup \{j\}$
-\State $\bm{r_t} = R(:, s)$
+\State $\bm{r_t} = \bm{R}(:, s)$
 \State $\bm{w} = \underset{\bm{w}}{min}(||\bm{w}'\bm{r_t} - \bm{y_t}||_2) s.t. \bm{1}^t\bm{w} = 1, \bm{w} \geq \bm{0}$
 \State $e(j) = \sqrt{mean(||\bm{r_t} * \bm{w}' - \bm{y_t}||_2^2)}$
 \EndIf
@@ -337,6 +353,11 @@ I first selected the first half of the data as training data and the rest as the
 \end{algorithmic}
 \end{algorithm}
 
+During the asset selection algorithm, the RMSE is calculated based on the training set, since we want to only fit the
+training data. Once the assets are determined, we find the effective portfolio based on only the training data and 
+apply it on the validation data to see how well it performs. As can be seen from Figure \ref{fig:q2-all-based-on-first},
+the representative index closely matches the training index, and deviates more on the validation data.
+
 \begin{figure}[!h]
    \centering 
  	\resizebox {0.8\textwidth} {!} {\input{q3_greedy.tex} }
@@ -346,6 +367,16 @@ I first selected the first half of the data as training data and the rest as the
 \end{figure}
 
 \subsection{Sparse Portfolio for Index Tracking}
+
+We perform the greedy search so that we don't have to search the entire combinatorial space. However, any markowitz
+porfolio construction can be ill conditioned, if there is significant correlation between the assets. So, I introduce
+a $l_1$ regulariser term $\tau||\bm{w}||_1$ with the alternative, but equivalent optimisation problem, 
+$\underset{\bm{w}}{min}(||\bm{w}'\bm{R} - \rho\bm{1}||_2$ in order to stabilise the optimisation problem. Then the top
+$N/5$ most contributing assets are chosen and the optimisation is run again to redistribute the weights over the 
+chosen assets. As before, the weights are chosen to match the training index and then applied to the validation set
+to compare with the actual validation index. The results are as expected as seen in Figure \ref{fig:q2-all-based-on-first}.
+It is interesting that if we do not redistribute the weights over the assets, and rather only invest a fraction of
+our total wealth, it produces better performance on the validation set!
 
 \begin{algorithm}[H]
 \caption{Sparse Asset Selection for Index Tracking}
@@ -366,6 +397,11 @@ I first selected the first half of the data as training data and the rest as the
 	\label{fig:q2-all-based-on-first}
 	\vspace{-0.5cm}
 \end{figure}
+
+Whether the sparse index using the regulariser is preferred over the greedy algorithm is more a matter of art and prior 
+knowledge. The idea is that sparse index is desired, but the way to achieve it can be different. Tuning $\tau$ is crucial and
+here we only tune it to match the number of selections to the number chosen by the greedy algorithm so that we can compare
+on the same grounds.
 
 
 \end{document}
