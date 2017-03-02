@@ -367,6 +367,8 @@ the representative index closely matches the training index, and deviates more o
 	\vspace{-0.5cm}
 \end{figure}
 
+The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-rmse} . Assets selected were 2, 4, 6, 10, 13, 19.
+
 \subsection{Sparse Portfolio for Index Tracking}
 
 We perform the greedy search so that we don't have to search the entire combinatorial space. However, any markowitz
@@ -377,7 +379,7 @@ $N/5$ most contributing assets are chosen and the optimisation is run again to r
 chosen assets. As before, the weights are chosen to fit the training index and then applied to the validation set
 to compare with the actual validation index. The results are as expected as seen in Figure \ref{fig:q3-sparse}.
 It is interesting that if we do not redistribute the weights over the assets, and rather only invest a fraction of
-our total wealth, it produces better performance on the validation set (Figure \ref{q3-sparse-no-distribution})!
+our total wealth, it produces better performance on the validation set (Figure \ref{q3-sparse-no-distribution})!\\
 
 \begin{algorithm}[H]
 \caption{Sparse Asset Selection for Index Tracking}
@@ -397,7 +399,6 @@ our total wealth, it produces better performance on the validation set (Figure \
  	\resizebox {0.8\textwidth} {!} {\input{q3_sparse.tex} }
     \caption{Sparse Index Tracking}
 	\label{fig:q3-sparse}
-	\vspace{-0.5cm}
 \end{figure}
 
 \begin{figure}[!h]
@@ -408,6 +409,19 @@ our total wealth, it produces better performance on the validation set (Figure \
 	\label{fig:q3-sparse-no-distribution}
 	\vspace{-0.5cm}
 \end{figure}
+
+\begin{wrapfigure}{!h}{0.45\textwidth}
+  \begin{center}
+	\vspace{-0.5cm}
+    \resizebox {0.4\textwidth} {!} {\input{q3_rmse.tex} }
+    \caption{RMSE for Different Portfolio Selection Processes}
+	\label{fig:q3-rmse}
+  \end{center}
+	\vspace{-1cm}
+\end{wrapfigure}
+
+The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-rmse}. Assets selected were 6, 10, 11, 18, 19, 21. So, half
+of the selected assets here were also selected by the greedy algorithm.\\
 
 Whether the sparse portfolio using the regulariser is preferred over using the greedy algorithm is more a matter of art and prior 
 knowledge. The idea is that a sparse portfolio is desired, but the way to achieve it can be different. Tuning $\tau$ is crucial and

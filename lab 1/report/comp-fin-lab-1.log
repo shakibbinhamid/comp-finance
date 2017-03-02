@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 13:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1248,15 +1248,52 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[5]
 
-LaTeX Warning: Reference `q3-sparse-no-distribution' on page 5 undefined on inp
-ut line 380.
+LaTeX Warning: Reference `q3-sparse-no-distribution' on page 6 undefined on inp
+ut line 382.
 
-[5] (./q3_sparse.tex) (./q3_sparse_no_redistribution.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--383
+
+ []
+
+(./q3_sparse.tex) (./q3_sparse_no_redistribution.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7] (./comp-fin-lab-1.aux)
+(./q3_rmse.tex
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 16
+6.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 166.
+
+ [warning /pgfplots/warning/plot without coordinates]
+) [6]
+Underfull \hbox (badness 2197) in paragraph at lines 423--425
+[][]\OT1/cmr/m/n/10.95 The RMSE for the port-fo-lio cho-sen by the reg-u-
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 423--425
+\OT1/cmr/m/n/10.95 6, 10, 11, 18, 19, 21. So, half of the se-lected
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 423--425
+\OT1/cmr/m/n/10.95 as-sets here were also se-lected by the greedy al-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
+
+ []
+
+[7] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1267,38 +1304,39 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31800 strings out of 493013
- 759353 string characters out of 6139317
- 3920700 words of memory out of 5000000
- 34705 multiletter control sequences out of 15000+600000
+ 31814 strings out of 493013
+ 759632 string characters out of 6139317
+ 3920732 words of memory out of 5000000
+ 34716 multiletter control sequences out of 15000+600000
  19653 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/cmextra/cmm
-ib8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.65
-7pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600p
-k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr17.720pk> </ho
-me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </usr/shar
-e/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.texlive/
-texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive/texmf-
-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texmf-var/f
-onts/pk/ljfour/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/fonts/pk
-/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
-r/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publi
-c/cm/cmex10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8
-.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </
-home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/s
-hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/
-.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texli
-ve/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/te
-xmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-va
-r/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts
-/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/lj
-four/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-1.pdf (7 pages, 861879 bytes).
+ </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk> </home/sha
+kib/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/cmextra/cmmib8.600pk> </
+home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.657pk> </home/s
+hakib/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/sha
+kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr17.720pk> </home/shakib/.te
+xlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.720pk> </usr/share/texmf-dist/
+fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib/.texlive/texmf-var/fon
+ts/pk/ljfour/public/cm/cmtt12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/
+ljfour/public/cm/cmbx12.1037pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
+r/public/cm/cmr17.864pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publi
+c/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/c
+mmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.6
+57pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/s
+hakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/shakib/.
+texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texliv
+e/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/.texlive/texm
+f-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/texmf-var/fonts
+/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/lj
+four/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pu
+blic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
+m/cmr12.720pk>
+Output written on comp-fin-lab-1.pdf (7 pages, 871003 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 633 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

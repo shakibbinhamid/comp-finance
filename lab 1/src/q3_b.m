@@ -17,7 +17,7 @@ ftseTest = ftse(nTrain+1:nTotal);
 maxSelectedAssets = 6;
 taw = 0.42;
 % get the weights and assets by doing lasso regression
-[~, selectedAssets] = calculateKSparseIndex(returnsTrain, ftseTrain, maxSelectedAssets, taw);
+[nodistWeights, selectedAssets] = calculateKSparseIndex(returnsTrain, ftseTrain, maxSelectedAssets, taw);
 taw = 0.01;
 % get the weights and assets by doing lasso regression
 [weights] = calculateSparseIndex(returnsTrain(:,selectedAssets), ftseTrain, taw);
