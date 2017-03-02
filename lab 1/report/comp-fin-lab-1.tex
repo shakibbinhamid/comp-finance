@@ -281,7 +281,7 @@ both cases were of expected shape.
 After chronologically sorting the data, I picked the first half of the data as the training set and the
 rest as the validation set. Using the first half, I calculated the Expected Return as the mean and the
 Risk as the covariance using \mintinline{matlab}|m = mean(returnsTrain);C = cov(returnsTrain);|. Then
-Financial Toolbox calculated the efficient frontier. Then I picked $E_{max}/2$ to be the target return 
+Financial Toolbox calculated the efficient frontier. Then I picked $V_{max}/2$ to be max risk 
 and calculated the weights, which I picked as the Markowitz portfolio for comparison. 
 \mintinline{matlab}|1/N*ones(N,1)| was the naive 1/N strategy portfolio.\\
 
@@ -359,6 +359,7 @@ apply it on the validation data to see how well it performs. As can be seen from
 the representative index closely matches the training index, and deviates more on the validation data.
 
 \begin{figure}[!h]
+	\vspace{-0.5cm}
    \centering 
  	\resizebox {0.8\textwidth} {!} {\input{q3_greedy.tex} }
     \caption{Greedy Index Tracking}
@@ -376,7 +377,7 @@ $N/5$ most contributing assets are chosen and the optimisation is run again to r
 chosen assets. As before, the weights are chosen to fit the training index and then applied to the validation set
 to compare with the actual validation index. The results are as expected as seen in Figure \ref{fig:q3-sparse}.
 It is interesting that if we do not redistribute the weights over the assets, and rather only invest a fraction of
-our total wealth, it produces better performance on the validation set!
+our total wealth, it produces better performance on the validation set (Figure \ref{q3-sparse-no-distribution})!
 
 \begin{algorithm}[H]
 \caption{Sparse Asset Selection for Index Tracking}
@@ -391,10 +392,20 @@ our total wealth, it produces better performance on the validation set!
 \end{algorithm}
 
 \begin{figure}[!h]
-   \centering 
+   \vspace{-0.5cm}
+	\centering 
  	\resizebox {0.8\textwidth} {!} {\input{q3_sparse.tex} }
     \caption{Sparse Index Tracking}
 	\label{fig:q3-sparse}
+	\vspace{-0.5cm}
+\end{figure}
+
+\begin{figure}[!h]
+	\vspace{-0.5cm}
+   \centering 
+ 	\resizebox {0.8\textwidth} {!} {\input{q3_sparse_no_redistribution.tex} }
+    \caption{Sparse Index Tracking without Redistribution after Asset Selection}
+	\label{fig:q3-sparse-no-distribution}
 	\vspace{-0.5cm}
 \end{figure}
 

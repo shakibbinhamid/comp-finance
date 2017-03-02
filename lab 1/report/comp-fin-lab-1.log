@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 11:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 12:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1248,7 +1248,18 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] (./q3_sparse.tex) [6] [7] (./comp-fin-lab-1.aux)
+
+LaTeX Warning: Reference `q3-sparse-no-distribution' on page 5 undefined on inp
+ut line 380.
+
+[5] (./q3_sparse.tex) (./q3_sparse_no_redistribution.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6] [7] (./comp-fin-lab-1.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1256,10 +1267,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31770 strings out of 493013
- 758712 string characters out of 6139317
- 3920668 words of memory out of 5000000
- 34678 multiletter control sequences out of 15000+600000
+ 31800 strings out of 493013
+ 759353 string characters out of 6139317
+ 3920700 words of memory out of 5000000
+ 34705 multiletter control sequences out of 15000+600000
  19653 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1284,9 +1295,9 @@ xmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-va
 r/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts
 /pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/lj
 four/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-1.pdf (7 pages, 802100 bytes).
+Output written on comp-fin-lab-1.pdf (7 pages, 861879 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
+ 609 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
