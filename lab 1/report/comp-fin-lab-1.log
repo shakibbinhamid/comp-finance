@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  2 MAR 2017 15:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1249,11 +1249,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5]
-
-LaTeX Warning: Reference `q3-sparse-no-distribution' on page 6 undefined on inp
-ut line 382.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 374--383
 
  []
@@ -1263,7 +1258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--383
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
@@ -1283,31 +1278,20 @@ Package epstopdf Info: Source file: <q3_weights1.eps>
 (epstopdf)                    date: 2017-03-02 14:52:25
 (epstopdf)                    size: 127802 bytes
 (epstopdf)             Output file: <q3_weights1-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-02 14:53:21
+(epstopdf)                    size: 12452 bytes
 (epstopdf)             Command: <epstopdf --outfile=q3_weights1-eps-converted-t
 o.pdf q3_weights1.eps>
-(epstopdf)             \includegraphics on input line 425.
-runsystem(epstopdf --outfile=q3_weights1-eps-converted-to.pdf q3_weights1.eps).
-..executed.
-
-Package epstopdf Info: Result file: <q3_weights1-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-02 14:53:21
-(epstopdf)                    size: 12452 bytes.
+(epstopdf)             \includegraphics on input line 424.
+Package epstopdf Info: Output file is already uptodate.
  <q3_weights1-eps-converted-to.pdf, id=55, 732.7375pt x 329.23pt>
 File: q3_weights1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use q3_weights1-eps-converted-to.pdf>
 Package pdftex.def Info: q3_weights1-eps-converted-to.pdf used on input line 42
-5.
-(pdftex.def)             Requested size: 366.36786pt x 164.6146pt.
-
-Overfull \hbox (58.49426pt too wide) in paragraph at lines 425--426
-[][] 
- []
-
-[7 <./q3_weights1-eps-converted-to.pdf>] (./comp-fin-lab-1.aux)
-
-LaTeX Warning: There were undefined references.
-
+4.
+(pdftex.def)             Requested size: 307.74765pt x 138.27565pt.
+ [7 <./q3_weights1-eps-converted-to.pdf>] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1315,10 +1299,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31827 strings out of 493013
- 759954 string characters out of 6139317
+ 31826 strings out of 493013
+ 759927 string characters out of 6139317
  3920880 words of memory out of 5000000
- 34728 multiletter control sequences out of 15000+600000
+ 34727 multiletter control sequences out of 15000+600000
  19653 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1344,9 +1328,9 @@ fonts/pk/ljfour/public/cm/cmmib10.657pk> </home/shakib/.texlive/texmf-var/fonts
 four/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pu
 blic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
 m/cmr12.720pk>
-Output written on comp-fin-lab-1.pdf (7 pages, 884912 bytes).
+Output written on comp-fin-lab-1.pdf (7 pages, 884576 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
+ 648 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)

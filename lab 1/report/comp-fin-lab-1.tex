@@ -367,7 +367,7 @@ the representative index closely matches the training index, and deviates more o
 	\vspace{-0.5cm}
 \end{figure}
 
-The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-weights} . Assets selected were 2, 4, 6, 10, 13, 19.
+The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-weights} . Selected assets and weights can be found in Figure \ref{fig:q3-weights}.
 
 \subsection{Sparse Portfolio for Index Tracking}
 
@@ -379,7 +379,7 @@ $N/5$ most contributing assets are chosen and the optimisation is run again to r
 chosen assets. As before, the weights are chosen to fit the training index and then applied to the validation set
 to compare with the actual validation index. The results are as expected as seen in Figure \ref{fig:q3-sparse}.
 It is interesting that if we do not redistribute the weights over the assets, and rather only invest a fraction of
-our total wealth, it produces better performance on the validation set (Figure \ref{q3-sparse-no-distribution})!\\
+our total wealth, it produces better performance on the validation set (Figure \ref{fig:q3-sparse-no-distribution} and \ref{fig:q3-rmse})!\\
 
 \begin{algorithm}[H]
 \caption{Sparse Asset Selection for Index Tracking}
@@ -410,8 +410,7 @@ our total wealth, it produces better performance on the validation set (Figure \
 	\vspace{-0.5cm}
 \end{figure}
 
-The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-weights}. Assets selected were 6, 10, 11, 18, 19, 21. So, half
-of the selected assets here were also selected by the greedy algorithm.\\
+The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-rmse}. Selected assets and weights can be found in Figure \ref{fig:q3-weights}.\\
 
 \begin{figure}[!h]
    \centering 
@@ -421,15 +420,14 @@ of the selected assets here were also selected by the greedy algorithm.\\
 		\label{fig:q3-rmse}
     \end{subfigure}
     ~
-    \begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[scale=.5] {q3_weights1.eps}
+    \begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[scale=.42] {q3_weights1.eps}
 		\caption{Portfolio Weights in Sparse Portfolios}
 		\label{fig:q3-weights}
     \end{subfigure}
-	\vspace{-0.5cm}	
     \caption{Greedy and Regulariser Asset Selection Analysis}
 	\label{fig:q3-analysis}	
-	\vspace{-0.5cm}
+	\vspace{-0.4cm}
 \end{figure}
 
 Whether the sparse portfolio using the regulariser is preferred over using the greedy algorithm is more a matter of art and prior 
