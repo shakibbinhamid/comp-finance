@@ -1,0 +1,75 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.20810,0.16630,0.52920}%
+\definecolor{mycolor2}{rgb}{0.21783,0.72504,0.61926}%
+\definecolor{mycolor3}{rgb}{0.97630,0.98310,0.05380}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=12.901in,
+height=7.106in,
+at={(2.164in,0.959in)},
+scale only axis,
+bar width=0.1cm,
+xmin=0,
+xmax=25,
+xtick={2,4,6,10,11,13,18,19,21},
+xticklabels={{AV},{BARC},{BP},{GSK},{HSBA},{KGF},{NG},{OML},{RDSB}},
+ymin=0,
+ymax=0.6,
+ylabel style={font=\color{white!15!black}},
+ylabel={Porfolio Weight},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Portfolio Weights in Different Sparse Portfolio Construction Algorithms},
+legend style={at={(0.498,0.759)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot[ybar, bar width=-1.6, fill=mycolor1, draw=black, area legend] table[row sep=crcr] {%
+19	0.160463159379571\\
+10	0.512962735225373\\
+2	0.12725892583696\\
+4	0.141487782408994\\
+13	0.0560734363725513\\
+6	0.00175396076719302\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0	0\\
+25	0\\
+};
+\addlegendentry{Greedy Selection}
+
+\addplot[ybar, bar width=-2.667, fill=mycolor2, draw=black, area legend] table[row sep=crcr] {%
+18	0.159682982450664\\
+10	0.130871877471004\\
+11	0.095058004828095\\
+19	0.0637436183986805\\
+21	0.0623590064552602\\
+6	0.0498443923030293\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0	0\\
+25	0\\
+};
+\addlegendentry{Sparse Selection Fully Invested}
+
+\addplot[ybar, bar width=-2.667, fill=mycolor3, draw=black, area legend] table[row sep=crcr] {%
+18	0.390371654426407\\
+10	7.97985757815668e-10\\
+11	0.226667701010609\\
+19	0.38296064247333\\
+21	5.77578164468587e-10\\
+6	7.27259465991378e-10\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0	0\\
+25	0\\
+};
+\addlegendentry{Sparse Selection 0.56 Invested}
+
+\end{axis}
+\end{tikzpicture}%

@@ -367,7 +367,7 @@ the representative index closely matches the training index, and deviates more o
 	\vspace{-0.5cm}
 \end{figure}
 
-The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-rmse} . Assets selected were 2, 4, 6, 10, 13, 19.
+The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-weights} . Assets selected were 2, 4, 6, 10, 13, 19.
 
 \subsection{Sparse Portfolio for Index Tracking}
 
@@ -410,18 +410,27 @@ our total wealth, it produces better performance on the validation set (Figure \
 	\vspace{-0.5cm}
 \end{figure}
 
-\begin{wrapfigure}{!h}{0.45\textwidth}
-  \begin{center}
-	\vspace{-0.5cm}
-    \resizebox {0.4\textwidth} {!} {\input{q3_rmse.tex} }
-    \caption{RMSE for Different Portfolio Selection Processes}
-	\label{fig:q3-rmse}
-  \end{center}
-	\vspace{-1cm}
-\end{wrapfigure}
-
-The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-rmse}. Assets selected were 6, 10, 11, 18, 19, 21. So, half
+The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-weights}. Assets selected were 6, 10, 11, 18, 19, 21. So, half
 of the selected assets here were also selected by the greedy algorithm.\\
+
+\begin{figure}[!h]
+   \centering 
+   \begin{subfigure}[b]{0.35\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q3_rmse.tex} }
+		\caption{RMSE for Different Portfolio Selection Processes}
+		\label{fig:q3-rmse}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[scale=.5] {q3_weights1.eps}
+		\caption{Portfolio Weights in Sparse Portfolios}
+		\label{fig:q3-weights}
+    \end{subfigure}
+	\vspace{-0.5cm}	
+    \caption{Greedy and Regulariser Asset Selection Analysis}
+	\label{fig:q3-analysis}	
+	\vspace{-0.5cm}
+\end{figure}
 
 Whether the sparse portfolio using the regulariser is preferred over using the greedy algorithm is more a matter of art and prior 
 knowledge. The idea is that a sparse portfolio is desired, but the way to achieve it can be different. Tuning $\tau$ is crucial and
