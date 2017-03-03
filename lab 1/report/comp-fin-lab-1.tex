@@ -50,7 +50,7 @@ co-variance is $\bm{\Sigma}$. \\
 	\vspace{-1cm}
 \end{wrapfigure}
 
-According to the paper, the expected return of the portfolio, 
+According to the paper \cite{markowitz}, the expected return of the portfolio, 
 $E = \sum_{i=1}^N\pi_i\mu_i = \bm{\pi}^t\bm{\mu}$. The risk is analogous to the variance of
 the returns, i.e. $V = \sum_{i=1}^N\sum_{j=1}^N\sigma_{ij}\pi_i\pi_j = \bm{\pi}^t\bm{\Sigma}\bm{\pi}$.\\
 
@@ -410,13 +410,13 @@ our total wealth, it produces better performance on the validation set (Figure \
 	\vspace{-0.5cm}
 \end{figure}
 
-The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-rmse}. Selected assets and weights can be found in Figure \ref{fig:q3-weights}.\\
+The squared error for the portfolio chosen by the regulariser is plotted in Figure \ref{fig:q3-rmse}. Selected assets and weights can be found in Figure \ref{fig:q3-weights}.\\
 
 \begin{figure}[!h]
    \centering 
    \begin{subfigure}[b]{0.35\textwidth}
      	\resizebox {\textwidth} {!} {\input{q3_rmse.tex} }
-		\caption{RMSE for Different Portfolio Selection Processes}
+		\caption{SE for Different Portfolio Selection Processes}
 		\label{fig:q3-rmse}
     \end{subfigure}
     ~
@@ -433,9 +433,10 @@ The RMSE for the portfolio chosen by the regulariser is plotted in Figure \ref{f
 Whether the sparse portfolio using the regulariser is preferred over using the greedy algorithm is more a matter of art and prior 
 knowledge. The idea is that a sparse portfolio is desired, but the way to achieve it can be different. Tuning $\tau$ is crucial and
 here we only tune it to match the number of selections to the number chosen by the greedy algorithm so that we can compare
-on the same grounds.
+on the same grounds. However, in this exercise it was quite unexpected that changing $\tau$ to very high or very low numbers did not affect the weights much and indeed I had to choose the most contributing assets by sorting the weights. In this exercise, it seems that $l_1$ regulariser where only 56\% of the assets were invested produces the best
+predictions on validation set.
 
-\section{Discussion on Lobo (et. el)'s Paper}
+\section{Discussion on Lobo (et al.)'s Paper}
 
 Lets say, the current holding or wealth of $n$ assets is $\bm{w} = (w_1, w_2, ..., w_n)$. $\bm{x^+} = (x^+_1, x^+_2, ..., x^+_n)$ is
 the dollar amount bought for each asset and $\bm{x^-} = (x^-_1, x^-_2, ..., x^-_n)$ is the dollar amount sold for each asset. This
@@ -460,49 +461,41 @@ that the wealth will not be lower than 0.9, more than 97\% probability that it w
 In this example, the authors are solving the optimisation problem of maximising the return after a readjustment of the portfolio. The constraints
 are to tackle transaction cost, bound the short selling and reduce probability of undesirable outcomes after the investment period. It has been shown
 that this particular example is a convex optimisation problem. The shortfall risk constraints put two bounds on the efficient frontier. In fact, only
-one of the shortfall constraints is the effective one and the optimal solution to this problem is shown in the circle in Figure 3 of the paper.
+one of the shortfall constraints is the effective one and the optimal solution to this problem is shown in the circle in Figure 3 of the paper.\\
+
+In order to implement this, I will have to set $\bm{w}$ to some weights, as done in the paper (which uses $1/N$ strategy). Then set $\bm{s}$ to some
+short selling bounds and $\bm{\alpha^+}, \bm{\alpha^-}$, e.g. 1\%. Similar for some $(\eta_j,W^{low}_j)$ combinations. $\bar{a}$ would be found from 
+historical data as done already and it will produce $\Sigma$. We can use the CVX toolbox, since it is a convex optimisation problem.
+
+\begin{thebibliography}{9}
+\bibitem{markowitz} 
+H. Markowitz
+\textit{Portfolio Selection}. 
+The Journal of Finance, vol. 7, no. 1, pp. 77-91, 1952.
+ 
+\bibitem{brandimarte} 
+P. Brandimarte
+\textit{Numerical Methods in Finance and Economics}
+Wiley, 2006.
+ 
+\bibitem{demeguel} 
+V. DeMiguel, L. Garlappi, and R. Uppal
+\textit{Optimal versus naive diversification: How inefficient is the 1/n portfolio strategy?}
+The Review of Financial Studies, vol. 22, no. 5, pp.1915 – 1953, 2009
+
+\bibitem{brodie} 
+ J. Brodie, I. Daubechies, C. De Mol, D. Giannone, and I. Loris
+\textit{Sparse and stable Markowitz portfolios}
+PNAS, vol. 106, no. 30, pp. 12 267 – 12 272, 2009.
+
+\bibitem{lobo} 
+ M. Lobo, M. Fazel, and S. Boyd
+\textit{Portfolio optimization with linear and fixed transaction cost}
+Annals of Operations Research, vol. 152, no. 1, pp. 341–365, 2007.
+
+\end{thebibliography}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

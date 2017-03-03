@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  3 MAR 2017 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  3 MAR 2017 17:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1292,20 +1292,39 @@ Package pdftex.def Info: q3_weights1-eps-converted-to.pdf used on input line 42
 4.
 (pdftex.def)             Requested size: 307.74765pt x 138.27565pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--445
+Underfull \hbox (badness 10000) in paragraph at lines 441--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--451
+Underfull \hbox (badness 10000) in paragraph at lines 447--452
 
  []
 
 [7 <./q3_weights1-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--465
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
 [8] (./comp-fin-lab-1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1314,10 +1333,10 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31826 strings out of 493013
- 759927 string characters out of 6139317
- 3920880 words of memory out of 5000000
- 34727 multiletter control sequences out of 15000+600000
+ 31832 strings out of 493013
+ 759992 string characters out of 6139317
+ 3923895 words of memory out of 5000000
+ 34733 multiletter control sequences out of 15000+600000
  19653 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,851b,2453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1345,9 +1364,9 @@ s/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/l
 jfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
 ublic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
 cm/cmr12.720pk>
-Output written on comp-fin-lab-1.pdf (8 pages, 896233 bytes).
+Output written on comp-fin-lab-1.pdf (8 pages, 908053 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
+ 717 PDF objects out of 1000 (max. 8388607)
  131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
