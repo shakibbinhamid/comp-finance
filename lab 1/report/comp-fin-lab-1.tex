@@ -443,12 +443,24 @@ $\bm{w} + \bm{x^+} - \bm{x^-}$ asset is held for a period. After the period the 
 The expected return after the period is $\bar{a}^t(\bm{w} + \bm{x^+} - \bm{x^-})$, which we will want to maximise. This is the objective function
 in the example in the paper's Section 1.6.\\
 
-
 Buying and selling the assets will incur transaction costs, which lets say is $\phi(\bm{x})$, where $\bm{x}$ represents the amount sold or 
 bought. The exchange of assets will generate $\bm{1}^t(\bm{x^+} - \bm{x^-})$, which will cover some of the transaction costs, if not all 
 (self-financing). If the transaction cost is a linear function of $\bm{x}$, i.e. $\sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-)$, then we
-can express the constraint as $\bm{1}^t(\bm{x^+} - \bm{x^-}) + \sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-) \leq 0$.
+can express the constraint as $\bm{1}^t(\bm{x^+} - \bm{x^-}) + \sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-) \leq 0$. This is the first
+constraint in the example. $x_i^+ \geq 0, x_i^- \geq 0$ represents that buying and selling amount is, obviously, non-negative.\\
 
+It may also be desirable to limit the amount of short selling on each asset when we are readjusting our portfolio. If such short selling bounds
+on each asset is $\bm{s} = (s_1, s_2, ..., s_n)$, then we can express the constraint as $w_i + x_i^+ - x_i^- \geq s_i$, as seen in the example.\\
+
+Finally, we might also want to reduce the probability of bad or disasterous outcomes after the investment period. If we suppose that the returns
+after the period is a gaussian $a \sim (\bar{a}, \Sigma)$ and we want that the total wealth after the investment period to be higher
+than some $W^{low}$ with a probability of more than $\eta$. In fact, we may want more than one such constraint. For example: more than 80\% probability
+that the wealth will not be lower than 0.9, more than 97\% probability that it will not be lower than 0.7 etc. Define $\Phi^{-1}$ as the inverse cumulative distribution function of $\eta$ which, given a probability shows us the cut-off return. In the paper these shortfall risk constraints are formulated as $\Phi^{-1}(\eta_j)||\Sigma^{1/2}(w + x^+ - x^-)|| \leq \bar{a}^t(w + x^+ - x^-) - W^{low}_j, j=1,2$.\\
+
+In this example, the authors are solving the optimisation problem of maximising the return after a readjustment of the portfolio. The constraints
+are to tackle transaction cost, bound the short selling and reduce probability of undesirable outcomes after the investment period. It has been shown
+that this particular example is a convex optimisation problem. The shortfall risk constraints put two bounds on the efficient frontier. In fact, only
+one of the shortfall constraints is the effective one and the optimal solution to this problem is shown in the circle in Figure 3 of the paper.
 
 \end{document}
 
