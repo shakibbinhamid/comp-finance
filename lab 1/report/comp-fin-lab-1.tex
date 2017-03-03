@@ -435,6 +435,20 @@ knowledge. The idea is that a sparse portfolio is desired, but the way to achiev
 here we only tune it to match the number of selections to the number chosen by the greedy algorithm so that we can compare
 on the same grounds.
 
+\section{Discussion on Lobo (et. el)'s Paper}
+
+Lets say, the current holding or wealth of $n$ assets is $\bm{w} = (w_1, w_2, ..., w_n)$. $\bm{x^+} = (x^+_1, x^+_2, ..., x^+_n)$ is
+the dollar amount bought for each asset and $\bm{x^-} = (x^-_1, x^-_2, ..., x^-_n)$ is the dollar amount sold for each asset. This
+$\bm{w} + \bm{x^+} - \bm{x^-}$ asset is held for a period. After the period the resultant wealth is $W$ and returns are $\bm{a} = (a_1, a_2, ..., a_n)$.
+The expected return after the period is $\bar{a}^t(\bm{w} + \bm{x^+} - \bm{x^-})$, which we will want to maximise. This is the objective function
+in the example in the paper's Section 1.6.\\
+
+
+Buying and selling the assets will incur transaction costs, which lets say is $\phi(\bm{x})$, where $\bm{x}$ represents the amount sold or 
+bought. The exchange of assets will generate $\bm{1}^t(\bm{x^+} - \bm{x^-})$, which will cover some of the transaction costs, if not all 
+(self-financing). If the transaction cost is a linear function of $\bm{x}$, i.e. $\sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-)$, then we
+can express the constraint as $\bm{1}^t(\bm{x^+} - \bm{x^-}) + \sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-) \leq 0$.
+
 
 \end{document}
 
