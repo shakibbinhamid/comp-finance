@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  3 MAR 2017 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  5 MAR 2017 11:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1142,11 +1142,11 @@ C113FB5EA17.pygtex)
 (./_minted-comp-fin-lab-1/8F7519B524598347DC9C2365177809C3BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex) (./q1_d_naive_v_cvx.tex)
 Package epstopdf Info: Source file: <q1_d_naive_v_cvx_difference.eps>
-(epstopdf)                    date: 2017-02-27 13:58:22
+(epstopdf)                    date: 2017-02-26 17:24:29
 (epstopdf)                    size: 16651 bytes
 (epstopdf)             Output file: <q1_d_naive_v_cvx_difference-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2017-02-27 13:58:22
+(epstopdf)                    date: 2017-02-26 17:24:35
 (epstopdf)                    size: 8459 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_d_naive_v_cvx_difference
 -eps-converted-to.pdf q1_d_naive_v_cvx_difference.eps>
@@ -1212,7 +1212,7 @@ C113FB5EA17.pygtex)
 
 (./_minted-comp-fin-lab-1/E2DC0BB05B6558EDC0EE002AA0693DAEBD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 281--287
+Underfull \hbox (badness 10000) in paragraph at lines 282--288
 
  []
 
@@ -1222,7 +1222,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--287
 
 (./_minted-comp-fin-lab-1/EDD502A7BA5F162A929CCED6EF6B6ED0BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 296--299
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
@@ -1236,20 +1236,20 @@ C113FB5EA17.pygtex) [4]
 
 (./_minted-comp-fin-lab-1/CCD374C065BF399E0B5183C8A5DAA554BD76D7093559B2E24E3F5
 C113FB5EA17.pygtex)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 337.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 338.
 
  (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 337.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
 
 (./q3_greedy.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 374--383
+Underfull \hbox (badness 10000) in paragraph at lines 375--384
 
  []
 
@@ -1258,7 +1258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--383
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
@@ -1275,44 +1275,44 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
  [warning /pgfplots/warning/plot without coordinates]
 )
 Package epstopdf Info: Source file: <q3_weights1.eps>
-(epstopdf)                    date: 2017-03-02 14:52:25
+(epstopdf)                    date: 2017-03-05 11:07:17
 (epstopdf)                    size: 127802 bytes
 (epstopdf)             Output file: <q3_weights1-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-02 14:53:21
+(epstopdf)                    date: 2017-03-05 11:07:17
 (epstopdf)                    size: 12452 bytes
 (epstopdf)             Command: <epstopdf --outfile=q3_weights1-eps-converted-t
 o.pdf q3_weights1.eps>
-(epstopdf)             \includegraphics on input line 424.
+(epstopdf)             \includegraphics on input line 425.
 Package epstopdf Info: Output file is already uptodate.
  <q3_weights1-eps-converted-to.pdf, id=55, 732.7375pt x 329.23pt>
 File: q3_weights1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use q3_weights1-eps-converted-to.pdf>
 Package pdftex.def Info: q3_weights1-eps-converted-to.pdf used on input line 42
-4.
+5.
 (pdftex.def)             Requested size: 307.74765pt x 138.27565pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--446
+Underfull \hbox (badness 10000) in paragraph at lines 443--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--452
+Underfull \hbox (badness 10000) in paragraph at lines 449--454
 
  []
 
 [7 <./q3_weights1-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--460
+Underfull \hbox (badness 10000) in paragraph at lines 458--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--467
 
  []
 
@@ -1335,7 +1335,7 @@ runsystem(rm comp-fin-lab-1.pyg)...executed.
 Here is how much of TeX's memory you used:
  31832 strings out of 493013
  759992 string characters out of 6139317
- 3923895 words of memory out of 5000000
+ 3920895 words of memory out of 5000000
  34733 multiletter control sequences out of 15000+600000
  19653 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1364,9 +1364,9 @@ s/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/l
 jfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
 ublic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
 cm/cmr12.720pk>
-Output written on comp-fin-lab-1.pdf (8 pages, 908053 bytes).
+Output written on comp-fin-lab-1.pdf (8 pages, 912043 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
+ 731 PDF objects out of 1000 (max. 8388607)
  131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)

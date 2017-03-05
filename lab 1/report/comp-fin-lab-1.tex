@@ -119,9 +119,9 @@ regardless of the portfolio.
 
 In order to calculate the efficient frontier, I needed two extreme points - maximum return for a 
 portfolio regardless of the risk and minimum risk regardless of the return. For the first case,
-$E = \underset{w}{max}(\bm{\pi}^t\bm{\mu})$ s.t. $\bm{1}^t\bm{\pi} = 1$ which gives the portfolio that 
-maximises the return regardless of the risk. We can then calculate $E-V$ for this portfolio, thus giving
-us the top corner of the $E-V$ graphs here. This is a linear equation of $\bm{\pi}$. Matlab's
+I solve $\underset{w}{max}(\bm{\pi}^t\bm{\mu})$ s.t. $\bm{1}^t\bm{\pi} = 1$ which gives the portfolio that 
+maximises the return regardless of the risk. I can then calculate $E-V$ for this portfolio, thus giving
+the top corner of the $E-V$ graphs here. This is a linear equation of $\bm{\pi}$. Matlab's
 \mintinline{matlab}|linprog| function can solve linear equation of the following form -
 
 \begin{minipage}{.4\textwidth}
@@ -140,13 +140,13 @@ us the top corner of the $E-V$ graphs here. This is a linear equation of $\bm{\p
 
 However, to calculate the portfolio that minimises the risk we need to solve a quadratic equation of 
 $\bm{\pi}$, $\underset{w}{min}(\bm{\pi}^t\bm{\Sigma}\bm{\pi})$ s.t. $\bm{1}^t\bm{\pi} = 1$. In this case we use the
-\mintinline{matlab}|quadprog| function. Finally, we choose $N$ expected portfolio returns between the two extreme
+\mintinline{matlab}|quadprog| function. Finally, I choose $N$ expected portfolio returns between the two extreme
 points and calculate the porfolio that minimises the risk while achieving the chosen expected returns.
 Thus the efficient portfolio is created.
 
 \subsection{Efficient Frontier : NaiveMV vs CVX}
 
-Using the CVX tool we can declarively perform the convex optimisations we performed earlier with
+Using the CVX tool I can declarively perform the convex optimisations I performed earlier with
 \mintinline{matlab}|linprog| and \mintinline{matlab}|quadprog|, as follows -
 
 \vspace{0.5cm}
@@ -234,8 +234,9 @@ I started by calculating the returns as percentage. I defined the return in two 
 \end{itemize}
 
 I expected portfolio returns in first definition to be jittery in a small window since daily returns
-go up and down. Whereas the second definition would be smoother, although it implicitly imposes a correlation. 
-Figure \ref{fig:q2-all-assets-all-based-on-daily} and \ref{fig:q2-all-assets-all-based-on-first} build a portfolio out of \textbf{all} 30 assets, whereas
+go up and down. Whereas the second definition would be smoother. Although it implicitly imposes a correlation,
+a passive investor may calculate the returns in this way. Figure \ref{fig:q2-all-assets-all-based-on-daily} and
+\ref{fig:q2-all-assets-all-based-on-first} build a portfolio out of \textbf{all} 30 assets, whereas
 Figure \ref{fig:q2-all-based-on-daily} and \ref{fig:q2-all-based-on-first} select \textbf{3} random assets,
 which were controlled using \mintinline{matlab}|rng(1)|. The resultant assets were AAL, KGF and RDSB.
 Their adjusted closing values were plotted in Figure \ref{fig:q2_return}.
@@ -248,7 +249,7 @@ Their adjusted closing values were plotted in Figure \ref{fig:q2_return}.
 	\vspace{-0.3cm}
 \end{figure}
 
-As expected, the portfolio returns over time were moving between $\pm0.02$ if we calculated returns
+As expected, the portfolio returns over time were moving between $\pm0.02$ if I calculated returns
 based on daily investment. It was smoother when returns were calculated based on the first investment. The efficient frontier in
 both cases were of expected shape.
 
@@ -308,7 +309,7 @@ effSharpe = (mean(effReturn) - riskFree)/std(effReturn);
 The sharpe ratio is plotted in the 4th subfigures in the figures in this section. Surprisingly the sharpe
 ratios in both cases were often negative, meaning that risk free assets, if it returned 5\%, would be better.
 The reason for this is that the assets actually performed poorly in adjusted close values during this
-time, as seen in Figure \ref{fig:q2_return}. Unsurprisingly, if we set $r_0 = 0$, i.e. no returns are risk free,
+time, as seen in Figure \ref{fig:q2_return}. Unsurprisingly, if I set $r_0 = 0$, i.e. no returns are risk free,
 then the sharpe ratios are positive. Also, a larger sharpe ratio can suggest a better performing portfolio. So, whichever portfolio showed
 better returns on the 2nd subfigures had the larger sharpe ratio on the 4th subfigures. I think the sharpe ratio
 is a reasonable measure of performance, but it depends largely on the estimate of the risk free assets like -
@@ -320,7 +321,7 @@ Since the index is improving over the years, a passive investor will likely want
 However, investing in a large number of companies comes with the problem of tackling transaction costs. So, it is
 desirable to invest in a subset of the index assets that, as combination, closely matches the performance of the index
 itself. I investigated two ways of selecting one fifth of the $N$ assets that represent the index. I first selected
- =the first half of the data as training data and the rest as the validation data.
+the first half of the data as training data and the rest as the validation data.
 
 \subsection{Greedy Forward Search Asset Selection}
 
@@ -353,8 +354,8 @@ Algorithm \ref{alg:greedy-index}.
 \end{algorithmic}
 \end{algorithm}
 
-During the asset selection algorithm, the RMSE is calculated based on the training set, since we want to only fit the
-training data. Once the assets are determined, we find the effective portfolio based on only the training data and 
+During the asset selection algorithm, the RMSE is calculated based on the training set (since I want to only fit the
+training data). Once the assets are determined, I find the effective portfolio based on only the training data and 
 apply it on the validation data to see how well it performs. As can be seen from Figure \ref{fig:q3-greedy},
 the representative index closely matches the training index, and deviates more on the validation data.
 
@@ -367,7 +368,7 @@ the representative index closely matches the training index, and deviates more o
 	\vspace{-0.5cm}
 \end{figure}
 
-The RMSE for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-weights} . Selected assets and weights can be found in Figure \ref{fig:q3-weights}.
+The squared error for the portfolio chosen by the greedy algorithm is plotted in Figure \ref{fig:q3-rmse} . Selected assets and weights can be found in Figure \ref{fig:q3-weights}.
 
 \subsection{Sparse Portfolio for Index Tracking}
 
@@ -378,7 +379,7 @@ $\underset{\bm{w}}{min}(||\bm{w}'\bm{R} - \rho\bm{1}||_2)$ in order to stabilise
 $N/5$ most contributing assets are chosen and the optimisation is run again to redistribute the weights over the 
 chosen assets. As before, the weights are chosen to fit the training index and then applied to the validation set
 to compare with the actual validation index. The results are as expected as seen in Figure \ref{fig:q3-sparse}.
-It is interesting that if we do not redistribute the weights over the assets, and rather only invest a fraction of
+It is interesting that if I do not redistribute the weights over the assets, and rather only invest a fraction of
 our total wealth, it produces better performance on the validation set (Figure \ref{fig:q3-sparse-no-distribution} and \ref{fig:q3-rmse})!\\
 
 \begin{algorithm}[H]
@@ -433,8 +434,9 @@ The squared error for the portfolio chosen by the regulariser is plotted in Figu
 Whether the sparse portfolio using the regulariser is preferred over using the greedy algorithm is more a matter of art and prior 
 knowledge. The idea is that a sparse portfolio is desired, but the way to achieve it can be different. Tuning $\tau$ is crucial and
 here we only tune it to match the number of selections to the number chosen by the greedy algorithm so that we can compare
-on the same grounds. However, in this exercise it was quite unexpected that changing $\tau$ to very high or very low numbers did not affect the weights much and indeed I had to choose the most contributing assets by sorting the weights. In this exercise, it seems that $l_1$ regulariser where only 56\% of the assets were invested produces the best
-predictions on validation set.
+on the same grounds. However, in this exercise it was quite unexpected that changing $\tau$ to very high or very low numbers did not 
+affect the weights much and indeed I had to choose the most contributing assets by sorting the weights. In this exercise, it seems that
+$l_1$ regulariser, where only 56\% of the assets were invested, produces the best predictions on validation set.
 
 \section{Discussion on Lobo (et al.)'s Paper}
 
@@ -445,7 +447,7 @@ The expected return after the period is $\bar{a}^t(\bm{w} + \bm{x^+} - \bm{x^-})
 in the example in the paper's Section 1.6.\\
 
 Buying and selling the assets will incur transaction costs, which lets say is $\phi(\bm{x})$, where $\bm{x}$ represents the amount sold or 
-bought. The exchange of assets will generate $\bm{1}^t(\bm{x^+} - \bm{x^-})$, which will cover some of the transaction costs, if not all 
+bought. The exchange of assets will generate $\bm{1}^t(\bm{x^+} - \bm{x^-})$ wealth, which will cover some of the transaction costs, if not all 
 (self-financing). If the transaction cost is a linear function of $\bm{x}$, i.e. $\sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-)$, then we
 can express the constraint as $\bm{1}^t(\bm{x^+} - \bm{x^-}) + \sum_{i=1}^N(\alpha_i^+x_i^+ + \alpha_i^-x_i^-) \leq 0$. This is the first
 constraint in the example. $x_i^+ \geq 0, x_i^- \geq 0$ represents that buying and selling amount is, obviously, non-negative.\\
@@ -465,7 +467,7 @@ one of the shortfall constraints is the effective one and the optimal solution t
 
 In order to implement this, I will have to set $\bm{w}$ to some weights, as done in the paper (which uses $1/N$ strategy). Then set $\bm{s}$ to some
 short selling bounds and $\bm{\alpha^+}, \bm{\alpha^-}$, e.g. 1\%. Similar for some $(\eta_j,W^{low}_j)$ combinations. $\bar{a}$ would be found from 
-historical data as done already and it will produce $\Sigma$. We can use the CVX toolbox, since it is a convex optimisation problem.
+historical data as done already and it will produce $\Sigma$. I can use the CVX toolbox to solve it, since it is a convex optimisation problem.
 
 \begin{thebibliography}{9}
 \bibitem{markowitz} 
