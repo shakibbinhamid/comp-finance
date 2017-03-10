@@ -23,6 +23,7 @@
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+
 \raggedbottom
 
 \begin{document}
@@ -58,10 +59,18 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 \end{eqnarray*}
 
 \subsection{}
-\vspace{-1cm}
+$c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$
+
 \begin{eqnarray*}
-&& c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2) \\
-&\implies& \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
+-\frac{\partial c}{\partial t} &=& -\frac{\partial}{\partial t}[S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)] \\
+&=& -S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) + \mathcal{N}'(d_2)\frac{\partial d_2}{\partial t}]\\
+&=& -S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) + \mathcal{N}'(d_2)(\frac{\partial d_1}{\partial t} - \frac{\sigma}{2\sqrt{T-t}})]\\
+&=& [-S\mathcal{N}'(d_1) + Kexp(-r(T-t))\mathcal{N}'(d_2)]\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}\mathcal{N}'(d_2)]\\
+&=& -rKexp(-r(T-t))\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
 \end{eqnarray*}
 The above follows because -
 \begin{eqnarray*}
