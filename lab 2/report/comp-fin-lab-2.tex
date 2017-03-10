@@ -35,15 +35,15 @@
 
 \section{Black Scholes Equation Check Solution Correctness}
 
-Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} e^{\frac{-y^2}{2}}dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}$.\\
+Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} exp(\frac{-y^2}{2})dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}exp(\frac{-x^2}{2})$.\\
 
 \begin{eqnarray*}
 && d_2 = d_1 - \sigma\sqrt{T-t}\\
 &\implies& \frac{d_2^2}{2} = \frac{d_1^2}{2} + \frac{\sigma^2(T-t)}{2} - d_1\sigma\sqrt{T-t}\\
 &\implies& \frac{d_1^2}{2} - \frac{d_2^2}{2} = d_1\sigma\sqrt{T-t} - \frac{\sigma^2(T-t)}{2} = log(\frac{S}{K}) + r(T-t)\\
 &\implies& log(\frac{S}{K}) = \frac{d_1^2}{2} - \frac{d_2^2}{2} - r(T-t)\\
-&\implies& \frac{S}{K} = exp(\frac{d_1^2}{2} - \frac{d_2^2}{2} - r(T-t)) = \frac{exp(\frac{-d_2^2}{2})}{exp(\frac{-d_1^2}{2} - r(T-t))} = \frac{\mathcal{N}'(d_2)}{\mathcal{N}'(d_1)e^{r(T-t)}}\\
-&\implies& S\mathcal{N}'(d_1) = Ke^{-r(T-t)}\mathcal{N}'(d_2) 
+&\implies& \frac{S}{K} = exp(\frac{d_1^2}{2} - \frac{d_2^2}{2} - r(T-t)) = \frac{exp(\frac{-d_2^2}{2})}{exp(\frac{-d_1^2}{2} - r(T-t))} = \frac{\mathcal{N}'(d_2)}{\mathcal{N}'(d_1)exp(r(T-t))}\\
+&\implies& S\mathcal{N}'(d_1) = Kexp(-r(T-t))\mathcal{N}'(d_2) 
 \end{eqnarray*}
 
 
@@ -54,16 +54,16 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 \end{eqnarray*}
 
 \begin{eqnarray*}
-&& c = S\mathcal{N}(d_1) - Ke^{-r(T-t)}\mathcal{N}(d_2) \\
-&\implies& \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Ke^{-r(T-t)}\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
+&& c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2) \\
+&\implies& \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
 \end{eqnarray*}
 
 \begin{eqnarray*}
-Ke^{-r(T-t)}\mathcal{N}'(d_2) &=& Ke^{-r(T-t)}\mathcal{N}'(d_1 - \sigma\sqrt{T-t})\\
-&=& Ke^{-r(T-t)}\frac{1}{\sqrt{2\pi}}e^{\frac{-(d_1 - \sigma\sqrt{T-t})^2}{2}}\\
-&=& Ke^{-r(T-t)}\frac{1}{\sqrt{2\pi}}e^{\frac{-d_1^2}{2}}e^{\frac{2d_1\sigma\sqrt{T-t} - \sigma^2(T-t)}{2}}\\
-&=& Ke^{-r(T-t)}\mathcal{N}'(d_1)e^{d_1\sigma\sqrt{T-t}}e^{-\sigma^2(T-t)}\\
-&=& K\mathcal{N}'(d_1)e^{-r(T-t)-\frac{\sigma^2(T-t)}{2} + log(\frac{S}{K}) + r(T-t) + \frac{\sigma^2(T-t)}{2}}\\
+Kexp(-r(T-t))\mathcal{N}'(d_2) &=& Kexp(-r(T-t))\mathcal{N}'(d_1 - \sigma\sqrt{T-t})\\
+&=& Kexp(-r(T-t))\frac{1}{\sqrt{2\pi}}exp(\frac{-(d_1 - \sigma\sqrt{T-t})^2}{2})\\
+&=& Kexp(-r(T-t))\frac{1}{\sqrt{2\pi}}exp(\frac{-d_1^2}{2})exp(\frac{2d_1\sigma\sqrt{T-t} - \sigma^2(T-t)}{2})\\
+&=& Kexp(-r(T-t))\mathcal{N}'(d_1)exp(d_1\sigma\sqrt{T-t})exp(-\sigma^2(T-t))\\
+&=& K\mathcal{N}'(d_1)exp(-r(T-t)-\frac{\sigma^2(T-t)}{2} + log(\frac{S}{K}) + r(T-t) + \frac{\sigma^2(T-t)}{2})\\
 &=& K\mathcal{N}'(d_1)\frac{S}{K} = S\mathcal{N}'(d_1)
 \end{eqnarray*}
 
