@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt, fleqn]{article}
 
 \usepackage[letterpaper, margin=0.7in]{geometry}
 \usepackage{graphicx}
@@ -38,14 +38,18 @@
 Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} e^{\frac{-y^2}{2}}dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}e^{\frac{-x^2}{2}}$.\\
 
 \begin{eqnarray*}
-d_2 &=& d_1 - \sigma\sqrt{T-t} \\
-\implies \frac{d_2^2}{2} &=& \frac{d_1^2}{2} + \frac{\sigma^2(T-t)}{2} - d_1\sigma\sqrt{T-t}\\
- S\mathcal{N}'(d_1) &=& Ke^{-r(T-t)}\mathcal{N}'(d_2) 
+&& d_2 = d_1 - \sigma\sqrt{T-t}\\
+&\implies& \frac{d_2^2}{2} = \frac{d_1^2}{2} + \frac{\sigma^2(T-t)}{2} - d_1\sigma\sqrt{T-t}\\
+&\implies& \frac{d_1^2}{2} - \frac{d_2^2}{2} = d_1\sigma\sqrt{T-t} - \frac{\sigma^2(T-t)}{2} = log(\frac{S}{K}) + r(T-t)\\
+&\implies& log(\frac{S}{K}) = \frac{d_1^2}{2} - \frac{d_2^2}{2} - r(T-t)\\
+&\implies& \frac{S}{K} = exp(\frac{d_1^2}{2} - \frac{d_2^2}{2} - r(T-t)) = \frac{exp(\frac{-d_2^2}{2})}{exp(\frac{-d_1^2}{2} - r(T-t))} = \frac{\mathcal{N}'(d_2)}{\mathcal{N}'(d_1)e^{r(T-t)}}\\
+&\implies& S\mathcal{N}'(d_1) = Ke^{-r(T-t)}\mathcal{N}'(d_2) 
 \end{eqnarray*}
 
 
+\begin{eqnarray*}
 
-
+\end{eqnarray*}
 
 
 
