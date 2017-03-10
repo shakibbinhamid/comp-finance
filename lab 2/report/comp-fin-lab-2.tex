@@ -35,8 +35,11 @@
 
 \section{Black Scholes Equation Check Solution Correctness}
 
-Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} exp(\frac{-y^2}{2})dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}exp(\frac{-x^2}{2})$.\\
+\subsection{}
+Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} exp(\frac{-y^2}{2})dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}exp(\frac{-x^2}{2})$.
 
+\subsection{}
+\vspace{-1cm}
 \begin{eqnarray*}
 && d_2 = d_1 - \sigma\sqrt{T-t}\\
 &\implies& \frac{d_2^2}{2} = \frac{d_1^2}{2} + \frac{\sigma^2(T-t)}{2} - d_1\sigma\sqrt{T-t}\\
@@ -46,18 +49,21 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 &\implies& S\mathcal{N}'(d_1) = Kexp(-r(T-t))\mathcal{N}'(d_2) 
 \end{eqnarray*}
 
-
+\subsection{}
+\vspace{-1cm}
 \begin{eqnarray*}
 && d_1 = \frac{log(\frac{S}{K})+(r+\frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{(T-t)}} \\
 &\implies& \frac{\partial d_1}{\partial S} = \frac{1}{\sigma\sqrt{(T-t)}} \frac{\partial}{\partial S}(logS - logK + (r+\frac{\sigma^2}{2})(T-t)) = \frac{1}{\sigma S \sqrt{(T-t)}}\\
 &Similarly& d_2 = d_1 - \sigma\sqrt{T-t} \implies \frac{\partial d_2}{\partial S} = \frac{\partial d_1}{\partial S}= \frac{1}{\sigma S \sqrt{(T-t)}}
 \end{eqnarray*}
 
+\subsection{}
+\vspace{-1cm}
 \begin{eqnarray*}
 && c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2) \\
 &\implies& \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
 \end{eqnarray*}
-
+The above follows because -
 \begin{eqnarray*}
 Kexp(-r(T-t))\mathcal{N}'(d_2) &=& Kexp(-r(T-t))\mathcal{N}'(d_1 - \sigma\sqrt{T-t})\\
 &=& Kexp(-r(T-t))\frac{1}{\sqrt{2\pi}}exp(\frac{-(d_1 - \sigma\sqrt{T-t})^2}{2})\\
@@ -67,7 +73,7 @@ Kexp(-r(T-t))\mathcal{N}'(d_2) &=& Kexp(-r(T-t))\mathcal{N}'(d_1 - \sigma\sqrt{T
 &=& K\mathcal{N}'(d_1)\frac{S}{K} = S\mathcal{N}'(d_1)
 \end{eqnarray*}
 
-
+\subsection{}
 $
 \frac{\partial c}{\partial S} = \mathcal{N}(d_1)
 \implies \frac{\partial^2 c}{\partial S^2} = \mathcal{N}(d_1)\frac{\partial d_1}{\partial S} = \mathcal{N}(d_1)\frac{1}{\sigma S \sqrt{(T-t)}}

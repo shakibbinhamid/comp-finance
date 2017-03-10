@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  10 MAR 2017 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  10 MAR 2017 18:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -999,28 +999,23 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.14}).
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
- 30464 strings out of 493013
- 725443 string characters out of 6139317
+ 30467 strings out of 493013
+ 725493 string characters out of 6139317
  966378 words of memory out of 5000000
- 33493 multiletter control sequences out of 15000+600000
- 11831 words of font info for 44 fonts, out of 8000000 for 9000
+ 33496 multiletter control sequences out of 15000+600000
+ 12436 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,7n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
  <
@@ -1031,12 +1026,13 @@ e/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf
 our/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/
 public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public
 /cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cm
-r10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.72
-0pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (1 page, 43092 bytes).
+r10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.60
+0pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> <
+/home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-2.pdf (1 page, 46049 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 188 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
