@@ -53,7 +53,19 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 &Similarly& d_2 = d_1 - \sigma\sqrt{T-t} \implies \frac{\partial d_2}{\partial S} = \frac{\partial d_1}{\partial S}= \frac{1}{\sigma S \sqrt{(T-t)}}
 \end{eqnarray*}
 
+\begin{eqnarray*}
+&& c = S\mathcal{N}(d_1) - Ke^{-r(T-t)}\mathcal{N}(d_2) \\
+&\implies& \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Ke^{-r(T-t)}\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
+\end{eqnarray*}
 
+\begin{eqnarray*}
+Ke^{-r(T-t)}\mathcal{N}'(d_2) &=& Ke^{-r(T-t)}\mathcal{N}'(d_1 - \sigma\sqrt{T-t})\\
+&=& Ke^{-r(T-t)}\frac{1}{\sqrt{2\pi}}e^{\frac{-(d_1 - \sigma\sqrt{T-t})^2}{2}}\\
+&=& Ke^{-r(T-t)}\frac{1}{\sqrt{2\pi}}e^{\frac{-d_1^2}{2}}e^{\frac{2d_1\sigma\sqrt{T-t} - \sigma^2(T-t)}{2}}\\
+&=& Ke^{-r(T-t)}\mathcal{N}'(d_1)e^{d_1\sigma\sqrt{T-t}}e^{-\sigma^2(T-t)}\\
+&=& K\mathcal{N}'(d_1)e^{-r(T-t)-\frac{\sigma^2(T-t)}{2} + log(\frac{S}{K}) + r(T-t) + \frac{\sigma^2(T-t)}{2}}\\
+&=& K\mathcal{N}'(d_1)\frac{S}{K} = S\mathcal{N}'(d_1)
+\end{eqnarray*}
 
 
 $
