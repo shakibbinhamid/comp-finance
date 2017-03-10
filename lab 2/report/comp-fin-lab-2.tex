@@ -48,10 +48,18 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 
 
 \begin{eqnarray*}
-
+&& d_1 = \frac{log(\frac{S}{K})+(r+\frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{(T-t)}} \\
+&\implies& \frac{\partial d_1}{\partial S} = \frac{1}{\sigma\sqrt{(T-t)}} \frac{\partial}{\partial S}(logS - logK + (r+\frac{\sigma^2}{2})(T-t)) = \frac{1}{\sigma S \sqrt{(T-t)}}\\
+&Similarly& d_2 = d_1 - \sigma\sqrt{T-t} \implies \frac{\partial d_2}{\partial S} = \frac{\partial d_1}{\partial S}= \frac{1}{\sigma S \sqrt{(T-t)}}
 \end{eqnarray*}
 
 
+
+
+$
+\frac{\partial c}{\partial S} = \mathcal{N}(d_1)
+\implies \frac{\partial^2 c}{\partial S^2} = \mathcal{N}(d_1)\frac{\partial d_1}{\partial S} = \mathcal{N}(d_1)\frac{1}{\sigma S \sqrt{(T-t)}}
+$
 
 
 
