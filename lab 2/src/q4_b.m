@@ -1,63 +1,49 @@
 clc;
 
-% load data
+%% load data --------------------------------------
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/prices');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/dates');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/stock');
 
 % interest rate is fixed
 intRate = 6/100;
-
-% list of strike prices for all the 5 call options
-% and 5 put options we have
-% note that the strike price is different from the option price
-strikePrices = [...
-    2925, 3025, 3125, 3225, 3325, ...
-    2925, 3025, 3125, 3225, 3325];
+strikePrices = [2925, 3025, 3125, 3225, 3325, ...
+                        2925, 3025, 3125, 3225, 3325];
 
 % neglect the last week as the timeToExpire (in years) becomes to small
 % and the calcuations of volatility gives errors
-neglectedDays = 10;
+neglectedDays = 0; %10
 
-% data is divided to training and testing
+%% divide data into training and testing
 n = size(stock, 1);
-m = length(strikePrices);
-nTrain = int16(n/4);
+totalNOptions = length(strikePrices);
+nTrain = floor(n/4);
 nTest = n-nTrain - neglectedDays;
 
 % in this question, we need only random 50 days
 nSamples = 100;
-testIdx = int16(randperm(nTest, 140)) + nTrain;
+testIdx = floor(randperm(nTest, 140)) + nTrain;
 testIdx = sort(testIdx);
 
 errorBlack = zeros(1, nSamples);
 errorLattice = zeros(1, nSamples);
 errorMonte = zeros(1, nSamples);
 
-% loop on the test data. for each one, calcuate the volatility
-% from train data and estimate the call price and save it
+%% calculate option prices -------------------
 for i=1:nSamples
     
     idxCurrent = testIdx(i);
-    
-    % current price of the underlying asset
     stockPrice = stock(idxCurrent);
     
     % pick up a random option
     % we're only interested in Put Options
     nOptions = 1;
-    optionIdx = int16(randperm(m/2, nOptions));
-    optionIdx = optionIdx + m/2;
+    optionIdx = floor(randperm(totalNOptions/2, nOptions));
+    optionIdx = optionIdx + totalNOptions/2;
     
-    % current price of the option
     optionPrice = prices(idxCurrent,optionIdx);
-    
-    % strike price of the option
     strikePrice = strikePrices(optionIdx);
-    
-    % time untill the expiration of the option (in years)
-    expTime = dates(n,optionIdx)+1 - dates(idxCurrent,optionIdx);
-    expTime = expTime/365;
+    expTime = (dates(n,optionIdx)+1 - dates(idxCurrent,optionIdx))/365;
     
     % estimate the volatility based on nTrain historical data
     % note the difference between [blsimpv] and [blkimpv]
@@ -95,13 +81,14 @@ for i=1:nSamples
     
 end
 
-%% plot
-figure(2);clf;
-hold on;
-grid on;
-box on;
+%% plot -----------------------------------------------
+figure(1);clf;
+
+hold on;grid on;box on;
+
 boxplot([abs(errorBlack); abs(errorLattice); abs(errorMonte);]');
-title('Measuring Performance', 'FontSize', 18);
+
+title('Pricing Performance', 'FontSize', 14);
 xlabel('Black-Scholes  Binomial Lattice  Monte-Carlo   ', 'FontSize', 14);
-ylabel('Absolute Error', 'FontSize', 18);
+ylabel('Absolute Error', 'FontSize', 14);
 set(gca, 'XDir', 'reverse');
