@@ -1,92 +1,195 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Question 2-a: estimating prices using Black-Scholes model
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 clc;
 
-% load data
+%% load data --------------------------------------
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/prices');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/dates');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 2/Data/stock');
 
 % interest rate is fixed
-intRate = 6/100;
+interestRate = 6/100;
 
-% list of strike prices for all the 5 call options
-% and 5 put options we have
-% note that the strike price is different from the option price
+% strike prices
 strikePrices = [2925, 3025, 3125, 3225, 3325, ...
-    2925, 3025, 3125, 3225, 3325];
+                        2925, 3025, 3125, 3225, 3325];
+
+%% divide into training and validation data
 
 % neglect the last week as the timeToExpire (in years) becomes to small
 % and the calcuations of volatility gives errors
 neglectedDays = 0; % 10
 
 % data is divided to training and testing
-n = size(stock, 1);
-m = length(strikePrices);
-nTrain = floor(n/4);
-nTest = n-nTrain - neglectedDays;
+T = size(stock, 1);
+nOptions = length(strikePrices);
+nTrain = floor(T/4);
+nTest = T-nTrain - neglectedDays;
+
+actualValidationPrices = prices(nTrain+1: nTrain+nTest,:);
+timeValues = dates(nTrain+1: nTrain+nTest);
 
 % list of estimated prices of put and call options
-estmPrices = zeros(nTest, m);
+estimatedValidationPrices = zeros(nTest, nOptions);
 
-voltValues = zeros(nTest,m);
-sigmaValues = zeros(nTest,m);
-vegaValues = zeros(nTest,m);
-gammaValues = zeros(nTest,m);
-deltaValues = zeros(nTest,m);
+volatilityValues = zeros(nTest,nOptions);
+sigmaValues = zeros(nTest,nOptions);
+vegaValues = zeros(nTest,nOptions);
+gammaValues = zeros(nTest,nOptions);
+deltaValues = zeros(nTest,nOptions);
 
-% loop on the test data. for each one, calcuate the volatility
-% from train data and estimate the call price and save it
 for i=1:nTest
-    idxCurrent = nTrain +i;
+    idx = nTrain +i;
     
-    % current price of the underlying asset
-    stockPrice = stock(idxCurrent);
+    stockPrice = stock(idx);
     
-    % loop on the 10 options we have (5 call and 5 put)
-    for j=1:m
+    for j=1:nOptions
         
-        % current price of the option
-        optionPrice = prices(idxCurrent,j);
-        
-        % strike price of the option
+        optionPrice = prices(idx,j);
         strikePrice = strikePrices(j);
+        maturityTime = (dates(T,j)+1 - dates(idx,j))/365;
         
-        % time untill the expiration of the option (in years)
-        expTime = dates(n,j)+1 - dates(idxCurrent,j);
-        expTime = expTime/365;
-        
-        % estimate the volatility based on nTrain historical data
-        % note the difference between [blsimpv] and [blkimpv]
-        if (j<=5)
-            optionType = 1;
-            optionClass = {'call'};
-        else
-            optionType = -1;
-            optionClass = {'put'};
-        end
-        
-        % volatility, this is different than the implied volatility
+        % calculate volatility from training data
         sigma = calcVolatility(prices(i:nTrain+i-1, j));
-        sigmaValues(i,j) = sigma;
         
         % get some parameters of the model
-        vegaValues(i,j) = blsvega(stockPrice, strikePrice, intRate, expTime, sigma);
-        gammaValues(i,j) = blsgamma(stockPrice, strikePrice, intRate, expTime, sigma);
-        deltaValues(i,j) = blsdelta(stockPrice, strikePrice, intRate, expTime, sigma);
+        sigmaValues(i,j) = sigma;
+        vegaValues(i,j) = blsvega(stockPrice, strikePrice, interestRate, maturityTime, sigma);
+        gammaValues(i,j) = blsgamma(stockPrice, strikePrice, interestRate, maturityTime, sigma);
+        deltaValues(i,j) = blsdelta(stockPrice, strikePrice, interestRate, maturityTime, sigma);
         
         % apply the model to get the option price        
-        [pCall, pPut] = blsprice(stockPrice, strikePrice, intRate, expTime, sigma);
+        [pCall, pPut] = blsprice(stockPrice, strikePrice, interestRate, maturityTime, sigma);
         if (j <= 5)
-            estmPrices(i,j) = pCall;
+            estimatedValidationPrices(i,j) = pCall;
         else
-            estmPrices(i,j) = pPut;
+            estimatedValidationPrices(i,j) = pPut;
         end
     end
-    
 end
 
+errors = abs(actualValidationPrices - estimatedValidationPrices);
 
+%% plot the estimated option prices -----
 
+figure(1);clf;
+
+subplot(1, 2, 1);
+hold on;
+grid on;
+box on;
+axis tight;
+for i=1:nOptions/2
+    plot(timeValues, estimatedValidationPrices(:,i), 'b');
+    plot(timeValues, actualValidationPrices(:,i), 'r');
+end
+title('BLS Estmations for Call Prices', 'FontSize', 14);
+xlabel('Date (dd/mm)', 'FontSize', 14);
+ylabel('Call Option Price', 'FontSize', 14);
+plot_legend = legend ('Estimated', 'Actual');
+set(plot_legend, 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+subplot(1, 2, 2);
+hold on;
+grid on;
+box on;
+axis tight;
+for i=1+(nOptions/2):nOptions
+    plot(timeValues, estimatedValidationPrices(:,i), 'b');
+    plot(timeValues, actualValidationPrices(:,i), 'r');
+end
+title('BLS Estmations for Put Prices', 'FontSize', 14);
+xlabel('Date (dd/mm)', 'FontSize', 14);
+ylabel('Put Option Price', 'FontSize', 14);
+plot_legend = legend ('Estimated', 'Actual');
+set(plot_legend, 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+%% plot the absolute error between actual and estimated price
+colorMaps = lines(10);
+
+figure(2);clf;
+subplot(1, 2, 1);
+hold on;grid on;box on;axis tight;
+
+for i=1:nOptions/2
+    plot(timeValues, errors(:,i), 'Color', colorMaps(i,:));
+end
+
+title('Call Pricing Absolute Errors', 'FontSize', 14);
+xlabel('Date (dd/mm)', 'FontSize', 14);
+ylabel('Call Price Abs Error', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+subplot(1, 2, 2);
+hold on;grid on;box on;axis tight;
+
+for i=1+(nOptions/2):nOptions
+    plot(timeValues, errors(:,i), 'Color', colorMaps(i-(nOptions/2),:));
+end
+
+title('Put Pricing Absolute Errors', 'FontSize', 14);
+xlabel('Date (dd/mm)', 'FontSize', 14);
+ylabel('Put Price Abs Error', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+%% box-plot of abs error ----------------------
+figure(3);clf;
+
+subplot(1, 2, 1);
+hold on;grid on;box on;axis tight;
+
+boxplot(errors(:,1:nOptions/2));
+
+title('Call Option Pricing Absolute Errors', 'FontSize', 14);
+xlabel('Call Options', 'FontSize', 16);
+ylabel('Absolute Error', 'FontSize', 16);
+
+subplot(1, 2, 2);
+hold on;grid on;box on;axis tight;
+
+boxplot(errors(:,1+(nOptions/2):nOptions));
+
+title('Put Option Pricing Absolute Errors', 'FontSize', 14);
+xlabel('Put Options', 'FontSize', 16);
+ylabel('Absolute Error', 'FontSize', 16);
+
+%% plot model parameters ------------------
+colorMap = lines(5);
+
+figure(4);clf;
+
+subplot(4,1,1);
+hold on;grid on;box on;axis tight;
+
+plot(timeValues, sigmaValues, 'Color', colorMap(1,:), 'LineWidth', 0.5);
+
+title('\sigma: Volatility', 'FontSize', 14);
+ylabel('Value', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+subplot(4,1,2);
+hold on;grid on;box on;axis tight;
+
+plot(timeValues, vegaValues, 'Color', colorMap(2,:), 'LineWidth', 0.5);
+
+title('\nu: Sensitivity to Underlying Price Volatility', 'FontSize', 14);
+ylabel('Value', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+subplot(4,1,3);
+hold on;grid on;box on;axis tight;
+
+plot(timeValues, deltaValues, 'Color', colorMap(4,:), 'LineWidth', 0.5);
+
+title('\Delta: Sensitivity to Underlying Price Change', 'FontSize', 14);
+ylabel('Value', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
+
+subplot(4,1,4);hold on;grid on;box on;axis tight;
+
+plot(timeValues, gammaValues, 'Color', colorMap(5,:), 'LineWidth', 0.5);
+
+title('\Gamma: Sensitivity to Underlying Delta Change', 'FontSize', 14);
+xlabel('Date (dd/mm)', 'FontSize', 14);
+ylabel('Value', 'FontSize', 14);
+datetick('x','dd/mm','keeplimits');
