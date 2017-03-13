@@ -1,0 +1,311 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor5}{rgb}{0.46600,0.67400,0.18800}%
+\definecolor{mycolor6}{rgb}{0.63500,0.07800,0.18400}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=2.707in,
+height=3.017in,
+at={(1.064in,0.486in)},
+scale only axis,
+xmin=2900,
+xmax=3400,
+xlabel style={font=\color{white!15!black}},
+xlabel={Strike/Asset},
+ymin=0.04,
+ymax=0.16,
+ylabel style={font=\color{white!15!black}},
+ylabel={Implied Volatility},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={ Call Option Volatility Smile},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+2925	0.0550322159724941\\
+3025	0.121761940454837\\
+3125	0.101396125781078\\
+3225	0.148069108832649\\
+3325	0.127434791701829\\
+};
+\addplot [color=mycolor1, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2925	0.0550322159724941\\
+3025	0.121761940454837\\
+3125	0.101396125781078\\
+3225	0.148069108832649\\
+3325	0.127434791701829\\
+};
+\addlegendentry{09/Feb}
+
+\addplot [color=mycolor2, forget plot]
+  table[row sep=crcr]{%
+2925	0.114448998315317\\
+3025	0.121910640576759\\
+3125	0.125201172238213\\
+3225	0.12773306320703\\
+3325	0.128257009096138\\
+};
+\addplot [color=mycolor2, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+2925	0.114448998315317\\
+3025	0.121910640576759\\
+3125	0.125201172238213\\
+3225	0.12773306320703\\
+3325	0.128257009096138\\
+};
+\addlegendentry{10/Feb}
+
+\addplot [color=mycolor3, forget plot]
+  table[row sep=crcr]{%
+2925	0.0739741696677091\\
+3025	0.100793680656645\\
+3125	0.111522263030768\\
+3225	0.116149419102205\\
+3325	0.118559613633175\\
+};
+\addplot [color=mycolor3, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+2925	0.0739741696677091\\
+3025	0.100793680656645\\
+3125	0.111522263030768\\
+3225	0.116149419102205\\
+3325	0.118559613633175\\
+};
+\addlegendentry{25/Feb}
+
+\addplot [color=mycolor4, forget plot]
+  table[row sep=crcr]{%
+2925	0.0481331317022744\\
+3025	0.0911818717816178\\
+3125	0.103627549440492\\
+3225	0.110079748913666\\
+3325	0.114822463385574\\
+};
+\addplot [color=mycolor4, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor4}]
+  table[row sep=crcr]{%
+2925	0.0481331317022744\\
+3025	0.0911818717816178\\
+3125	0.103627549440492\\
+3225	0.110079748913666\\
+3325	0.114822463385574\\
+};
+\addlegendentry{16/Mar}
+
+\addplot [color=mycolor5, forget plot]
+  table[row sep=crcr]{%
+2925	0.105163900790446\\
+3025	0.114613358475839\\
+3125	0.147829348384367\\
+3225	0.123968505898763\\
+3325	0.123737089589005\\
+};
+\addplot [color=mycolor5, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor5}]
+  table[row sep=crcr]{%
+2925	0.105163900790446\\
+3025	0.114613358475839\\
+3125	0.147829348384367\\
+3225	0.123968505898763\\
+3325	0.123737089589005\\
+};
+\addlegendentry{18/Mar}
+
+\addplot [color=mycolor6, forget plot]
+  table[row sep=crcr]{%
+2925	0.130250832961549\\
+3025	0.145573063390754\\
+3125	0.133772471001269\\
+3225	0.134870074825517\\
+3325	0.135543353505332\\
+};
+\addplot [color=mycolor6, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor6}]
+  table[row sep=crcr]{%
+2925	0.130250832961549\\
+3025	0.145573063390754\\
+3125	0.133772471001269\\
+3225	0.134870074825517\\
+3325	0.135543353505332\\
+};
+\addlegendentry{24/Mar}
+
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+2925	0.124883782779815\\
+3025	0.139713207818031\\
+3125	0.136056049631517\\
+3225	0.133027023263109\\
+3325	0.135829073512172\\
+};
+\addplot [color=mycolor1, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2925	0.124883782779815\\
+3025	0.139713207818031\\
+3125	0.136056049631517\\
+3225	0.133027023263109\\
+3325	0.135829073512172\\
+};
+\addlegendentry{28/Mar}
+
+\end{axis}
+
+\begin{axis}[%
+width=2.707in,
+height=3.017in,
+at={(4.67in,0.486in)},
+scale only axis,
+xmin=2900,
+xmax=3400,
+xlabel style={font=\color{white!15!black}},
+xlabel={Strike/Asset},
+ymin=0.15,
+ymax=0.23,
+ylabel style={font=\color{white!15!black}},
+ylabel={Implied Volatility},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Put Option Volatility Smile},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+2925	0.202689415342272\\
+3025	0.199863459990151\\
+3125	0.200468276501571\\
+3225	0.201575594786575\\
+3325	0.208284589715834\\
+};
+\addplot [color=mycolor1, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2925	0.202689415342272\\
+3025	0.199863459990151\\
+3125	0.200468276501571\\
+3225	0.201575594786575\\
+3325	0.208284589715834\\
+};
+\addlegendentry{09/Feb}
+
+\addplot [color=mycolor2, forget plot]
+  table[row sep=crcr]{%
+2925	0.192605558638478\\
+3025	0.191510806516985\\
+3125	0.192825982210705\\
+3225	0.195862878668258\\
+3325	0.203061815563154\\
+};
+\addplot [color=mycolor2, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+2925	0.192605558638478\\
+3025	0.191510806516985\\
+3125	0.192825982210705\\
+3225	0.195862878668258\\
+3325	0.203061815563154\\
+};
+\addlegendentry{10/Feb}
+
+\addplot [color=mycolor3, forget plot]
+  table[row sep=crcr]{%
+2925	0.191473933451534\\
+3025	0.191407174707866\\
+3125	0.186628982115968\\
+3225	0.199906104202725\\
+3325	0.209754892086712\\
+};
+\addplot [color=mycolor3, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+2925	0.191473933451534\\
+3025	0.191407174707866\\
+3125	0.186628982115968\\
+3225	0.199906104202725\\
+3325	0.209754892086712\\
+};
+\addlegendentry{25/Feb}
+
+\addplot [color=mycolor4, forget plot]
+  table[row sep=crcr]{%
+2925	0.196511820085172\\
+3025	0.15262010858785\\
+3125	0.203897634750451\\
+3225	0.210964608454464\\
+3325	0.222754703399877\\
+};
+\addplot [color=mycolor4, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor4}]
+  table[row sep=crcr]{%
+2925	0.196511820085172\\
+3025	0.15262010858785\\
+3125	0.203897634750451\\
+3225	0.210964608454464\\
+3325	0.222754703399877\\
+};
+\addlegendentry{16/Mar}
+
+\addplot [color=mycolor5, forget plot]
+  table[row sep=crcr]{%
+2925	0.192545001630816\\
+3025	0.193529311583925\\
+3125	0.198101593030488\\
+3225	0.20446132945021\\
+3325	0.215229014647561\\
+};
+\addplot [color=mycolor5, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor5}]
+  table[row sep=crcr]{%
+2925	0.192545001630816\\
+3025	0.193529311583925\\
+3125	0.198101593030488\\
+3225	0.20446132945021\\
+3325	0.215229014647561\\
+};
+\addlegendentry{18/Mar}
+
+\addplot [color=mycolor6, forget plot]
+  table[row sep=crcr]{%
+2925	0.19847156816234\\
+3025	0.216370576353695\\
+3125	0.20595277496439\\
+3225	0.215265822029224\\
+3325	0.227266663412286\\
+};
+\addplot [color=mycolor6, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor6}]
+  table[row sep=crcr]{%
+2925	0.19847156816234\\
+3025	0.216370576353695\\
+3125	0.20595277496439\\
+3225	0.215265822029224\\
+3325	0.227266663412286\\
+};
+\addlegendentry{24/Mar}
+
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+2925	0.193895369859817\\
+3025	0.207267384774418\\
+3125	0.198972535653307\\
+3225	0.206459417321738\\
+3325	0.216982417298509\\
+};
+\addplot [color=mycolor1, draw=none, mark size=5.0pt, mark=*, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2925	0.193895369859817\\
+3025	0.207267384774418\\
+3125	0.198972535653307\\
+3225	0.206459417321738\\
+3325	0.216982417298509\\
+};
+\addlegendentry{28/Mar}
+
+\end{axis}
+\end{tikzpicture}%

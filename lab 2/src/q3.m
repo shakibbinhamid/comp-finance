@@ -23,7 +23,7 @@ nTest = n-nTrain - neglectedDays;
 
 % in this question, we need only random 30 days form
 % the test data
-nSamples = 30;
+nSamples = 68;
 testIdx = floor(randperm(nTest, nSamples)) + nTrain;
 testIdx = sort(testIdx);
 
@@ -66,15 +66,15 @@ for i=1:nSamples
 end
 
 % this is to choose the days whose volatilites are not zero
-voltValues_ = [];
-sigmaValues_ = [];
+volatilityValues_ = [];
+impliedVolatilityValues_ = [];
 dates_ = [];
 stock_ = [];
 for i=1:nSamples
     v = impliedVolatilityValues(i,:);
     if (isempty(v(v==0)))
-        voltValues_ = [voltValues_; v];
-        sigmaValues_ = [sigmaValues_; volatilityValues(i,:)];
+        volatilityValues_ = [volatilityValues_; v];
+        impliedVolatilityValues_ = [impliedVolatilityValues_; volatilityValues(i,:)];
         dates_ = [dates_; dates(i,:)];
         stock_ = [stock_; stock(i)];
     end
@@ -83,69 +83,67 @@ end
 %% scatter plot historical vs. implied volatility
 colorMap = lines(5);
 colorIdx = [1 2 3 4 5];
+
 figure(1);clf;
+
 subplot(1,2,1);
-hold on;
-grid on;
-box on;
-%axis tight;
-%daspect([1,1,1]);
+hold on;grid on;box on;
+
 for i=1:nOptions/2
-    plot(voltValues_(:,i), sigmaValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i),:));
+    plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i),:));
 end
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Implied Volatility', 'FontSize', 14);
-ylabel('Historical (Realised) Volatility', 'FontSize', 14);
+ylabel('Historical Volatility', 'FontSize', 14);
 plotLegend = legend('Call 1', 'Call 2', 'Call 3', 'Call 4', 'Call 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
+
 subplot(1,2,2);
-hold on;
-grid on;
-box on;
-%axis tight;
-%daspect([1,1,1]);
+hold on;grid on;box on;
+
 for i=1+(nOptions/2):nOptions
-    plot(voltValues_(:,i), sigmaValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
+    plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
 end
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Implied Volatility', 'FontSize', 14);
-ylabel('Historical (Realised) Volatility', 'FontSize', 14);
-plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'ne');
+ylabel('Historical Volatility', 'FontSize', 14);
+plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
 %% plot historical vs. implied volatility
 colorMap = lines(5);
 colorIdx = [1 2 3 4 5];
+
 figure(2);clf;
+
 subplot(1,2,1);
-hold on;
-grid on;
-box on;
-%axis tight;
-%daspect([1,1,1]);
+hold on;grid on;box on;
+
 for i=1:nOptions/2
-    plot(voltValues_(:,i), 'LineWidth', 1, 'Color', 'k');
-    plot(sigmaValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i),:));
+     plot(volatilityValues_(:,i), '-.', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i),:));
+    plot(impliedVolatilityValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i),:));
 end
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Implied Volatility', 'FontSize', 14);
 ylabel('Historical (Realised) Volatility', 'FontSize', 14);
-plotLegend = legend('Call 1', 'Call 2', 'Call 3', 'Call 4', 'Call 5', 'Location', 'nw');
+plotLegend = legend('Call 1',  'Call 1','Call 2', 'Call 2', 'Call 3','Call 4' ,'Call 4', 'Call 5','Call 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
+
 subplot(1,2,2);
-hold on;
-grid on;
-box on;
-%axis tight;
-%daspect([1,1,1]);
+hold on;grid on;box on;
+
 for i=1+(nOptions/2):nOptions
-    plot(voltValues_(:,i), 'LineWidth', 1, 'Color', 'k');
-    plot(sigmaValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
+    plot(volatilityValues_(:,i), '-.', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
+    plot(impliedVolatilityValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
 end
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Implied Volatility', 'FontSize', 14);
 ylabel('Historical (Realised) Volatility', 'FontSize', 14);
-plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'ne');
+plotLegend = legend('Put 1', 'Put 1','Put 2','Put 2', 'Put 3','Put 3', 'Put 4','Put 4', 'Put 5','Put 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
 %% volatility smile
@@ -157,30 +155,33 @@ plots = zeros(length(daysIdx),1);
 for i=1:length(daysIdx)
     legendDates{i} = datestr(dates_(testIdx(i)),'dd/mmm');
 end
+
 figure(3); clf;
+
 subplot(1, 2, 1);
-hold on;
-grid on;
-box on;
+hold on;grid on;box on;
+
 for i=1:length(daysIdx)
-    plot(strikePrices(1:nOptions/2), voltValues_(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
-    plots(i) = plot(strikePrices(1:nOptions/2), voltValues_(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
+    plot(strikePrices(1:nOptions/2), volatilityValues_(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
+    plots(i) = plot(strikePrices(1:nOptions/2), volatilityValues_(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
 end
-title('Implied Volatility for Call Options', 'FontSize', 14);
+
+title(' Call Option Volatility Smile', 'FontSize', 14);
 xlabel('Strike/Asset', 'FontSize', 14);
 ylabel('Implied Volatility', 'FontSize', 14);
 plotLegend = legend(plots, legendDates, 'Location', 'se');
 set(plotLegend, 'FontSize', 10);
+
 subplot(1, 2, 2);
-hold on;
-grid on;
-box on;
+hold on;grid on;box on;
+
 for i=1:length(daysIdx)
     plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues(daysIdx(i),1+(nOptions/2):nOptions), '-', 'Color', colorMap(colorIdx(i),:));
     plots(i) = plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues(daysIdx(i),1+(nOptions/2):nOptions), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));
 end
-title('Implied Volatility for Put Options', 'FontSize', 14);
-xlabel('Strike/Asset', 'FontSize', 14);
+
+title('Put Option Volatility Smile', 'FontSize', 14);
+xlabel('Strike/Asset', 'FontSize', 14);,
 ylabel('Implied Volatility', 'FontSize', 14);
 plotLegend = legend(plots, legendDates, 'Location', 'se');
 set(plotLegend, 'FontSize', 10);
