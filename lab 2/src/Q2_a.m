@@ -20,12 +20,12 @@ strikePrices = [2925, 3025, 3125, 3225, 3325, ...
 
 % neglect the last week as the timeToExpire (in years) becomes to small
 % and the calcuations of volatility gives errors
-neglectedDays = 10;
+neglectedDays = 0; % 10
 
 % data is divided to training and testing
 n = size(stock, 1);
 m = length(strikePrices);
-nTrain = int16(n/4);
+nTrain = floor(n/4);
 nTest = n-nTrain - neglectedDays;
 
 % list of estimated prices of put and call options
