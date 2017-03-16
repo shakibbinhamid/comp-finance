@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  16 MAR 2017 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  16 MAR 2017 12:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1009,30 +1009,89 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./comp-fin-lab-2.aux)
- ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./q2-bls-parameters.tex) 
+(./q2-error.tex)
+(./q2-error-boxplot.tex
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 21
+6.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 216.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 42
+9.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 429.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 43
+3.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 433.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 43
+7.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 437.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: Table '<inline_table>' has non-unique column name 'na
+n'. Only the first occurence can be accessed via column names. on input line 44
+1.
+
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 441.
+
+ [warning /pgfplots/warning/plot without coordinates]
+)
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+[][]
+ []
+
+[2] [3] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
- 30467 strings out of 493013
- 725493 string characters out of 6139317
- 968378 words of memory out of 5000000
- 33496 multiletter control sequences out of 15000+600000
+ 30957 strings out of 493013
+ 739089 string characters out of 6139317
+ 1327946 words of memory out of 5000000
+ 33977 multiletter control sequences out of 15000+600000
  12436 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
- </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shak
-ib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.te
-xlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/t
-exmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk
-/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljf
-our/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pu
-blic/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
-m/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx1
-2.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720p
-k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (2 pages, 49619 bytes).
+ 69i,15n,120p,851b,2112s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
+ur/public/cm/cmbx10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi
+600/cmr6.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.
+657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> 
+</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </usr/s
+hare/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.texliv
+e/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texm
+f-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
+k/ljfour/public/cm/cmbx12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
+ur/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pub
+lic/cm/cmr12.720pk>
+Output written on comp-fin-lab-2.pdf (3 pages, 133938 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 262 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

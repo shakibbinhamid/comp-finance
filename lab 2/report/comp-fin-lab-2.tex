@@ -88,9 +88,30 @@ rS\frac{\partial c}{\partial S} &=& \mathcal{N}(d_1)rS\\
 
 Adding the above - $\frac{\partial c}{\partial t} + \frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} + rS\frac{\partial c}{\partial S} - rc = 0$. So, black scholes PDE is correct for European call option.
 
+\section{Black-Scholes Option Price vs Actual Option Price}
 
+\begin{wrapfigure}{!h}{0.45\textwidth}
+\begin{center}
+	\resizebox {0.4\textwidth} {!} {\input{q2-bls-parameters.tex} }
+	\caption{Black Scholes Parameters}
+	\label{fig:q2-bls-parameters}
+\end{center}
+\end{wrapfigure}
 
-
+\begin{figure}[!h]
+   \centering 
+   \begin{subfigure}[b]{0.49\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q2-error.tex} }
+		\label{fig:q2-error}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.49\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q2-error-boxplot.tex} }
+        \label{fig:q2-error-boxplot}
+    \end{subfigure}
+    \caption{Absolute Error between Black-Scholes and Actual Option Prices}
+	\label{fig:naive_v_cvx}
+\end{figure}
 
 
 
