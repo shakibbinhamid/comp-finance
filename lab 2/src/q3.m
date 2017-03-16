@@ -93,10 +93,12 @@ for i=1:nOptions/2
     plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i),:));
 end
 
+fplot(@(x) x, [0, mean(max(volatilityValues_))], 'Linewidth', 2)
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Historical Volatility', 'FontSize', 14);
 ylabel('Implied Volatility', 'FontSize', 14);
-plotLegend = legend('Call 1', 'Call 2', 'Call 3', 'Call 4', 'Call 5', 'Location', 'nw');
+plotLegend = legend('Call 1', 'Call 2', 'Call 3', 'Call 4', 'Call 5', 'Location', 'se');
 set(plotLegend, 'FontSize', 10);
 
 subplot(1,2,2);
@@ -106,10 +108,12 @@ for i=1+(nOptions/2):nOptions
     plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
 end
 
+fplot(@(x) x, [0, mean(max(volatilityValues_))], 'Linewidth', 2)
+
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Historical Volatility', 'FontSize', 14);
 ylabel('Implied Volatility', 'FontSize', 14);
-plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'nw');
+plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'se');
 set(plotLegend, 'FontSize', 10);
 
 %% plot historical vs. implied volatility
