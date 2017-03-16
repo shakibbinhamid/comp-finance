@@ -72,15 +72,6 @@ $c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$
 \begin{eqnarray*}
 \frac{\partial c}{\partial S} = \mathcal{N}(d_1) + \frac{1}{\sigma S \sqrt{(T-t)}}[S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)] = \mathcal{N}(d_1)
 \end{eqnarray*}
-The above follows because -
-\begin{eqnarray*}
-Kexp(-r(T-t))\mathcal{N}'(d_2) &=& Kexp(-r(T-t))\mathcal{N}'(d_1 - \sigma\sqrt{T-t})\\
-&=& Kexp(-r(T-t))\frac{1}{\sqrt{2\pi}}exp(\frac{-(d_1 - \sigma\sqrt{T-t})^2}{2})\\
-&=& Kexp(-r(T-t))\frac{1}{\sqrt{2\pi}}exp(\frac{-d_1^2}{2})exp(\frac{2d_1\sigma\sqrt{T-t} - \sigma^2(T-t)}{2})\\
-&=& Kexp(-r(T-t))\mathcal{N}'(d_1)exp(d_1\sigma\sqrt{T-t})exp(-\sigma^2(T-t))\\
-&=& K\mathcal{N}'(d_1)exp(-r(T-t)-\frac{\sigma^2(T-t)}{2} + log(\frac{S}{K}) + r(T-t) + \frac{\sigma^2(T-t)}{2})\\
-&=& K\mathcal{N}'(d_1)\frac{S}{K} = S\mathcal{N}'(d_1)
-\end{eqnarray*}
 
 \subsection{}
 $
@@ -90,7 +81,7 @@ $
 
 \begin{eqnarray*}
 \frac{\partial c}{\partial t} &=& -rKexp(-r(T-t))\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1) \\
-\frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} &=& \mathcal{N}'(d_1)\frac{1}{\sigma\sqrt{T-t}}\times\frac{\sigma^2S^2}{2} = \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1)\\
+\frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} &=& \mathcal{N}'(d_1)\frac{1}{\sigma S \sqrt{T-t}}\times\frac{\sigma^2S^2}{2} = \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1)\\
 rS\frac{\partial c}{\partial S} &=& \mathcal{N}(d_1)rS\\
 -rc &=& -r(S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)) = -rS\mathcal{N}(d_1) + rKexp(-r(T-t))\mathcal{N}(d_2)
 \end{eqnarray*}

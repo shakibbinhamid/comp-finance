@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  10 MAR 2017 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  16 MAR 2017 11:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1029,9 +1029,9 @@ blic/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
 m/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx1
 2.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720p
 k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (2 pages, 51316 bytes).
+Output written on comp-fin-lab-2.pdf (2 pages, 49621 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
