@@ -62,10 +62,10 @@ Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}}
 $c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$
 
 \begin{eqnarray*}
--\frac{\partial c}{\partial t} &=& -\frac{\partial}{\partial t}[S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)] \\
-&=& -S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) + \mathcal{N}'(d_2)\frac{\partial d_2}{\partial t}]\\
-&=& -S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) + \mathcal{N}'(d_2)(\frac{\partial d_1}{\partial t} - \frac{\sigma}{2\sqrt{T-t}})]\\
-&=& [-S\mathcal{N}'(d_1) + Kexp(-r(T-t))\mathcal{N}'(d_2)]\frac{\partial d_1}{\partial t} + Kexp(-r(T-t))[-r\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}\mathcal{N}'(d_2)]\\
+\frac{\partial c}{\partial t} &=& \frac{\partial}{\partial t}[S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)] \\
+&=& S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} - Kexp(-r(T-t))[r\mathcal{N}(d_2) + \mathcal{N}'(d_2)\frac{\partial d_2}{\partial t}]\\
+&=& S\mathcal{N}'(d_1)\frac{\partial d_1}{\partial t} - Kexp(-r(T-t))[r\mathcal{N}(d_2) + \mathcal{N}'(d_2)(\frac{\partial d_1}{\partial t} + \frac{\sigma}{2\sqrt{T-t}})]\\
+&=& [S\mathcal{N}'(d_1) - Kexp(-r(T-t))\mathcal{N}'(d_2)]\frac{\partial d_1}{\partial t} - Kexp(-r(T-t))[r\mathcal{N}(d_2) + \frac{\sigma}{2\sqrt{T-t}}\mathcal{N}'(d_2)]\\
 &=& -rKexp(-r(T-t))\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1)
 \end{eqnarray*}
 
