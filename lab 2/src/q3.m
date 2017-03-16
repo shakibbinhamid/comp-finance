@@ -16,10 +16,10 @@ neglectedDays = 0; % 10
 
 %% divide into training and validation data 
 
-n = size(stock, 1);
+nTotalDays = size(stock, 1);
 nOptions = length(strikePrices);
-nTrain = floor(n/4);
-nTest = n-nTrain - neglectedDays;
+nTrain = floor(nTotalDays/4);
+nTest = nTotalDays-nTrain - neglectedDays;
 
 % in this question, we need only random 30 days form
 % the test data
@@ -27,25 +27,25 @@ nSamples = 68;
 testIdx = floor(randperm(nTest, nSamples)) + nTrain;
 testIdx = sort(testIdx);
 
-impliedVolatilityValues = zeros(nTest,nOptions);
-volatilityValues = zeros(nTest,nOptions);
+impliedVolatilityValues = zeros(nSamples,nOptions);
+volatilityValues = zeros(nSamples,nOptions);
 
 % loop on the test data. for each one, calcuate the volatility
 % from train data and estimate the call price and save it
 for i=1:nSamples
     
-    idx = testIdx(i);
-    stockPrice = stock(idx);
+    currentRandomDay = testIdx(i);
+    stockPrice = stock(currentRandomDay);
     
-    for j=1:nOptions
+    for currentOption=1:nOptions
         
-        optionPrice = prices(idx,j);
-        strikePrice = strikePrices(j);
-        expTime = (dates(n,j)+1 - dates(idx,j))/365;
+        optionPrice = prices(currentRandomDay,currentOption);
+        strikePrice = strikePrices(currentOption);
+        expTime = (dates(nTotalDays,currentOption)+1 - dates(currentRandomDay,currentOption))/365;
         
         % estimate the volatility based on nTrain historical data
         % note the difference between [blsimpv] and [blkimpv]
-        if (j<=5)
+        if (currentOption<=5)
             optionClass = {'call'};
         else
             optionClass = {'put'};
@@ -56,11 +56,11 @@ for i=1:nSamples
         if (isnan(volt))
              volt = 0;
         end
-        impliedVolatilityValues(i,j) = volt;
+        impliedVolatilityValues(i,currentOption) = volt;
         
         % historical volatility
-        pr = prices(idx-nTrain:idx-1, j);
-        volatilityValues(i,j) = calcVolatility(pr);
+        pr = prices(currentRandomDay-nTrain:currentRandomDay-1, currentOption);
+        volatilityValues(i,currentOption) = calcVolatility(pr);
     end
     
 end
@@ -73,10 +73,10 @@ stock_ = [];
 for i=1:nSamples
     v = impliedVolatilityValues(i,:);
     if (isempty(v(v==0)))
-        volatilityValues_ = [volatilityValues_; v];
-        impliedVolatilityValues_ = [impliedVolatilityValues_; volatilityValues(i,:)];
-        dates_ = [dates_; dates(i,:)];
-        stock_ = [stock_; stock(i)];
+        volatilityValues_ = [volatilityValues_; volatilityValues(i,:)];
+        impliedVolatilityValues_ = [impliedVolatilityValues_; v];
+        dates_ = [dates_; dates(testIdx(i),:)];
+        stock_ = [stock_; stock(testIdx(i))];
     end
 end
 
@@ -94,8 +94,8 @@ for i=1:nOptions/2
 end
 
 title('Historical vs. Implied Volatility', 'FontSize', 14);
-xlabel('Implied Volatility', 'FontSize', 14);
-ylabel('Historical Volatility', 'FontSize', 14);
+xlabel('Historical Volatility', 'FontSize', 14);
+ylabel('Implied Volatility', 'FontSize', 14);
 plotLegend = legend('Call 1', 'Call 2', 'Call 3', 'Call 4', 'Call 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
@@ -107,8 +107,8 @@ for i=1+(nOptions/2):nOptions
 end
 
 title('Historical vs. Implied Volatility', 'FontSize', 14);
-xlabel('Implied Volatility', 'FontSize', 14);
-ylabel('Historical Volatility', 'FontSize', 14);
+xlabel('Historical Volatility', 'FontSize', 14);
+ylabel('Implied Volatility', 'FontSize', 14);
 plotLegend = legend('Put 1', 'Put 2', 'Put 3', 'Put 4', 'Put 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
@@ -122,7 +122,7 @@ subplot(1,2,1);
 hold on;grid on;box on;
 
 for i=1:nOptions/2
-     plot(volatilityValues_(:,i), '-.', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i),:));
+    plot(volatilityValues_(:,i), '-.', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i),:));
     plot(impliedVolatilityValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i),:));
 end
 
@@ -162,8 +162,8 @@ subplot(1, 2, 1);
 hold on;grid on;box on;
 
 for i=1:length(daysIdx)
-    plot(strikePrices(1:nOptions/2), impliedVolatilityValues(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
-    plots(i) = plot(strikePrices(1:nOptions/2), impliedVolatilityValues(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
+    plot(strikePrices(1:nOptions/2), impliedVolatilityValues_(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
+    plots(i) = plot(strikePrices(1:nOptions/2), impliedVolatilityValues_(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
 end
 
 title(' Call Option Volatility Smile', 'FontSize', 14);
@@ -176,8 +176,8 @@ subplot(1, 2, 2);
 hold on;grid on;box on;
 
 for i=1:length(daysIdx)
-    plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues(daysIdx(i),1+(nOptions/2):nOptions), '-', 'Color', colorMap(colorIdx(i),:));
-    plots(i) = plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues(daysIdx(i),1+(nOptions/2):nOptions), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));
+    plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues_(daysIdx(i),1+(nOptions/2):nOptions), '-', 'Color', colorMap(colorIdx(i),:));
+    plots(i) = plot(strikePrices(1+(nOptions/2):nOptions), impliedVolatilityValues_(daysIdx(i),1+(nOptions/2):nOptions), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));
 end
 
 title('Put Option Volatility Smile', 'FontSize', 14);
