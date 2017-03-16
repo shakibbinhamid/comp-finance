@@ -34,7 +34,7 @@
 
 \end{center}
 
-\section{Black Scholes Equation Check Solution Correctness}
+\section{Black-Scholes Equation Check Solution Correctness}
 
 \subsection{}
 Cumulative normal distribution function, $\mathcal{N}(x) = \frac{1}{\sqrt{2\pi}} \int_x^{-\infty} exp(\frac{-y^2}{2})dy$. $\mathcal{N}'(x) = \frac{1}{\sqrt{2\pi}}exp(\frac{-x^2}{2})$.
@@ -86,33 +86,79 @@ rS\frac{\partial c}{\partial S} &=& \mathcal{N}(d_1)rS\\
 -rc &=& -r(S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)) = -rS\mathcal{N}(d_1) + rKexp(-r(T-t))\mathcal{N}(d_2)
 \end{eqnarray*}
 
-Adding the above - $\frac{\partial c}{\partial t} + \frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} + rS\frac{\partial c}{\partial S} - rc = 0$. So, black scholes PDE is correct for European call option.
+Adding the above - $\frac{\partial c}{\partial t} + \frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} + rS\frac{\partial c}{\partial S} - rc = 0$. So, Black-Scholes PDE is correct for European call option.
 
 \section{Black-Scholes Option Price vs Actual Option Price}
 
-\begin{wrapfigure}{!h}{0.45\textwidth}
+Black-Scholes equation has a closed form solution, $c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$, given that the volatility, i.e. Standard Deviation of log returns, $u_i = log(a_i)$ is constant for an asset \cite{hull}. In this formula, interest $r$, time to maturity, $T$, current stock price of the underlying asset, $S$ are constants of the domain. Only, volatility, $\sigma$ needs to be derived from past data. As long as the volatility does not change over time until maturity, the option price will be fair.
+
+\begin{figure}[!h]
 \begin{center}
-	\resizebox {0.4\textwidth} {!} {\input{q2-bls-parameters.tex} }
-	\caption{Black Scholes Parameters}
-	\label{fig:q2-bls-parameters}
+	\resizebox {0.6\textwidth} {!} {\input{q2-prices.tex} }
+	\caption{Black-Scholes vs Actual Option Prices}
+	\label{fig:q2-prices}
+	\vspace{-0.8cm}
 \end{center}
-\end{wrapfigure}
+\end{figure}
+
+\begin{algorithm}[H]
+\caption{Calculating Black-Scholes Option Price}
+\label{alg:black-sholes}
+\begin{algorithmic}
+\State $r = 0.06$ // interest rate
+\For {$i \in \{1,...,3T/4\}$} // T = total days = 222
+\State $idx = T/4 + i$ // current day
+\State $S = stocks(idx)$ // today's stock price
+\For {$j \in \{1,...,N\}$} // N = number of options = 10
+\State $K = strikePrices(j)$ // strike price of the option
+\State $\tau = (dates(T,j)+1 - dates(idx,j))/365$ // maturity time in years
+\State $\sigma = std(log(returns(i:T/4+i-1, j)))$ // volatility as SD of log returns
+\State $[p, c] = blsprice(S, K, r, \tau, \sigma)$ // matlab function for Black-Scholes price
+\If {$isCallOption(j)$}
+\State $estPrices(i,j) = c$
+\Else
+\State $estPrices(i,j) = p$
+\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Algorithm \ref{alg:black-sholes} describes how I calculated the option prices for the 10 options from $T/4 + 1$ to $T$ days. Then I plotted the estimated option prices against the actual traded prices in Figure \ref{fig:q2-prices}.
 
 \begin{figure}[!h]
    \centering 
-   \begin{subfigure}[b]{0.49\textwidth}
+   \begin{subfigure}[b]{0.45\textwidth}
      	\resizebox {\textwidth} {!} {\input{q2-error.tex} }
 		\label{fig:q2-error}
     \end{subfigure}
     ~
-    \begin{subfigure}[b]{0.49\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
        	\resizebox {\textwidth} {!} {\input{q2-error-boxplot.tex} }
         \label{fig:q2-error-boxplot}
     \end{subfigure}
+	\vspace{-0.5cm}
     \caption{Absolute Error between Black-Scholes and Actual Option Prices}
-	\label{fig:naive_v_cvx}
+	\label{fig:q2-error-both}
 \end{figure}
 
+\begin{wrapfigure}{!h}{0.45\textwidth}
+\vspace{-1.5cm}
+\begin{center}
+	\resizebox {0.4\textwidth} {!} {\input{q2-bls-parameters.tex} }
+	\caption{Black-Scholes Parameters}
+	\label{fig:q2-bls-parameters}
+	\vspace{-1cm}
+\end{center}
+\end{wrapfigure}
+
+Then I calculated the absolute error between the Black-Scholes option price and the actual traded price. They were plotted in Figure \ref{fig:q2-error-both}. Finally, using Matlab's Financial Toolbox, I calculated the greeks for each option over that period and plotted them in Figure \ref{fig:q2-bls-parameters}.\\
+
+As can be seen from Figure \ref{fig:q2-prices}, the call option prices closely followed the Black-Scholes solution. One exception here is a spike which can also be seen in Figure \ref{fig:q2-error-both} as well where the absolute error was quite substantial compared to other call options.\\
+
+On the other hand, there was a systematic difference between the Black-Scholes formula and actual prices for the put options, seen in both Figure \ref{fig:q2-prices} and \ref{fig:q2-error-both}. All put options were traded at a higher price than that derived from Black-Scholes formula. Thus the absolute errors were also quite large and dispersed.\\
+
+In Figure \ref{fig:q2-bls-parameters}, one of the volatilities has a spike near the end. This is precisely the call option whose price spiked at the same time. This leads me to believe that the price is correlated to the volatility of the underlying asset. Vega, $\nu=\frac{\partial c}{\partial \sigma}$ demonstrates exactly this. Clearly, as time to maturity draws near, the effect steadily goes down to 0. Delta $\Delta=\frac{\partial c}{\partial S}$ is also depicted in the same Figure over the same time period. Note that the horizontal scale is the time from the beginning of observation to the maturity date.
 
 
 
@@ -141,9 +187,13 @@ Adding the above - $\frac{\partial c}{\partial t} + \frac{\sigma^2S^2}{2}\frac{\
 
 
 
+\begin{thebibliography}{9}
+\bibitem{hull} 
+J. C. Hull
+\textit{Options, Futures and Other Derivatives}. 
+Prentice Hall, 2009
 
-
-
+\end{thebibliography}
 
 \end{document}
 
