@@ -141,8 +141,8 @@ for i=1+(nOptions/2):nOptions
 end
 
 title('Historical vs. Implied Volatility', 'FontSize', 14);
-xlabel('Implied Volatility', 'FontSize', 14);
-ylabel('Historical (Realised) Volatility', 'FontSize', 14);
+xlabel('Days', 'FontSize', 14);
+ylabel('Volatility', 'FontSize', 14);
 plotLegend = legend('Put 1', 'Put 1','Put 2','Put 2', 'Put 3','Put 3', 'Put 4','Put 4', 'Put 5','Put 5', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
@@ -162,8 +162,8 @@ subplot(1, 2, 1);
 hold on;grid on;box on;
 
 for i=1:length(daysIdx)
-    plot(strikePrices(1:nOptions/2), volatilityValues_(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
-    plots(i) = plot(strikePrices(1:nOptions/2), volatilityValues_(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
+    plot(strikePrices(1:nOptions/2), impliedVolatilityValues(daysIdx(i),1:nOptions/2), '-', 'Color', colorMap(colorIdx(i),:));
+    plots(i) = plot(strikePrices(1:nOptions/2), impliedVolatilityValues(daysIdx(i),1:nOptions/2), '.', 'MarkerSize', 30, 'Color', colorMap(colorIdx(i),:));    
 end
 
 title(' Call Option Volatility Smile', 'FontSize', 14);
@@ -181,7 +181,7 @@ for i=1:length(daysIdx)
 end
 
 title('Put Option Volatility Smile', 'FontSize', 14);
-xlabel('Strike/Asset', 'FontSize', 14);,
+xlabel('Strike/Asset', 'FontSize', 14);
 ylabel('Implied Volatility', 'FontSize', 14);
 plotLegend = legend(plots, legendDates, 'Location', 'se');
 set(plotLegend, 'FontSize', 10);

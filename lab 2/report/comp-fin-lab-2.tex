@@ -160,13 +160,28 @@ On the other hand, there was a systematic difference between the Black-Scholes f
 
 In Figure \ref{fig:q2-bls-parameters}, one of the volatilities has a spike near the end. This is precisely the call option whose price spiked at the same time. This leads me to believe that the price is correlated to the volatility of the underlying asset. Vega, $\nu=\frac{\partial c}{\partial \sigma}$ demonstrates exactly this. Clearly, as time to maturity draws near, the effect steadily goes down to 0. Delta $\Delta=\frac{\partial c}{\partial S}$ is also depicted in the same Figure over the same time period. Note that the horizontal scale is the time from the beginning of observation to the maturity date.
 
+\section{Implied Volatility}
 
+\begin{figure}[!h]
+   \centering 
+   	\resizebox {0.6\textwidth} {!} {\input{q3-historical-vs-implied-volatility.tex} }
+    \caption{Historical vs Implied Volatility Scatter Plot}
+	\label{fig:q3-historical-vs-implied-volatility}
+\end{figure}
 
+\begin{figure}[!h]
+   \centering 
+   	\resizebox {0.6\textwidth} {!} {\input{q3-volatility-days.tex} }
+    \caption{}
+	\label{fig:q3-volatility-days}
+\end{figure}
 
-
-
-
-
+\begin{figure}[!h]
+   \centering 
+   	\resizebox {0.6\textwidth} {!} {\input{q3-volatility-smile.tex} }
+    \caption{Volatility Smile}
+	\label{fig:q3-volatility-smile}
+\end{figure}
 
 
 
