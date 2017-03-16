@@ -93,7 +93,7 @@ for i=1:nOptions/2
     plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i),:));
 end
 
-fplot(@(x) x, [0, mean(max(volatilityValues_))], 'Linewidth', 2)
+plot([0, mean(max(volatilityValues_))], [0, mean(max(volatilityValues_))], '-', 'Linewidth', 2);
 
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Historical Volatility', 'FontSize', 14);
@@ -108,7 +108,7 @@ for i=1+(nOptions/2):nOptions
     plot(volatilityValues_(:,i), impliedVolatilityValues_(:,i), '.', 'MarkerSize', 20, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
 end
 
-fplot(@(x) x, [0, mean(max(volatilityValues_))], 'Linewidth', 2)
+plot([0, mean(max(volatilityValues_))], [0, mean(max(volatilityValues_))], '-', 'Linewidth', 2);
 
 title('Historical vs. Implied Volatility', 'FontSize', 14);
 xlabel('Historical Volatility', 'FontSize', 14);
@@ -124,10 +124,6 @@ figure(2);clf;
 
 subplot(1,2,1);
 hold on;grid on;box on;
-
-h = zeros(2, 1);
-h(1) = plot(NaN,NaN,'-.', 'LineWidth', 1.5);
-h(2) = plot(NaN,NaN,'LineWidth', 2);
 
 for i=1:nOptions/2
     plot(dates_(:,1),volatilityValues_(:,i), '-.', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i),:));
@@ -145,10 +141,6 @@ set(plotLegend, 'FontSize', 10);
 subplot(1,2,2);
 hold on;grid on;box on;
 
-h = zeros(2, 1);
-h(1) = plot(NaN,NaN,'-.', 'LineWidth', 1.5);
-h(2) = plot(NaN,NaN,'LineWidth', 2);
-
 for i=1+(nOptions/2):nOptions
     plot(dates_(:,1), volatilityValues_(:,i), '--', 'LineWidth', 1.5, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
     plot(dates_(:,1), impliedVolatilityValues_(:,i), 'LineWidth', 2, 'Color', colorMap(colorIdx(i-(nOptions/2)),:));
@@ -163,9 +155,9 @@ plotLegend = legend('Volatility','Implied Volatility', 'Location', 'nw');
 set(plotLegend, 'FontSize', 10);
 
 %% volatility smile
-colorMap = lines(30);
-daysIdx = [ 1 5 6 7 8 9 10];
-colorIdx = [1 2 3 4 5 7 8 9 10 11 12 13 14 15 16 17 18];
+colorMap = lines(nSamples);
+daysIdx = [8,21,1,15,16,10,7,6,17,18]; %randperm(length(dates_), 10);
+colorIdx = 1:nSamples;
 legendDates = cell(length(daysIdx),1);
 plots = zeros(length(daysIdx),1);
 for i=1:length(daysIdx)
