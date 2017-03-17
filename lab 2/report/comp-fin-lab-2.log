@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  16 MAR 2017 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 11:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1009,11 +1009,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `hull' on page 2 undefined on input line 93.
-
-(./q2-prices.tex) [2] (./q2-error.tex)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./q2-prices.tex) [2] (./q
+2-error.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 132--134
 [][]
  []
@@ -1070,17 +1067,8 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
 
  [warning /pgfplots/warning/plot without coordinates]
 ) (./q2-bls-parameters.tex)
-
-LaTeX Warning: Reference `fig:q2-error-both' on page 3 undefined on input line 
-155.
-
-
-LaTeX Warning: Reference `fig:q2-bls-parameters' on page 3 undefined on input l
-ine 155.
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 155--156
-\OT1/cmr/m/n/10.95 Fi-nan-cial Tool-box, I cal-cu-lated the greeks for each
+Underfull \hbox (badness 1728) in paragraph at lines 155--156
+\OT1/cmr/m/n/10.95 tion over that pe-riod and plot-ted them in Fig-ure
  []
 
 
@@ -1089,37 +1077,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
  []
 
 
-LaTeX Warning: Reference `fig:q2-error-both' on page 3 undefined on input line 
-157.
-
-
-Underfull \hbox (badness 3514) in paragraph at lines 157--158
-[]\OT1/cmr/m/n/10.95 As can be seen from Fig-ure 1[], the call op-tion
+Underfull \hbox (badness 7273) in paragraph at lines 157--158
+[]\OT1/cmr/m/n/10.95 As can be seen from Fig-ure 1[], the call op-
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 157--158
-\OT1/cmr/m/n/10.95 prices closely fol-lowed the Black-Scholes so-lu-tion.
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 157--158
-\OT1/cmr/m/n/10.95 One ex-cep-tion here is a spike which can also be
- []
-
-
-Underfull \hbox (badness 1831) in paragraph at lines 157--158
-\OT1/cmr/m/n/10.95 seen in Fig-ure [] as well where the ab-so-lute er-
+Underfull \hbox (badness 2376) in paragraph at lines 157--158
+\OT1/cmr/m/n/10.95 tion prices closely fol-lowed the Black-Scholes so-lu-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
-
-
-LaTeX Warning: Reference `fig:q2-error-both' on page 3 undefined on input line 
-159.
 
 
 Underfull \hbox (badness 1320) in paragraph at lines 159--160
@@ -1141,54 +1111,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-
-LaTeX Warning: Reference `fig:q2-bls-parameters' on page 3 undefined on input l
-ine 161.
-
-(./q3-historical-vs-implied-volatility.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./q3-volatility-days.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[3] (./q3-historical-vs-implied-volatility.tex) (./q3-volatility-days.tex)
 (./q3-volatility-smile.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3] [4] (./comp-fin-lab-2.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[4] [5] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
  31139 strings out of 493013
  742482 string characters out of 6139317
- 1436866 words of memory out of 5000000
+ 1395172 words of memory out of 5000000
  34146 multiletter control sequences out of 15000+600000
  12782 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,21n,120p,851b,2328s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.657pk> </h
-ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/sha
-re/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/
-texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-
-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fon
-ts/pk/ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/publ
-ic/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
-m/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy
-10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657p
-k> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </h
-ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/sh
-akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (4 pages, 229521 bytes).
+ 69i,21n,120p,851b,2326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
+ur/public/cm/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pub
+lic/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm
+/cmbx10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk>
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </hom
+e/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shaki
+b/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-d
+ist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/
+pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljf
+our/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pub
+lic/cm/cmbx12.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm
+/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12
+.720pk>
+Output written on comp-fin-lab-2.pdf (5 pages, 233292 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 342 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

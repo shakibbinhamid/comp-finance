@@ -162,6 +162,8 @@ In Figure \ref{fig:q2-bls-parameters}, one of the volatilities has a spike near 
 
 \section{Implied Volatility}
 
+In implementing Black-Scholes solution, I calculated the volatility from the previous $T/4$ day's historical data. However, actual traders will use other factors, such as their experience or recent market movements etc. to negotiate or write the prices for their options. So, the prices observed for the options will almost always be different from those derived from the Black-Scholes equation, as seen in the previous section. However, this gives a chance to calculate what the traders or market believe the volatility should be by working backwards. This is called the implied volatility.
+
 \begin{figure}[!h]
    \centering 
    	\resizebox {0.6\textwidth} {!} {\input{q3-historical-vs-implied-volatility.tex} }
@@ -169,12 +171,16 @@ In Figure \ref{fig:q2-bls-parameters}, one of the volatilities has a spike near 
 	\label{fig:q3-historical-vs-implied-volatility}
 \end{figure}
 
+I started by randomly selecting $T/5$ days between day $T/4+1$ and $T$ and sorting them so that they fall in chronological order. Then I used Matlab's Financial Toolbox to calculate the implied volatility for those days. In some cases, it could not be computed and returned \texttt{NaN}. Getting rid of such days' data, I was left with $\approx 30$ days' worth of implied volatility. I then also calculated the historical volatility of those days from previous $T/4$ days' data. Finally, I plotted a scatter diagram in Figure \ref{fig:q3-historical-vs-implied-volatility}. Since the selected data was sorted chronologicaly, I also plotted both the implied and historical volatility over time in Figure \ref{fig:q3-volatility-days}.
+
 \begin{figure}[!h]
    \centering 
    	\resizebox {0.6\textwidth} {!} {\input{q3-volatility-days.tex} }
     \caption{Historical and Implied Volatility over Time}
 	\label{fig:q3-volatility-days}
 \end{figure}
+
+An assumption of the Black-Scholes formula is that volatility of an asset is constant on any day, leading up to the maturity day. As, we have seen this is not the case. What is of interest then is how it changes depending on the strike price. A graph of implied volatility vs strike price on a day will have a valley or 'smile' shape, giving the name 'Volatility Smile'. So, I picked 10 random days and for each day calculated the implied volatility on that day for each of the 5 strike prices. Then I plotted the volatility smile in Figure \ref{fig:q3-volatility-smile}.
 
 \begin{figure}[!h]
    \centering 
