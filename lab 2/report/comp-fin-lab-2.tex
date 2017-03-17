@@ -24,6 +24,9 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 
+\let\oldReturn\Return
+\renewcommand{\Return}{\State\oldReturn}
+
 \raggedbottom
 
 \begin{document}
@@ -219,9 +222,24 @@ Black-Scholes equation is derived under some very strict conditions, including a
 
 I began by selecting a random strike price and a random start date after $T/4$ for a random call option. Then I calculated the option price using the Black-Scholes formula. Then I used the Financial Toolbox function, \texttt{binprice}, to run the binomial lattice over the period. From it I retrieved the price on the same day as the Black-Scholes' price. This method was done for $\delta t = $\texttt{logspace(1,4,20)}. I then plotted the absolute difference between the two pricing methods for different values of $\delta t$ in Figure \ref{fig:q4-bls-vs-binomial}. As expecated the difference gets smaller as $\delta t$ decreases. It is interesting that it is an exponential decrease. Note that, lowering $\delta t$ will also make the lattice extremely large and memory starts becoming an issue at this point.\\
 
-At the same time, I wanted to compare the two methods with a monte carlo simulation. I calculated the errors (difference between the method predicted price and actual traded price) over $T/2$ random days after $T/4$ for each of the methods and made a box plot in Figure \ref{fig:q4-bls-vs-binomial-vs-monte-error}. $\delta t$ was 1 day in this case. As expected the monte carlo method produced nearly the same results as the Black-Scholes formula. But the binomial lattice actually performed better in almost all runs of the program. This makes it a very interesting, flexible and competitive method for option pricing.
+At the same time, I wanted to compare the two methods with a monte carlo simulation (see Algorithm \ref{alg:mcarlo}) for put options. I calculated the errors (difference between the method predicted price and actual traded price) over $T/2$ random days after $T/4$th day for each of the methods and made a box plot in Figure \ref{fig:q4-bls-vs-binomial-vs-monte-error}. $\delta t$ was 1 day in this case. As expected the monte carlo method produced nearly the same results as the Black-Scholes formula. But the binomial lattice actually performed better in almost all runs of the program. This makes it a very interesting, flexible and competitive method for option pricing.
 
-
+\begin{algorithm}[H]
+\caption{Calculating Monte Carlo Option Price}
+\label{alg:mcarlo}
+\begin{algorithmic}
+\Function{monteCarlo}{$S, K, r, \tau, \sigma$}
+\State $M = 10^4$ // number of trials
+\State $vals=S\times exp(\tau(r-\sigma^2/2) + \sigma\sqrt{\tau}randn(M,1))$ // value on maturity day
+\State $optVals=max(S-vals,0)$ // evaluate the put options
+\State $presentVals=e^{-r\tau}\times optVals$ // discount to present day
+\State $interval=1.96\times std(presentVals)/\sqrt{M}$ // confidence intervals
+\State $putVal=mean(presentVals)$
+\State $putRange = [putVal-interval, putVal+interval]$
+\Return $[putVal,putRange]$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
 
 
 

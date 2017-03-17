@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 21:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -825,18 +825,18 @@ runsystem(rm comp-fin-lab-2.aex)...executed.
  (./comp-fin-lab-2.aux)
 \openout1 = `comp-fin-lab-2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -999,11 +999,11 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.14}).
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+LaTeX Font Info:    Try loading font information for U+msa on input line 43.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1011,7 +1011,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./q2-prices.tex) [2] (./q
 2-error.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 [][]
  []
 
@@ -1067,57 +1067,57 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
 
  [warning /pgfplots/warning/plot without coordinates]
 ) (./q2-bls-parameters.tex)
-Underfull \hbox (badness 1728) in paragraph at lines 155--156
+Underfull \hbox (badness 1728) in paragraph at lines 158--159
 \OT1/cmr/m/n/10.95 tion over that pe-riod and plot-ted them in Fig-ure
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 157--158
+Underfull \hbox (badness 7273) in paragraph at lines 160--161
 []\OT1/cmr/m/n/10.95 As can be seen from Fig-ure 1[], the call op-
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 157--158
+Underfull \hbox (badness 2376) in paragraph at lines 160--161
 \OT1/cmr/m/n/10.95 tion prices closely fol-lowed the Black-Scholes so-lu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 159--160
+Underfull \hbox (badness 1320) in paragraph at lines 162--163
 []\OT1/cmr/m/n/10.95 On the other hand, there was a sys-tem-atic dif-fer-
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 159--160
+Underfull \hbox (badness 1622) in paragraph at lines 162--163
 \OT1/cmr/m/n/10.95 ence be-tween the Black-Scholes for-mula and ac-tual
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 159--160
+Underfull \hbox (badness 1874) in paragraph at lines 162--163
 \OT1/cmr/m/n/10.95 the ab-so-lute er-rors were also quite large and dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 [3] (./q3-historical-vs-implied-volatility.tex) (./q3-volatility-days.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 (./q3-volatility-smile.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
@@ -1156,38 +1156,39 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
 
  [warning /pgfplots/warning/plot without coordinates]
 )
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 [5] [6] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
- 31209 strings out of 493013
- 744012 string characters out of 6139317
- 1395448 words of memory out of 5000000
- 34202 multiletter control sequences out of 15000+600000
- 17238 words of font info for 64 fonts, out of 8000000 for 9000
+ 31217 strings out of 493013
+ 744133 string characters out of 6139317
+ 1395484 words of memory out of 5000000
+ 34209 multiletter control sequences out of 15000+600000
+ 17539 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,1029b,2472s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
-ur/public/cm/cmti10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi
-600/cmmi10.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt1
-0.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </ho
-me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/shar
-e/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/t
-exmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-v
-ar/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/font
-s/pk/ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/publi
-c/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm
-/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy1
-0.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk
-> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </ho
-me/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/sha
-kib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (6 pages, 260751 bytes).
+ur/public/cm/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pub
+lic/cm/cmcsc10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/c
+mmi10.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657
+pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sh
+akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/share/tex
+mf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/texmf-
+var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fo
+nts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/
+ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/
+dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi
+10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657
+pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </h
+ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/sh
+akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.
+texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-2.pdf (6 pages, 266831 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 439 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
