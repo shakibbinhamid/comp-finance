@@ -166,21 +166,24 @@ In implementing Black-Scholes solution, I calculated the volatility from the pre
 
 \begin{figure}[!h]
    \centering 
-   	\resizebox {0.6\textwidth} {!} {\input{q3-historical-vs-implied-volatility.tex} }
-    \caption{Historical vs Implied Volatility Scatter Plot}
-	\label{fig:q3-historical-vs-implied-volatility}
+   \begin{subfigure}[b]{0.45\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q3-historical-vs-implied-volatility.tex} }
+		\caption{Historical vs Implied Volatility Scatter Plot}
+		\label{fig:q3-historical-vs-implied-volatility}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.44\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q3-volatility-days.tex} }
+		\caption{Historical and Implied Volatility over Time}
+        \label{fig:q3-volatility-days}
+    \end{subfigure}
+    \caption{Volatility vs Implied Volatility}
+	\label{fig:vol-vs-impl-vol}
 \end{figure}
 
-I started by randomly selecting $T/5$ days between day $T/4+1$ and $T$ and sorting them so that they fall in chronological order. Then I used Matlab's Financial Toolbox to calculate the implied volatility for those days. In some cases, it could not be computed and returned \texttt{NaN}. Getting rid of such days' data, I was left with $\approx 30$ days' worth of implied volatility. I then also calculated the historical volatility of those days from previous $T/4$ days' data. Finally, I plotted a scatter diagram in Figure \ref{fig:q3-historical-vs-implied-volatility}. Since the selected data was sorted chronologicaly, I also plotted both the implied and historical volatility over time in Figure \ref{fig:q3-volatility-days}.
+I started by randomly selecting $T/5$ days between day $T/4+1$ and $T$ and sorting them so that they fall in chronological order. Then I used Matlab's Financial Toolbox to calculate the implied volatility for those days. In some cases, it could not be computed and returned \texttt{NaN}. Getting rid of such days' data, I was left with $\approx 30$ days' worth of implied volatility. I then also calculated the historical volatility of those days from previous $T/4$ days' data. Finally, I plotted a scatter diagram in Figure \ref{fig:q3-historical-vs-implied-volatility}. Since the selected data was sorted chronologicaly, I also plotted both the implied and historical volatility over time in Figure \ref{fig:q3-volatility-days}.\\
 
-\begin{figure}[!h]
-   \centering 
-   	\resizebox {0.6\textwidth} {!} {\input{q3-volatility-days.tex} }
-    \caption{Historical and Implied Volatility over Time}
-	\label{fig:q3-volatility-days}
-\end{figure}
-
-An assumption of the Black-Scholes formula is that volatility of an asset is constant on any day, leading up to the maturity day. As, we have seen this is not the case. What is of interest then is how it changes depending on the strike price. A graph of implied volatility vs strike price on a day will have a valley or 'smile' shape, giving the name 'Volatility Smile'. So, I picked 10 random days and for each day calculated the implied volatility on that day for each of the 5 strike prices. Then I plotted the volatility smile in Figure \ref{fig:q3-volatility-smile}.
+An assumption of the Black-Scholes formula is that volatility of an asset is constant on any day, leading up to the maturity day. As, we have seen this is not the case. What is of interest then is how it changes depending on the strike price. A graph of implied volatility vs strike price on a day will have a valley or 'smile' shape, giving the name 'Volatility Smile'. I picked 10 random days and for each day calculated the implied volatility on that day for each of the 5 strike prices. Then I plotted the volatility smile in Figure \ref{fig:q3-volatility-smile}.
 
 \begin{figure}[!h]
    \centering 
@@ -189,9 +192,9 @@ An assumption of the Black-Scholes formula is that volatility of an asset is con
 	\label{fig:q3-volatility-smile}
 \end{figure}
 
+As seen from Figure \ref{fig:q3-historical-vs-implied-volatility}, there is a systematic difference between the historical and implied volatilities for the put options. The implied volatility was almost always higher than the historical volatility. This suggests that the market had some prior knowledge about the options. From the previous section, it can be seen that these put options' actual price was also always higher than the ones produced by the Black-Scholes formula. It indicates that the market was paying higher price for options whose underlying assets' implied volatilities were higher. As for the call options, we see that the implied volatilites are more in line with the historical volatility, except for one spike which was also observed in the pricing difference.\\
 
-
-
+In Figure \ref{fig:q3-volatility-smile} we can see that the put options, on most days, have the regular volatility smile, i.e. market deemed assets least volatile around the mean of the strike price range. Then the volatility was larger around the mean, giving the smile shape. However, for one day of the put option and most days of the call options, the smile was more of a logarithmic shape. In case of the call options, on most days implied volatility seems to have increased as the strike price increased until they plateaued. I suspect it is because the market thinks that the underlying option has some intrisic value if the strike price is going up, so the implied volatility is increasing with it. We need to investigate the market in 1994 for call options on FTSE 100 index to find out more.
 
 
 
