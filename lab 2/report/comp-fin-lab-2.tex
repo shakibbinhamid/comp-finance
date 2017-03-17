@@ -198,6 +198,8 @@ In Figure \ref{fig:q3-volatility-smile} we can see that the put options, on most
 
 \section{Option Pricing using Binomial Lattice over Discrete Intervals}
 
+Black-Scholes equation is derived under some very strict conditions, including assuming that the stock prices follow a geometric brownian motion and volatility is constant for that stock over time. This leads to a closed form solution of the equation, the option price. On the other hand, if we model stock price such that it can go up to $S_t = uS_{t-\delta t}$ or down to $S_t = dS_{t-\delta t}$ with a probability of $p$, and construct a binomial lattice until time $T$, we get a distribution of resultant stock prices with corresponding probabilities of achieving those stock prices. From this distribution, we can work backwards and arrive at a fair price for an option over the underlying asset today. What we are interested in is how the price derived from a discrete interval method differ from the restricted, but closed form solution of a continuous model. If they are similar, we can use the lattice to relax some of the constraints and price more interesting options, e.g. American style options.
+
 \begin{figure}[!h]
    \centering 
    \begin{subfigure}[b]{0.45\textwidth}
@@ -215,9 +217,9 @@ In Figure \ref{fig:q3-volatility-smile} we can see that the put options, on most
 	\label{fig:pricing-difference}
 \end{figure}
 
+I began by selecting a random strike price and a random start date after $T/4$ for a random call option. Then I calculated the option price using the Black-Scholes formula. Then I used the Financial Toolbox function, \texttt{binprice}, to run the binomial lattice over the period. From it I retrieved the price on the same day as the Black-Scholes' price. This method was done for $\delta t = $\texttt{logspace(1,4,20)}. I then plotted the absolute difference between the two pricing methods for different values of $\delta t$ in Figure \ref{fig:q4-bls-vs-binomial}. As expecated the difference gets smaller as $\delta t$ decreases. It is interesting that it is an exponential decrease. Note that, lowering $\delta t$ will also make the lattice extremely large and memory starts becoming an issue at this point.\\
 
-
-
+At the same time, I wanted to compare the two methods with a monte carlo simulation. I calculated the errors (difference between the method predicted price and actual traded price) over $T/2$ random days after $T/4$ for each of the methods and made a box plot in Figure \ref{fig:q4-bls-vs-binomial-vs-monte-error}. $\delta t$ was 1 day in this case. As expected the monte carlo method produced nearly the same results as the Black-Scholes formula. But the binomial lattice actually performed better in almost all runs of the program. This makes it a very interesting, flexible and competitive method for option pricing.
 
 
 
