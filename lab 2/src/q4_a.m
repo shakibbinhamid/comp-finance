@@ -15,28 +15,28 @@ strikePrices = [2925, 3025, 3125, 3225, 3325, ...
 neglectedDays = 0; %30
 
 %% dividing data in training and testing
-n = size(stock, 1);
-m = length(strikePrices);
-nTrain = floor(n/4);
-nTest = n-nTrain - neglectedDays;
+nTotalDays = size(stock, 1);
+nTotalOptions = length(strikePrices);
+nTrainDays = floor(nTotalDays/4);
+nTestDays = nTotalDays-nTrainDays - neglectedDays;
 
 % pick up a day randomly from 1+(T/4) to T
 % in this question, we need only random 1 day form the test data
 nSamples = 1;
-testIdx = floor(randperm(nTest, nSamples)) + nTrain;
+testIdx = floor(randperm(nTestDays, nSamples)) + nTrainDays;
 
 % pick up a random option
 nOptions = 1;
-optionIdx = floor(randperm(m/2, nOptions));
+optionIdx = floor(randperm(nTotalOptions/2, nOptions));
 
 stockPrice = stock(testIdx);
 optionPrice = prices(testIdx,optionIdx);
 strikePrice = strikePrices(optionIdx);
-expTime = (dates(n,optionIdx)+1 - dates(testIdx,optionIdx))/365;
+expTime = (dates(nTotalDays,optionIdx)+1 - dates(testIdx,optionIdx))/365;
 
 % volatility is needed for pricing using Black-Scholes model
-pr = prices(testIdx-nTrain:testIdx-1, optionIdx);
-sigma = calcVolatility(pr);
+trainingPrices = prices(testIdx-nTrainDays:testIdx-1, optionIdx);
+sigma = calcVolatility(trainingPrices);
 
 %% BLS -----------------------------------------------
 % estimate the call price using Black-Scholes and Binomial Lattice
@@ -73,9 +73,9 @@ end
 %% plot -----------------------------------------------
 error = abs(priceLattice(1,:) - pBlack);
 figure(1);clf;
-semilogx(deltaValues, error, '.--', 'Color', 'k', 'LineWidth', 1);
+semilogx(deltaValues, error, '--', 'Color', 'b', 'LineWidth', 1);
 hold on;
-semilogx(deltaValues, error,  'o', 'MarkerFaceColor','b', 'Color', 'k', 'MarkerSize', 6);
+semilogx(deltaValues, error,  'o', 'MarkerFaceColor','m', 'Color', 'k', 'MarkerSize', 6);
 grid on;
 box on;
 title('Absolute Difference in Option Pricing', 'FontSize', 14);

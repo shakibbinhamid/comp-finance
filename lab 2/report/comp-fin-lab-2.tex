@@ -196,9 +196,24 @@ As seen from Figure \ref{fig:q3-historical-vs-implied-volatility}, there is a sy
 
 In Figure \ref{fig:q3-volatility-smile} we can see that the put options, on most days, have the regular volatility smile, i.e. market deemed assets least volatile around the mean of the strike price range. Then the volatility was larger around the mean, giving the smile shape. However, for one day of the put option and most days of the call options, the smile was more of a logarithmic shape. In case of the call options, on most days implied volatility seems to have increased as the strike price increased until they plateaued. I suspect it is because the market thinks that the underlying option has some intrisic value if the strike price is going up, so the implied volatility is increasing with it. We need to investigate the market in 1994 for call options on FTSE 100 index to find out more.
 
+\section{Option Pricing using Binomial Lattice over Discrete Intervals}
 
-
-
+\begin{figure}[!h]
+   \centering 
+   \begin{subfigure}[b]{0.45\textwidth}
+     	\resizebox {\textwidth} {!} {\input{q4-bls-vs-binomial.tex} }
+		\caption{Pricing Difference between Binomial Lattice and Black-Scholes vs $\delta t$}
+		\label{fig:q4-bls-vs-binomial}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.44\textwidth}
+       	\resizebox {\textwidth} {!} {\input{q4-bls-vs-binomial-vs-monte-error.tex} }
+		\caption{Pricing Difference for Various Methods}
+        \label{fig:q4-bls-vs-binomial-vs-monte-error}
+    \end{subfigure}
+    \caption{Option Pricing Difference}
+	\label{fig:pricing-difference}
+\end{figure}
 
 
 
