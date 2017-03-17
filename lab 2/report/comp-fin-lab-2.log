@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 22:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1160,34 +1160,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-[5] [6] (./comp-fin-lab-2.aux) ) 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+[6] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
- 31217 strings out of 493013
- 744133 string characters out of 6139317
- 1395484 words of memory out of 5000000
- 34209 multiletter control sequences out of 15000+600000
+ 31218 strings out of 493013
+ 744146 string characters out of 6139317
+ 1395487 words of memory out of 5000000
+ 34210 multiletter control sequences out of 15000+600000
  17539 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,1029b,2472s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
-ur/public/cm/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pub
-lic/cm/cmcsc10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/c
-mmi10.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657
-pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/sh
-akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/share/tex
-mf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/texmf-
-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fo
-nts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/
-ljfour/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/
-dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi
-10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657
-pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </h
-ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/sh
-akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.
-texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (6 pages, 266831 bytes).
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
+ublic/cm/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
+cm/cmcsc10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi1
+0.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> 
+</usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/share/texmf-d
+ist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/
+pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
+ur/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi6
+00/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.6
+57pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> 
+</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/
+shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texl
+ive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-2.pdf (6 pages, 273186 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
+ 456 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)

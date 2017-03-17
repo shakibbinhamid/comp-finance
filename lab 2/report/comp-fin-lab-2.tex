@@ -241,9 +241,13 @@ At the same time, I wanted to compare the two methods with a monte carlo simulat
 \end{algorithmic}
 \end{algorithm}
 
+\section{Pricing an American Put Option using Binomial Lattice}
 
+Figure 7.10 in \cite{brandimarte} describes an algorithm to calculate american put option price using a binomial lattice. The procedure here is similar to that of an European put option. However, one key difference is that in case of an american option, a trader can exercise the option at any point until the maturity date. So, when working backwards, we have to consider wheter to exercise the option, or to hold further.\\
 
+The snippet in the assignment is working backwards from the maturity day. For each cell in the lattice, it is calculating the payoff if the option is exercised on that day \texttt{K - SVals(i)} and the payoff if it is held further \texttt{hold}. Like dynamic programming, we make a decision here and clearly whichever strategy is better at the cell, is chosen, i.e. \texttt{max} of the two values. So, in short, the snippet is about working backwards in the binomial lattice and choosing between selling off the asset or holding the option based on the payoff for each action.\\
 
+In case of a call option, the same will be done. Except that this time the payoff for exercising the option will be \texttt{SVals(i) - K}, since we are in the money if \texttt{SVals(i)>K}.
 
 
 \begin{thebibliography}{9}
@@ -251,6 +255,11 @@ At the same time, I wanted to compare the two methods with a monte carlo simulat
 J. C. Hull
 \textit{Options, Futures and Other Derivatives}. 
 Prentice Hall, 2009
+
+\bibitem{brandimarte} 
+P. Brandimarte
+\textit{Numerical Methods in Finance and Economics.}. 
+Wiley, 2006
 
 \end{thebibliography}
 
