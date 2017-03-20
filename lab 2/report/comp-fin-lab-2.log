@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  17 MAR 2017 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  20 MAR 2017 12:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1011,7 +1011,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./q2-prices.tex) [2] (./q
 2-error.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
 [][]
  []
 
@@ -1067,43 +1067,8 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
 
  [warning /pgfplots/warning/plot without coordinates]
 ) (./q2-bls-parameters.tex)
-Underfull \hbox (badness 1728) in paragraph at lines 158--159
+Underfull \hbox (badness 1728) in paragraph at lines 162--163
 \OT1/cmr/m/n/10.95 tion over that pe-riod and plot-ted them in Fig-ure
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 160--161
-[]\OT1/cmr/m/n/10.95 As can be seen from Fig-ure 1[], the call op-
- []
-
-
-Underfull \hbox (badness 2376) in paragraph at lines 160--161
-\OT1/cmr/m/n/10.95 tion prices closely fol-lowed the Black-Scholes so-lu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 162--163
-[]\OT1/cmr/m/n/10.95 On the other hand, there was a sys-tem-atic dif-fer-
- []
-
-
-Underfull \hbox (badness 1622) in paragraph at lines 162--163
-\OT1/cmr/m/n/10.95 ence be-tween the Black-Scholes for-mula and ac-tual
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 162--163
-\OT1/cmr/m/n/10.95 the ab-so-lute er-rors were also quite large and dis-
  []
 
 
@@ -1111,18 +1076,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
+
+Underfull \hbox (badness 7273) in paragraph at lines 164--165
+[]\OT1/cmr/m/n/10.95 As can be seen from Fig-ure 1[], the call op-
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 164--165
+\OT1/cmr/m/n/10.95 tion prices closely fol-lowed the Black-Scholes so-lu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 166--167
+[]\OT1/cmr/m/n/10.95 On the other hand, there was a sys-tem-atic dif-fer-
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 ence be-tween the Black-Scholes for-mula and ac-tual
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 the ab-so-lute er-rors were also quite large and dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
 [3] (./q3-historical-vs-implied-volatility.tex) (./q3-volatility-days.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 (./q3-volatility-smile.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 [4] (./q4-bls-vs-binomial.tex
-Package pgfplots info on input line 31: Using 'lua backend=false' for axis: xmo
+Package pgfplots info on input line 33: Using 'lua backend=false' for axis: xmo
 de=log unsupported (yet).
 ) (./q4-bls-vs-binomial-vs-monte-error.tex
 
@@ -1156,27 +1156,27 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been
 
  [warning /pgfplots/warning/plot without coordinates]
 )
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
 [6] (./comp-fin-lab-2.aux) ) 
 Here is how much of TeX's memory you used:
- 31218 strings out of 493013
- 744146 string characters out of 6139317
- 1395487 words of memory out of 5000000
- 34210 multiletter control sequences out of 15000+600000
- 17539 words of font info for 65 fonts, out of 8000000 for 9000
+ 31236 strings out of 493013
+ 744320 string characters out of 6139317
+ 1395511 words of memory out of 5000000
+ 34220 multiletter control sequences out of 15000+600000
+ 20172 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,23n,120p,1029b,2472s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
@@ -1184,21 +1184,23 @@ ublic/cm/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/
 cm/cmcsc10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi1
 0.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> 
 </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/shakib
-/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/share/texmf-d
-ist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/texmf-var/
-fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/
-pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfo
-ur/public/cm/cmsy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi6
-00/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.6
-57pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> 
-</home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/
-shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib
-/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texl
-ive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-2.pdf (6 pages, 273186 bytes).
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt9.600pk> </home/shakib/.texli
+ve/texmf-var/fonts/pk/ljfour/public/cm/cmr9.600pk> </home/shakib/.texlive/texmf
+-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </usr/share/texmf-dist/fonts/pk/lj
+four/public/cm/dpi600/cmr6.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour
+/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publi
+c/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cm
+sy8.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </h
+ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/sh
+akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.
+texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive
+/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/shakib/.texlive/texmf
+-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/f
+onts/pk/ljfour/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-2.pdf (6 pages, 280860 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 492 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

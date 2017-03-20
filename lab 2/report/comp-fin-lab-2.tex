@@ -82,6 +82,8 @@ $
 \implies \frac{\partial^2 c}{\partial S^2} = \mathcal{N}'(d_1)\frac{\partial d_1}{\partial S} = \mathcal{N}'(d_1)\frac{1}{\sigma S \sqrt{(T-t)}}
 $
 
+\vspace{-0.5cm}
+
 \begin{eqnarray*}
 \frac{\partial c}{\partial t} &=& -rKexp(-r(T-t))\mathcal{N}(d_2) - \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1) \\
 \frac{\sigma^2S^2}{2}\frac{\partial^2 c}{\partial S^2} &=& \mathcal{N}'(d_1)\frac{1}{\sigma S \sqrt{T-t}}\times\frac{\sigma^2S^2}{2} = \frac{\sigma}{2\sqrt{T-t}}S\mathcal{N}'(d_1)\\
@@ -93,7 +95,7 @@ Adding the above - $\frac{\partial c}{\partial t} + \frac{\sigma^2S^2}{2}\frac{\
 
 \section{Black-Scholes Option Price vs Actual Option Price}
 
-Black-Scholes equation has a closed form solution, $c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$, given that the volatility, i.e. Standard Deviation of log returns, $u_i = log(a_i)$ is constant for an asset \cite{hull}. In this formula, interest $r$, time to maturity, $T$, current stock price of the underlying asset, $S$ are constants of the domain. Only, volatility, $\sigma$ needs to be derived from past data. As long as the volatility does not change over time until maturity, the option price will be fair.
+Black-Scholes equation has a closed form solution, $c = S\mathcal{N}(d_1) - Kexp(-r(T-t))\mathcal{N}(d_2)$, given that the volatility, i.e. Standard Deviation of log returns, $u_i = log(a_i)$ is constant for an asset \cite{hull}. In this formula, interest rate $r$, time to maturity, $T$, current stock price of the underlying asset, $S$ are constants of the domain. Only, volatility, $\sigma$ needs to be derived from past data. As long as the volatility does not change over time until maturity, the option price will be fair \footnote{the x axis in the figures show $10^4$ because of a bug in the \texttt{tikz} package for numeric dates}.
 
 \begin{figure}[!h]
 \begin{center}
@@ -103,6 +105,8 @@ Black-Scholes equation has a closed form solution, $c = S\mathcal{N}(d_1) - Kexp
 	\vspace{-0.8cm}
 \end{center}
 \end{figure}
+
+\vspace{-0.3cm}
 
 \begin{algorithm}[H]
 \caption{Calculating Black-Scholes Option Price}
@@ -114,7 +118,7 @@ Black-Scholes equation has a closed form solution, $c = S\mathcal{N}(d_1) - Kexp
 \State $S = stocks(idx)$ // today's stock price
 \For {$j \in \{1,...,N\}$} // N = number of options = 10
 \State $K = strikePrices(j)$ // strike price of the option
-\State $\tau = (dates(T,j)+1 - dates(idx,j))/365$ // maturity time in years
+\State $\tau = (dates(T)+1 - dates(idx))/365$ // maturity time in years
 \State $\sigma = std(log(returns(i:T/4+i-1, j)))$ // volatility as SD of log returns
 \State $[p, c] = blsprice(S, K, r, \tau, \sigma)$ // matlab function for Black-Scholes price
 \If {$isCallOption(j)$}
