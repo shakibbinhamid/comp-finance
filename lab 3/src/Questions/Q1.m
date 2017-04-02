@@ -99,29 +99,7 @@ plot_legend = legend(plots, {'Option 1', 'Option 2', 'Option 3', 'Option 4', 'Op
 set(plot_legend, 'FontSize', 14);
 return;
 
-%% plot errors of training using box plot
-figure(7);clf;
-subplot(1,3,1);
-hold on;
-grid on;
-box on;
-boxplot(abs(errorTrainBS));
-ylim([0 0.032]);
-title('BS Model - Actual', 'FontSize', 14);
-subplot(1,3,2);
-hold on;
-grid on;
-box on;
-boxplot(abs(errorTrain));
-ylim([0 0.032]);
-title('RBF Network - Actual', 'FontSize', 14);
-subplot(1,3,3);
-hold on;
-grid on;
-box on;
-boxplot(abs(errorTrainRBF));
-ylim([0 0.032]);
-title('RBF Network - BS Model', 'FontSize', 14);
+
 
 %% plot errors of testing using box plot
 figure(7);clf;

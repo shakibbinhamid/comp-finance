@@ -15,18 +15,13 @@ errorDelta = [];
 cxTrainRBF = [];
 cxTestRBF = [];
 
+%% simulate BLS only for the call options ---------------------------------
 for i=1:nOption/2
     % construct the desgin matrix
     phiTrain = rbfDesignMatrix([sxTrain(:,i) ttmTrain], gmm_k);
     phiTest = rbfDesignMatrix([sxTest(:,i) ttmTest], gmm_k);
     
-    % solve least-squares problem to get the lambda
-    % we have ill-conditioned matrix, so instead of using
-    % pseudo inverse , use pinv with regularization/tolerance term
-    % if you used the pseudo inverse with ill-conditioned matrix,
-    % you will get a lambda that's over fitting
-    % which will work well for predicting for the training 'cxTrainRBF'
-    % but will work utterly wrong in predicting for the test 'cxTestRBF'
+    % ill-conditioned matrix phiX. Use Moore-Penrose pseudoinverse
     %lambda = phiTrain \ cxTrainBS(:,i);
     lambda = pinv(phiTrain, 0.1) * cxTrain(:,i);
     
@@ -60,7 +55,29 @@ for i=1:nOption/2
 %     %plot(ttmTrain, cxTrainRBF(:,i), 'r');
 end
 
-
+%% plot errors of training using box plot ---------------------------------
+figure(1);clf;
+subplot(1,3,1);
+hold on;
+grid on;
+box on;
+boxplot(abs(errorTrainBS));
+ylim([0 0.032]);
+title('|BLS - actual|', 'FontSize', 14);
+subplot(1,3,2);
+hold on;
+grid on;
+box on;
+boxplot(abs(errorTrain));
+ylim([0 0.032]);
+title('|RBF - actual|', 'FontSize', 14);
+subplot(1,3,3);
+hold on;
+grid on;
+box on;
+boxplot(abs(errorTrainRBF));
+ylim([0 0.032]);
+title('|RBF - BLS|', 'FontSize', 14);
 
 
 
