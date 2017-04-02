@@ -1,4 +1,4 @@
-function [Phi] = rbfDesignMatrix(data, k)
+function [Phi, gmm] = rbfDesignMatrix(data, k)
 
 n = size(data,1);
 
