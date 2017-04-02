@@ -1,73 +1,50 @@
+% this function will generate BLS prices dataset --------------------------
 function [sxTrain, sxTest, ttmTrain, ttmTest, fxTrainBS, fxTrain, fxTest, deltas] = bsPricing()
 
-% do the procing using Black-Scholes model and return the results
-% first we need to get  the pricing from the Black Scholes
-% model, which will be our ground truth
-
-% load data
+%% given data -------------------------------------------------------------
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 3/Data/prices');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 3/Data/dates');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 3/Data/stock');
 
-% interest rate is fixed
 intRate = 6/100;
-
-% list of strike prices for all the 5 call options
-% and 5 put options we have
-% note that the strike price is different from the option price
 strikePrices = [2925, 3025, 3125, 3225, 3325, ...
-    2925, 3025, 3125, 3225, 3325];
+                2925, 3025, 3125, 3225, 3325];
 
 % neglect the last week as the timeToExpire (in years) becomes to small
 % and the calcuations of volatility gives errors
 neglectedDays = 10;
 
-% data is divided to training and testing
-n = size(stock,1);
-m = length(strikePrices);
-nTest = int16(n/4);
-nTrain = n - nTest - neglectedDays;
+%% divide the data for training and validation ----------------------------
+numberOfDays = size(stock,1);
+numberOfCountedDays = numberOfDays - neglectedDays;
+numberOfOptions = length(strikePrices);
+numberOfTrainDays = floor(numberOfDays/4);
+numberOfTestDays = numberOfCountedDays - numberOfTrainDays;
 
-% list of estimated prices of put and call options
-estmPrices = zeros(nTrain,m);
+%% generate BLS prices ----------------------------------------------------
+estmPrices = zeros(numberOfTestDays,numberOfOptions);
+deltas = zeros(numberOfTestDays,numberOfOptions);
+ttmTrain = zeros(numberOfTestDays,1); % ttm = time to maturity
+tMat = dates(numberOfTrainDays+numberOfTestDays+1);
 
-% delta values of BS model
-deltas = zeros(nTrain,m);
-
-%array for time to maturity
-ttmTrain = zeros(nTrain,1);
-tMat = dates(nTest+nTrain+1);
-
-% loop on the test data. for each one, calcuate the volatility
-% from train data and estimate the call price and save it
-for i=1:nTrain
+% loop on the test days, calcuate the volatility and BLS price ------------
+for i=1:numberOfTestDays
     
-    idxCurrent = nTest +i;
-    
-    % current price of the underlying asset
+    idxCurrent = i + numberOfTrainDays;
     stockPrice = stock(idxCurrent);
-    
-    % time untill the expiration of the option (in years)
-    expTime = (tMat - dates(idxCurrent))/252;
+    expTime = (tMat - dates(idxCurrent))/252; % ? should be 365?
     ttmTrain(i) = expTime;
     
-    % loop on the 10 options we have (5 call and 5 put)
-    for j=1:m
+    % calculate BLS price for each option
+    for j=1:numberOfOptions
         
-        % strike price of the option
         strikePrice = strikePrices(j);
-        
-        % window of historical prices
-        histPrices = prices(i:nTest+i-1, j);
-        
-        % volatility, this is different than the implied volatility
+        histPrices = prices(i:numberOfTrainDays+i-1, j);
         sigma = calcVolatility1(histPrices);
-        sigmaValues(i,j) = sigma;
-        
-        % get some parameters of the model
+        % sigmaValues(i,j) = sigma;
         deltas(i,j) = blsdelta(stockPrice, strikePrice, intRate, expTime, sigma);
         
-        % apply the model to get the option price
+        % BLS price
         [pCall, pPut] = blsprice(stockPrice, strikePrice, intRate, expTime, sigma);
         if (j <= 5)
             estmPrices(i,j) = pCall;
@@ -78,34 +55,31 @@ for i=1:nTrain
     
 end
 
-% we normalize the prices to be (c/K, s/K)
-% instead of (c, s)
-% k : strike price
-% c : call price
-% s : underlying price
+%% normalizing to (c/K, s/K) instead of (c, s)
 
 % normalize by dividing by strike price
 % normalize the predicted prices as well
-sx = zeros(nTrain+nTest,m);
-fx = zeros(nTrain+nTest,m);
-fxTrainBS = zeros(nTrain,m);
-for i=1:m
-    sx(:,i) = stock(1:nTest+nTrain)/strikePrices(i);
-    fx(:,i) = prices(1:nTrain+nTest,i)/strikePrices(i);
+sx = zeros(numberOfTestDays+numberOfTrainDays,numberOfOptions);
+fx = zeros(numberOfTestDays+numberOfTrainDays,numberOfOptions);
+fxTrainBS = zeros(numberOfTestDays,numberOfOptions);
+
+for i=1:numberOfOptions
+    sx(:,i) = stock(1:numberOfCountedDays)/strikePrices(i);
+    fx(:,i) = prices(1:numberOfCountedDays,i)/strikePrices(i);
     fxTrainBS(:,i) = estmPrices(:,i)/strikePrices(i);
 end
 
-sxTest = sx(1:nTest,:);
-sxTrain = sx(nTest+1:end,:);
+sxTest = sx(1:numberOfTrainDays,:);
+sxTrain = sx(numberOfTrainDays+1:end,:);
 
-ttmTest = zeros(nTest,1);
-for i=1:nTest
+ttmTest = zeros(numberOfTrainDays,1);
+for i=1:numberOfTrainDays
     expTime = (tMat - dates(i))/365;
     ttmTest(i) = expTime;
 end
 
 % split the normalized option prices
-fxTrain = fx(nTest+1:nTest+nTrain,:);
-fxTest = fx(1:nTest,:);
+fxTrain = fx(numberOfTrainDays+1:numberOfCountedDays,:);
+fxTest = fx(1:numberOfTrainDays,:);
 
 end

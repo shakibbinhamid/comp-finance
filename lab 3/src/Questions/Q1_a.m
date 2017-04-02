@@ -1,11 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Question 1-a: simulating Black-Scholes model
-%               using the RBF network
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% ------------- use RBF to simulate BLS -----------------------------------
 clc;
 
-% precition using black-scholes
+%% construct a dataset by generating BLS call option prices ---------------
 [sxTrain, sxTest, ttmTrain, ttmTest, cxTrainBS, cxTrain, cxTest, deltas] = bsPricing();
 
 nOption = size(sxTrain,2);
