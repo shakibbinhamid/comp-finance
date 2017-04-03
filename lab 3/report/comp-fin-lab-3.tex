@@ -1,0 +1,66 @@
+\documentclass[11pt, fleqn]{article}
+
+\usepackage[letterpaper, margin=0.7in]{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{minted}
+\usetikzlibrary{arrows}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[section]{placeins}
+\usepackage{pgfplots,wrapfig}  
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false} 
+\newlength\figureheight 
+\newlength\figurewidth 
+\setlength{\parindent}{0pt}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\let\oldReturn\Return
+\renewcommand{\Return}{\State\oldReturn}
+
+\raggedbottom
+
+\begin{document}
+
+\begin{center}
+
+\Large{COMP6212 Assignment 3 : Shakib-Bin Hamid 25250094 sh3g12}
+
+\end{center}
+
+Black-Scholes arrived at a closed form solution of the derivative pricing problem under some strict conditions. Some of these conditions can be eased by creating a binomial lattice based on probabilities on returns. However, these are still parametric methods and sensitive to the underlying stochastic process for $S(t)$, the stock price over time. Misspecification of it will lead to systematic errors in the option's price calculation, i.e. the performance of the parametric models is closely tied with the ability to capture the dynamics of underlying asset or stock.\\
+
+On the other hand, learning networks like RBF (Radial Basis Function), MLP (Multi Layer Perceptron) etc. 'learn' the underlying dynamics based on training data and target outputs. They can adapt to the structural changes to the data generating process. It is true that such methods are not needed if the option in question is very well understood, or a new option is made and cannot be captured as a combination of other options or if there is not enough training data. However, these are rare circumstances indeed.\\
+
+In this exercise we are primarily concerned with RBF networks. It has been shown that RBFs have the best approximation property, i.e. there is always a choice for the parameters that is beter than any other possible choice - not shared by MLPs. The paper poses the following challange - " if option prices are truly determined by the Black-Scholes formula exactly, can learning networks like RBF 'learn' the formula?". In other words, if we generated a dataset of options prices given strike prices, time to maturity and stock price, and trained a RBF on it, then will it generate the same prices on unseen data as Black-Scholes' formula would? If it does, then we can use this non-parametric model in future, even without the strict assumptions in Black-Scholes.
+
+\begin{thebibliography}{9}
+\bibitem{Hutchinson} 
+J. Hutchinson, A. Lo, and T. Poggio,
+\textit{A nonparametric  approach  to  pricing  and  hedging  derivative
+securities via learning networks}. 
+The Journal of Finance, vol. 49, no. 3, pp. 851–889, 1994.
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
