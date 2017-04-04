@@ -59,6 +59,8 @@ Once the design matrix was ready for both the training and validation set of our
 \end{center}
 \end{figure}
 
+Figure \ref{fig:q1-simulated-bls} is the Figure 4 in \cite{hutchinson} drawn on the validation set for all 5 call options. If the RBF network truly learnt the Black-Scholes formula from the training data, it would produce a similar result over the validation set. From Figure \ref{fig:q1-rbf-price} we can see that the RBF network produces a similar graph, as claimed in the paper. This surface was produced by using \texttt{trisurf} and \texttt{delaunay} triangulation over $S/X$, $C/X$ and $T-t$ values. The data points were plotted using \texttt{plot3}. Also, as done in Figure 5 of the paper, I plotted the validation set pricing error from the RBF network in Figure \ref{fig:q1-rbf-price}. The shape is as expected, a surface with erratic folds in the corners.\\
+
 \begin{figure}[!h]
 \begin{center}
 	\includegraphics[scale=.6] {q1_rbf_price.eps}
@@ -67,6 +69,8 @@ Once the design matrix was ready for both the training and validation set of our
 \end{center}
 \end{figure}
 
+The paper claims that the RBF network will also be able to approximate the delta values from the Black-Scholes formula. In that regard, I plotted the delta prediction over the validation set in Figure \ref{fig:q1-rbf-delta}. Both the delta and delta error graphs matches the claimed graph in Figure 5 of the paper.\\
+
 \begin{figure}[!h]
 \begin{center}
 	\includegraphics[scale=.6] {q1_rbf_delta.eps}
@@ -74,6 +78,8 @@ Once the design matrix was ready for both the training and validation set of our
 	\label{fig:q1-rbf-delta}
 \end{center}
 \end{figure}
+
+Finally, I plotted the boxplot of the absolute error between the actual option price, Black-Scholes model and RBF network in Figure \ref{fig:q1-bls-vs-rbf} over the validation set. It is interesting that the RBF model actually performed better than the Black-Scholes model on the validation set (although there are some outliers). This may be because the Black-Scholes model's assumptions do not hold true in real life, but the RBF model is able to cope with it. However, the actual pricing difference between these two models is in hundreths as seen in the figure.
 
 \begin{figure}[!h]
 \begin{center}
@@ -84,7 +90,7 @@ Once the design matrix was ready for both the training and validation set of our
 \end{figure}
 
 \begin{thebibliography}{9}
-\bibitem{Hutchinson} 
+\bibitem{hutchinson} 
 J. Hutchinson, A. Lo, and T. Poggio,
 \textit{A nonparametric  approach  to  pricing  and  hedging  derivative
 securities via learning networks}. 

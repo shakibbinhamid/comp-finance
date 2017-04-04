@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  4 APR 2017 12:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  4 APR 2017 13:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1063,6 +1063,11 @@ File: q1_simulated_bls-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: q1_simulated_bls-eps-converted-to.pdf used on input li
 ne 56.
 (pdftex.def)             Requested size: 281.85518pt x 183.68765pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
 Package epstopdf Info: Source file: <q1_rbf_price.eps>
 (epstopdf)                    date: 2017-04-04 12:34:22
 (epstopdf)                    size: 244438 bytes
@@ -1071,16 +1076,20 @@ Package epstopdf Info: Source file: <q1_rbf_price.eps>
 (epstopdf)                    size: 164475 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_rbf_price-eps-converted-
 to.pdf q1_rbf_price.eps>
-(epstopdf)             \includegraphics on input line 64.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
-
 <q1_rbf_price-eps-converted-to.pdf, id=21, 795.97375pt x 318.18875pt>
 File: q1_rbf_price-eps-converted-to.pdf Graphic file (type pdf)
 
 <use q1_rbf_price-eps-converted-to.pdf>
 Package pdftex.def Info: q1_rbf_price-eps-converted-to.pdf used on input line 6
-4.
+6.
 (pdftex.def)             Requested size: 477.58794pt x 190.9147pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
 Package epstopdf Info: Source file: <q1_rbf_delta.eps>
 (epstopdf)                    date: 2017-04-04 12:28:43
 (epstopdf)                    size: 214189 bytes
@@ -1089,55 +1098,43 @@ Package epstopdf Info: Source file: <q1_rbf_delta.eps>
 (epstopdf)                    size: 145279 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_rbf_delta-eps-converted-
 to.pdf q1_rbf_delta.eps>
-(epstopdf)             \includegraphics on input line 72.
+(epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
-
 <q1_rbf_delta-eps-converted-to.pdf, id=22, 778.91pt x 280.04625pt>
 File: q1_rbf_delta-eps-converted-to.pdf Graphic file (type pdf)
 
 <use q1_rbf_delta-eps-converted-to.pdf>
 Package pdftex.def Info: q1_rbf_delta-eps-converted-to.pdf used on input line 7
-2.
+6.
 (pdftex.def)             Requested size: 467.34961pt x 168.02904pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Package epstopdf Info: Source file: <q1_bls_vs_rbf.eps>
-(epstopdf)                    date: 2017-04-04 12:37:28
-(epstopdf)                    size: 92909 bytes
-(epstopdf)             Output file: <q1_bls_vs_rbf-eps-converted-to.pdf>
-(epstopdf)             Command: <epstopdf --outfile=q1_bls_vs_rbf-eps-converted
--to.pdf q1_bls_vs_rbf.eps>
-(epstopdf)             \includegraphics on input line 80.
-runsystem(epstopdf --outfile=q1_bls_vs_rbf-eps-converted-to.pdf q1_bls_vs_rbf.e
-ps)...executed.
-
-Package epstopdf Info: Result file: <q1_bls_vs_rbf-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-04 12:38:47
-(epstopdf)                    size: 9685 bytes.
-<q1_bls_vs_rbf-eps-converted-to.pdf, id=23, 501.875pt x 161.60374pt>
-File: q1_bls_vs_rbf-eps-converted-to.pdf Graphic file (type pdf)
-
-<use q1_bls_vs_rbf-eps-converted-to.pdf>
-Package pdftex.def Info: q1_bls_vs_rbf-eps-converted-to.pdf used on input line 
-80.
-(pdftex.def)             Requested size: 326.21487pt x 105.04118pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./q1_simulated_bls-eps-converted-to.pdf> <./q1_rbf_price-eps-converted-to.p
 df>]
+Package epstopdf Info: Source file: <q1_bls_vs_rbf.eps>
+(epstopdf)                    date: 2017-04-04 12:37:28
+(epstopdf)                    size: 92909 bytes
+(epstopdf)             Output file: <q1_bls_vs_rbf-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-04 12:38:47
+(epstopdf)                    size: 9685 bytes
+(epstopdf)             Command: <epstopdf --outfile=q1_bls_vs_rbf-eps-converted
+-to.pdf q1_bls_vs_rbf.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+ <q1_bls_vs_rbf-eps-converted-to.pdf, id=32, 501.875pt x 161.60374pt>
+File: q1_bls_vs_rbf-eps-converted-to.pdf Graphic file (type pdf)
+
+<use q1_bls_vs_rbf-eps-converted-to.pdf>
+Package pdftex.def Info: q1_bls_vs_rbf-eps-converted-to.pdf used on input line 
+86.
+(pdftex.def)             Requested size: 326.21487pt x 105.04118pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [3 <./q1_rbf_delta-eps-converted-to.pdf> <./q1_bls_vs_rbf-eps-converted-to.pdf
->] (./comp-fin-lab-3.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+>] (./comp-fin-lab-3.aux) ) 
 Here is how much of TeX's memory you used:
  30503 strings out of 493013
  726445 string characters out of 6139317
@@ -1146,20 +1143,21 @@ Here is how much of TeX's memory you used:
  12177 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,7n,120p,857b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </h
-ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.657pk> </home/sh
-akib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.
-texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texliv
-e/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </usr/share/texmf-dist/fon
-ts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/p
-k/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
-r/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publ
-ic/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/
-cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.
-657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-3.pdf (3 pages, 475357 bytes).
+ </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pu
+blic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
+m/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx
+10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657
+pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> <
+/usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.
+texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive
+/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf
+-var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/f
+onts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
+k/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
+r/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-3.pdf (3 pages, 478025 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
+ 258 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
