@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  4 APR 2017 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  4 APR 2017 12:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1037,38 +1037,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <q1_simulated_bls.eps>
+(epstopdf)                    date: 2017-04-04 12:00:58
+(epstopdf)                    size: 166644 bytes
+(epstopdf)             Output file: <q1_simulated_bls-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-04 12:03:07
+(epstopdf)                    size: 104734 bytes
+(epstopdf)             Command: <epstopdf --outfile=q1_simulated_bls-eps-conver
+ted-to.pdf q1_simulated_bls.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<q1_simulated_bls-eps-converted-to.pdf, id=20, 469.755pt x 306.14375pt>
+File: q1_simulated_bls-eps-converted-to.pdf Graphic file (type pdf)
+
+<use q1_simulated_bls-eps-converted-to.pdf>
+Package pdftex.def Info: q1_simulated_bls-eps-converted-to.pdf used on input li
+ne 56.
+(pdftex.def)             Requested size: 281.85518pt x 183.68765pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [2]
-(./comp-fin-lab-3.aux) ) 
+ [2 <./q1_simulated_bls-eps-converted-to.pdf>] (./comp-fin-lab-3.aux) ) 
 Here is how much of TeX's memory you used:
- 30467 strings out of 493013
- 725481 string characters out of 6139317
+ 30482 strings out of 493013
+ 725814 string characters out of 6139317
  960378 words of memory out of 5000000
- 33495 multiletter control sequences out of 15000+600000
+ 33508 multiletter control sequences out of 15000+600000
  12177 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,5n,120p,857b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/publi
-c/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/c
-mti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.
-657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk>
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> </us
-r/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.tex
-live/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive/te
-xmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf-va
-r/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/font
-s/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/l
-jfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
-ublic/cm/cmr12.720pk>
-Output written on comp-fin-lab-3.pdf (2 pages, 58630 bytes).
+ 69i,7n,120p,857b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/
+shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/shakib
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.657pk> </home/shakib/.texl
+ive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/shakib/.texlive/te
+xmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/shakib/.texlive/texmf-va
+r/fonts/pk/ljfour/public/cm/cmmib10.657pk> </usr/share/texmf-dist/fonts/pk/ljfo
+ur/public/cm/dpi600/cmr8.pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/p
+ublic/cm/cmmi8.600pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
+m/cmsy10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt
+10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657
+pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </h
+ome/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr12.720pk>
+Output written on comp-fin-lab-3.pdf (2 pages, 161654 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 238 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

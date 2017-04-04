@@ -51,7 +51,13 @@ I began with preparing the design matrix $\bm{\Phi}$. The input data was $\bm{x}
 
 Once the design matrix was ready for both the training and validation set of our experiment, the weights of the model, a 7 item column vector $\bm{\lambda}$ was calculated using \texttt{pinv} and \textit{only} the training data. \texttt{pinv} (Moore-Penrose Pseudo-Inverse) with 0.1 tolerance was used so as to not fall into the trap of ill-conditioned matrix $\bm{\Phi}$. Finally, this $\bm{\lambda}$ was used on the validation set's design matrix $\bm{\Phi}_{val}$ to calculate $C/X$ for the validation set. I followed the same steps to find the deltas for the validation set by using the weights found from a 4 node RDF network trained on the training deltas.\\
 
-
+\begin{figure}[!h]
+\begin{center}
+	\includegraphics[scale=.6] {q1_simulated_bls.eps}
+	\caption{Simulated Black-Scholes Price}
+	\label{fig:q1-simulated-bls}
+\end{center}
+\end{figure}
 
 \begin{thebibliography}{9}
 \bibitem{Hutchinson} 
