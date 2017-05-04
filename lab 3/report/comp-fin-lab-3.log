@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.24)  4 APR 2017 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  3 MAY 2017 19:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **comp-fin-lab-3.tex
 (./comp-fin-lab-3.tex
-LaTeX2e <2016/03/31> patch level 3
+LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/fleqn.clo
-File: fleqn.clo 2015/03/31 v1.1i Standard LaTeX option (flush left equations)
+File: fleqn.clo 2016/12/29 v1.2a Standard LaTeX option (flush left equations)
 \mathindent=\dimen102
 Applying: [2015/01/01] Make \[ robust on input line 50.
 LaTeX Info: Redefining \[ on input line 51.
@@ -41,7 +41,7 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -67,7 +67,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -78,7 +78,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -442,15 +442,15 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) (/usr/share/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2016/07/07 v1.2b Bold Symbol Support (DPC/FMi)
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
 \symboldsymbols=\mathgroup6
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
-LaTeX Info: Redefining \bm on input line 208.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
 (/usr/share/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2016/07/20 v2.4 Yet another Pygments shim for LaTeX
+Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
 
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -478,7 +478,7 @@ b
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count130
 )
 (/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
@@ -558,7 +558,7 @@ Package shellesc Info: Unrestricted shell escape enabled on input line 67.
 Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -618,7 +618,7 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/06/28 v2.15d AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
@@ -639,20 +639,20 @@ LaTeX Info: Redefining \boldsymbol on input line 28.
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count156
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count157
 \leftroot@=\count158
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count159
 \DOTSCASE@=\count160
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box74
 \strutbox@=\box75
 \big@size=\dimen257
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count161
 \c@MaxMatrixCols=\count162
 \dotsspace@=\muskip10
@@ -673,8 +673,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip51
 \multlinetaggap=\skip52
 \mathdisplay@stack=\toks38
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -912,7 +912,7 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2016/06/19 v1.99m Standard LaTeX package
+Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -1046,10 +1046,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package epstopdf Info: Source file: <q1_simulated_bls.eps>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:00:58
 (epstopdf)                    size: 166644 bytes
 (epstopdf)             Output file: <q1_simulated_bls-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:03:07
 (epstopdf)                    size: 104734 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_simulated_bls-eps-conver
 ted-to.pdf q1_simulated_bls.eps>
@@ -1069,10 +1069,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
  []
 
 Package epstopdf Info: Source file: <q1_rbf_price.eps>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:34:22
 (epstopdf)                    size: 244438 bytes
 (epstopdf)             Output file: <q1_rbf_price-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:35:39
 (epstopdf)                    size: 164475 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_rbf_price-eps-converted-
 to.pdf q1_rbf_price.eps>
@@ -1091,10 +1091,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 Package epstopdf Info: Source file: <q1_rbf_delta.eps>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:28:43
 (epstopdf)                    size: 214189 bytes
 (epstopdf)             Output file: <q1_rbf_delta-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:29:06
 (epstopdf)                    size: 145279 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_rbf_delta-eps-converted-
 to.pdf q1_rbf_delta.eps>
@@ -1114,10 +1114,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [2 <./q1_simulated_bls-eps-converted-to.pdf> <./q1_rbf_price-eps-converted-to.p
 df>]
 Package epstopdf Info: Source file: <q1_bls_vs_rbf.eps>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:37:28
 (epstopdf)                    size: 92909 bytes
 (epstopdf)             Output file: <q1_bls_vs_rbf-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-04 15:20:35
+(epstopdf)                    date: 2017-04-04 12:38:47
 (epstopdf)                    size: 9685 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_bls_vs_rbf-eps-converted
 -to.pdf q1_bls_vs_rbf.eps>
@@ -1136,29 +1136,28 @@ Missing character: There is no “ in font cmr10!
  [3 <./q1_rbf_delta-eps-converted-to.pdf> <./q1_bls_vs_rbf-eps-converted-to.pdf
 >] (./comp-fin-lab-3.aux) ) 
 Here is how much of TeX's memory you used:
- 30503 strings out of 493013
- 726445 string characters out of 6139317
- 960378 words of memory out of 5000000
- 33526 multiletter control sequences out of 15000+600000
+ 30527 strings out of 493013
+ 727178 string characters out of 6139317
+ 962247 words of memory out of 5000000
+ 33550 multiletter control sequences out of 15000+600000
  12177 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,7n,120p,857b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/pu
-blic/cm/cmbx12.720pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/c
-m/cmti10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx
-10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657
-pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.657pk> <
-/usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/shakib/.
-texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/shakib/.texlive
-/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/shakib/.texlive/texmf
--var/fonts/pk/ljfour/public/cm/cmtt10.657pk> </home/shakib/.texlive/texmf-var/f
-onts/pk/ljfour/public/cm/cmmi10.657pk> </home/shakib/.texlive/texmf-var/fonts/p
-k/ljfour/public/cm/cmr10.657pk> </home/shakib/.texlive/texmf-var/fonts/pk/ljfou
-r/public/cm/cmr12.720pk>
-Output written on comp-fin-lab-3.pdf (3 pages, 478793 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb>
+Output written on comp-fin-lab-3.pdf (3 pages, 547932 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
