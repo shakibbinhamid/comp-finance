@@ -22,46 +22,29 @@ for i = 1:100
     errors(i) = sum(abs(e_kalman));
 end
 
+
+
 [Y, W, e_kalman, K, A, Q, P, index_pred_kalman] = kalman(s, o, alpha, R);
 
-e_autoReg = e_autoReg(o:end);
+
 %%
 figure(1); clf;
+plot(e_kalman, 'b');
 
-maxError = max([max(abs(e_kalman)) max(abs(e_autoReg))]);
-
-subplot(2, 1, 1);
-
-plot(abs(e_kalman), 'b');
-xlim([o N]);
-ylim([o maxError]);
-
-title('Kalman Filter Absolute Error');
-ylabel('Absolute Error');
-
-subplot(2, 1, 2);
-
-plot(abs(e_autoReg), 'm');
-xlim([o N]);
-ylim([o maxError]);
-
-title('Autoregression Absolute Error');
-ylabel('Absolute Error');
-
-%%
-
+figure(2); clf;
+plot(e_autoReg);
 
 %%
 figure(3); clf;
-boxplot([abs(e_kalman), abs(e_autoReg)], 'Labels', {'Kalman Filter', 'Autoregression'}, 'Colors', 'bm');
+boxplot([abs(e_kalman), abs(e_autoReg(o:end))], 'Labels', {'Kalman Filter', 'Autoregression'}, 'Colors', 'bm');
 title('Absolute Error in S&P Index Prediction', 'Fontsize', 15);
 ylabel('Absolute Error')
 
 %%
 figure(8); clf;
 plot(alphas, errors);
-title('Absolute Error as a Function of \alpha', 'Fontsize', 15);
+title('Absolute error as a function of \alpha');
 xlabel('\alpha');
-ylabel('Sum of Absolute Error');
+ylabel('Sum of absolute residual');
 set(gca, 'XScale', 'log');
 grid on;
