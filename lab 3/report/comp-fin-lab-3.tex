@@ -49,7 +49,7 @@ The model for the RBF network is $c = \Sigma_{j=1}^J\lambda_j\phi_j(\bm{x}) + \b
 
 I began by preparing the design matrix $\bm{\Phi}$. The input data was $\bm{x} = [S/X, (T-t)]^t$, i.e. the normalised strike price and the time to maturity for the training days. The 4 centres for Mahalonobis distance were found using \texttt{fitgmdist} which fit a Gaussian Mixture Model with 4 sub gaussian models. Note that on some runs of the system, the function failed to converge within 100 iterations. Then the first 4 columns of $\bm{\Phi}$ were calculated as the Mahalonobis distance between the input vector and the centres. After that the input data was inserted unchanged as the next 2 columns (to calculate the linear term in the RBF model). Finally a column of ones was inserted in the design matrix at the last column (for the constant term in the RBF model).\\
 
-Once the design matrix was ready for both the training and validation set of our experiment, the weights of the model, a 7 element column vector $\bm{\lambda}$ was calculated using \texttt{pinv} and \textit{only} the training data. \texttt{pinv} (Moore-Penrose Pseudo-Inverse) with 0.1 tolerance was used so as to not fall into the trap of ill-conditioned matrix $\bm{\Phi}$. Finally, this $\bm{\lambda}$ was used on the validation set's design matrix $\bm{\Phi}_{val}$ to calculate $C/X$ for the validation set. I followed the same steps to find the deltas for the validation set by using the weights found from a 4 node RBF network trained on the training deltas.\\
+Once the design matrix was ready for both the training and validation set of our experiment, the weights of the model, a 7 element column vector $\bm{\lambda}$ was calculated using \texttt{pinv} and \textit{only} the training data. \texttt{pinv} (Moore-Penrose Pseudo-Inverse) with 0.1 tolerance was used so as to not fall into the trap of ill-conditioned matrix $\bm{\Phi}$. Finally, this $\bm{\lambda}$ was used on the validation set's design matrix $\bm{\Phi}_{val}$ to calculate $C/X$ for the validation set. I followed the same steps to first find the weights for network deltas using the training BLS deltas and then calculated the network deltas for the validation set using these weights.\\
 
 \begin{figure}[!h]
 \begin{center}
@@ -69,7 +69,7 @@ Figure \ref{fig:q1-simulated-bls} is the Figure 4 in \cite{hutchinson} drawn on 
 \end{center}
 \end{figure}
 
-The paper claims that the RBF network will also be able to approximate the delta values from the Black-Scholes formula. In that regard, I plotted the delta prediction over the validation set in Figure \ref{fig:q1-rbf-delta}. Both the delta and delta error graphs matches the claimed graph in Figure 5 of the paper.\\
+The paper claims that the RBF network will also be able to approximate the delta values from the Black-Scholes formula. In that regard, I plotted the network deltas of the validation set in Figure \ref{fig:q1-rbf-delta}. Both the delta and delta error graphs matches the claimed graph in Figure 5 of the paper.\\
 
 \begin{figure}[!h]
 \begin{center}
