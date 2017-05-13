@@ -16,17 +16,14 @@ W(1, :) = ones(1, o) * 1/o; % what would W(0) be?
 % n = 1 is the initialisation, so loop from 2
 for n = 2:(N - o + 1)
     
-    x = ceil((o - 1) / 2);
-    
     if (mod(o, 2) == 1)
-        % input
-        Y(n,:) = s(n - x: n + x);
+        x = (o - 1) / 2;
     else
-        % input
-        Y(n,:) = s(n - x: n + x - 1);
+        
     end
     
-    
+    % input
+    Y(n,:) = s(n - x: n + x);
     
     % prediction
     w_ = A * W(n-1, :)';

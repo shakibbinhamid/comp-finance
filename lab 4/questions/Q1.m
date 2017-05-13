@@ -74,6 +74,23 @@ title('Absolute Error in S&P Index Prediction', 'Fontsize', 15);
 ylabel('Absolute Error')
 
 %%
+
+X = mvnrnd(W(end,:), Q, 500);
+if (o == 3)
+    figure(4); clf;
+    h = scatter3(X(:,1), X(:,2), X(:,3), ones(500, 1) * 10, ones(500, 1));
+    h.MarkerFaceColor = [0 0.5 0.5];
+elseif (o == 2)
+    figure(4); clf; hold on;
+    h = scatter(X(:,1), X(:,2), ones(500, 1) * 10, ones(500, 1));
+    h.MarkerFaceColor = [0 0.5 0.5];
+    x1 = linspace(min(W(:, 1)), max(W(:, 1))); x2 = linspace(min(W(:, 2)), max(W(:, 2)));
+    [X1,X2] = meshgrid(x1,x2);
+    F = mvnpdf([X1(:) X2(:)], W(end,:), Q);
+    F = reshape(F,length(x2),length(x1));
+    contour(x1,x2,F);
+end
+%%
 figure(8); clf;
 plot(alphas, errors);
 title('Absolute Error as a Function of \alpha', 'Fontsize', 15);
