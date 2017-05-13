@@ -11,22 +11,15 @@ s_ = zeros(N, 1);
 A = eye(o); % What would this be?
 Q = eye(o) * alpha; % tune this?
 P = ones(o); % what would P(0) be?
-W(1, :) = ones(1, o) * 1/o; % what would W(0) be?
+
+W(1, :) = ones(1, o) * 1/o; % what would W(0) be
 
 % n = 1 is the initialisation, so loop from 2
-for n = 2:(N - o + 1)
+n = 2;
+
+for i = 1:(N - o)
     
-    x = ceil((o - 1) / 2);
-    
-    if (mod(o, 2) == 1)
-        % input
-        Y(n,:) = s(n - x: n + x);
-    else
-        % input
-        Y(n,:) = s(n - x: n + x - 1);
-    end
-    
-    
+    Y(n, :) = s(i:i+o-1);
     
     % prediction
     w_ = A * W(n-1, :)';
@@ -42,4 +35,6 @@ for n = 2:(N - o + 1)
     % correction
     W(n,:) = W(n - 1) + K(n,:) * e(n);
     P = (eye(o) - K(n,:)' * Y(n,:)) * P;
+    
+    n = n + 1;
 end
