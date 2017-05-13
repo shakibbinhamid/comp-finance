@@ -108,3 +108,22 @@ xlabel('\alpha');
 ylabel('Sum of Absolute Error');
 set(gca, 'XScale', 'log');
 grid on;
+
+%%
+E = zeros(numel(2:N), 1);
+i = 1;
+for o=2:N
+    [Y, W, e, K, A, Q, P, s_] = kalman(s, o, alpha, R);
+    
+    E(i) = sum(abs(e));
+    i = i + 1;
+end
+
+%%
+figure(9); clf;
+grid on;
+
+plot(E, 'Linewidth', 2);
+title('Cumulative Absolute Error in Kalman Filter as Window Increases');
+ylabel('Cuculative Absolute Error');
+xlabel('Window Size')
