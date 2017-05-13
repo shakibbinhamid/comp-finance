@@ -8,7 +8,7 @@ load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/stockIndex.mat');
 s = stockIndex(:,4);
 alpha = 10^-3;
 N = size(s, 1);
-o = 3;
+o = 2;
 
 [index_pred_autoReg, R, e_autoReg, arParams] = autoRegression(s, o);
 
@@ -33,6 +33,7 @@ maxError = max([max(abs(e_kalman)) max(abs(e_autoReg))]);
 subplot(2, 1, 1);
 
 plot(abs(e_kalman), 'b');
+grid on;
 xlim([o N]);
 ylim([o maxError]);
 
@@ -42,6 +43,7 @@ ylabel('Absolute Error');
 subplot(2, 1, 2);
 
 plot(abs(e_autoReg), 'm');
+grid on;
 xlim([o N]);
 ylim([o maxError]);
 
@@ -78,10 +80,16 @@ ylabel('Absolute Error')
 X = mvnrnd(W(end,:), Q, 500);
 if (o == 3)
     figure(4); clf;
+    grid on;
+    
     h = scatter3(X(:,1), X(:,2), X(:,3), ones(500, 1) * 10, ones(500, 1));
     h.MarkerFaceColor = [0 0.5 0.5];
+    
+    title('Gaussian Distribution \mu=W_n \Sigma=Q');
 elseif (o == 2)
     figure(4); clf; hold on;
+    grid on;
+    
     h = scatter(X(:,1), X(:,2), ones(500, 1) * 10, ones(500, 1));
     h.MarkerFaceColor = [0 0.5 0.5];
     x1 = linspace(min(W(:, 1)), max(W(:, 1))); x2 = linspace(min(W(:, 2)), max(W(:, 2)));
@@ -89,6 +97,8 @@ elseif (o == 2)
     F = mvnpdf([X1(:) X2(:)], W(end,:), Q);
     F = reshape(F,length(x2),length(x1));
     contour(x1,x2,F);
+    
+    title('Gaussian Distribution \mu=W_n \Sigma=Q');
 end
 %%
 figure(8); clf;
