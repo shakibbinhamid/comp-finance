@@ -50,6 +50,22 @@ ylabel('Absolute Error');
 
 %%
 
+figure(2); clf;
+hold on; grid on;
+
+plot(s(o:end), 'g', 'Linewidth', 2);
+xlim([o N]);
+
+plot(index_pred_kalman(o:end), 'r');
+xlim([o N]);
+
+plot(index_pred_autoReg(o:end), 'b');
+xlim([o N]);
+
+title('S&P 500 Monthly Index May 1999 - May 2017', 'Fontsize', 13);
+xlabel('Time');
+ylabel('Index Value');
+legend('Actual Index', 'Kalman Prediction', 'Autoregression Prediction');
 
 %%
 figure(3); clf;
