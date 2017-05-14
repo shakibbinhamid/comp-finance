@@ -8,7 +8,7 @@ load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/stockIndex.mat');
 s = stockIndex(:,4);
 alpha = 10^-3;
 N = size(s, 1);
-o = 3;
+o = 2;
 
 [index_pred_autoReg, R, e_autoReg, arParams] = autoRegression(s, o);
 

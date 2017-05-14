@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  14 MAY 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  14 MAY 2017 16:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1034,14 +1034,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 File: kalman-autoreg-pred.png Graphic file (type png)
 
 <use kalman-autoreg-pred.png>
-Package pdftex.def Info: kalman-autoreg-pred.png used on input line 106.
+Package pdftex.def Info: kalman-autoreg-pred.png used on input line 107.
 (pdftex.def)             Requested size: 256.55872pt x 192.42159pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
 
 <kalman-autoreg-error.png, id=21, 421.575pt x 316.18124pt>
 File: kalman-autoreg-error.png Graphic file (type png)
 
 <use kalman-autoreg-error.png>
-Package pdftex.def Info: kalman-autoreg-error.png used on input line 114.
+Package pdftex.def Info: kalman-autoreg-error.png used on input line 119.
 (pdftex.def)             Requested size: 230.90128pt x 173.17653pt.
 
 <kalman-autoreg-error-boxplot.png, id=22, 421.575pt x 316.18124pt>
@@ -1049,22 +1053,29 @@ File: kalman-autoreg-error-boxplot.png Graphic file (type png)
 
 <use kalman-autoreg-error-boxplot.png>
 Package pdftex.def Info: kalman-autoreg-error-boxplot.png used on input line 12
-0.
+5.
 (pdftex.def)             Requested size: 215.50838pt x 161.63142pt.
 
 <error-vs-alpha-order-3.png, id=23, 440.39531pt x 316.18124pt>
 File: error-vs-alpha-order-3.png Graphic file (type png)
 
 <use error-vs-alpha-order-3.png>
-Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 131.
-(pdftex.def)             Requested size: 230.90128pt x 165.7757pt.
+Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 138.
+(pdftex.def)             Requested size: 153.9368pt x 110.51552pt.
 
-<kalman-error-vs-window.png, id=24, 427.5975pt x 319.94531pt>
+<error_alpha_order_2.png, id=24, 434.37282pt x 316.18124pt>
+File: error_alpha_order_2.png Graphic file (type png)
+
+<use error_alpha_order_2.png>
+Package pdftex.def Info: error_alpha_order_2.png used on input line 144.
+(pdftex.def)             Requested size: 153.9368pt x 112.04973pt.
+
+<kalman-error-vs-window.png, id=25, 427.5975pt x 319.94531pt>
 File: kalman-error-vs-window.png Graphic file (type png)
 
 <use kalman-error-vs-window.png>
-Package pdftex.def Info: kalman-error-vs-window.png used on input line 137.
-(pdftex.def)             Requested size: 215.50838pt x 161.25133pt.
+Package pdftex.def Info: kalman-error-vs-window.png used on input line 150.
+(pdftex.def)             Requested size: 153.9368pt x 115.18022pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1077,36 +1088,32 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [3 <./error-vs-alpha-order-3.png (PNG copy)> <./kalman-error-vs-window.png (PN
-G copy)>]
-(./comp-fin-lab-4.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [3 <./error-vs-alpha-order-3.png (PNG copy)> <./error_alpha_order_2.png (PNG c
+opy)> <./kalman-error-vs-window.png (PNG copy)>] (./comp-fin-lab-4.aux) ) 
 Here is how much of TeX's memory you used:
- 30607 strings out of 493013
- 728600 string characters out of 6139317
+ 30618 strings out of 493013
+ 728884 string characters out of 6139317
  965247 words of memory out of 5000000
- 33620 multiletter control sequences out of 15000+600000
+ 33630 multiletter control sequences out of 15000+600000
  16934 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on comp-fin-lab-4.pdf (3 pages, 245971 bytes).
+</usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on comp-fin-lab-4.pdf (3 pages, 268145 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
