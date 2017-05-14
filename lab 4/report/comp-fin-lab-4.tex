@@ -52,9 +52,9 @@ In a Kalman Filter, we may assume a process $\bm{\omega}_n = \bm{A}\bm{\omega}_{
 \label{alg:kalman}
 \begin{algorithmic}
 
-\Procedure{Kalman}{$\bm{s}, o, \alpha$} \Comment{$\bm{s}$ = index, $o$ = order, $\alpha$ = is a constant}
+\Procedure{Kalman}{$\bm{s}, o, \alpha, R$} 
 
-\State
+\State \Comment{$\bm{s}$ = index, $o$ = order, $\alpha$ = is a constant, R = observation noise variance}
 
 \State $N$ = $size(\bm{s}, 1)$; \Comment{Number of months}
 \State $\bm{Y}$ = $zeros(N - o + 1, o)$; \Comment{Input data in $o$ order windows}
@@ -98,6 +98,54 @@ In a Kalman Filter, we may assume a process $\bm{\omega}_n = \bm{A}\bm{\omega}_{
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
+
+Here the input at each point in time is past $o \in {2, ..., N-1}$ index values. Observation noise $R$ is taken as the residual variance from an autoregression model using \texttt{ar} function of Matlab's System Identification Toolbox. Process noise covariance needed to be tuned via $\alpha$. From Figure \ref{fig:error-vs-alpha-order-3} (where I have plotted the cumulative sum of prediction error as a function of $\alpha$ for a 3rd order filter), we can say that $10^{-3}$ is a reasonable value for $\alpha$.\\
+
+\begin{figure}[!h]
+  	\centering
+  	\includegraphics[width=0.5\textwidth]{kalman-autoreg-pred.png}
+	\caption{Kalman \& Autoregression Prediction}
+	\label{fig:kalman-autoreg-pred}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{kalman-autoreg-error.png}
+		\caption{Index Prediction Absolute Error}
+		\label{fig:kalman-autoreg-error}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.42\textwidth}
+        \includegraphics[width=\textwidth]{kalman-autoreg-error-boxplot.png}
+		\caption{Index Prediction Error Comparison}
+		\label{fig:kalman-autoreg-error-boxplot}
+    \end{subfigure}
+    \caption{Prediction Error}
+	\label{fig:prediction-error}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{error-vs-alpha-order-3.png}
+	\caption{Cumulative Absolute Error as a Function of $\alpha$}
+	\label{fig:error-vs-alpha-order-3}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.42\textwidth}
+        \includegraphics[width=\textwidth]{kalman-error-vs-window.png}
+		\caption{Index Prediction Error Comparison}
+		\label{fig:kalman-error-vs-window}
+    \end{subfigure}
+    \caption{Cumulative Absolute Error as a function of $o$ and $\alpha$}
+	\label{fig:o-alpha-error}
+\end{figure}
+
+\begin{figure}[!h]
+  	\centering
+  	
+\end{figure}
 
 \begin{thebibliography}{9}
 \bibitem{mahler} 
