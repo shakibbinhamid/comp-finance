@@ -39,6 +39,7 @@ ylim([o maxError]);
 
 title('Kalman Filter Absolute Error');
 ylabel('Absolute Error');
+xlabel('Time');
 
 subplot(2, 1, 2);
 
@@ -49,6 +50,7 @@ ylim([o maxError]);
 
 title('Autoregression Absolute Error');
 ylabel('Absolute Error');
+xlabel('Time');
 
 %%
 
@@ -125,5 +127,5 @@ grid on;
 
 plot(E, 'Linewidth', 2);
 title('Cumulative Absolute Error in Kalman Filter as Window Increases');
-ylabel('Cuculative Absolute Error');
+ylabel('Cumulative Absolute Error');
 xlabel('Window Size')
