@@ -30,11 +30,11 @@ for i = 1:(N - o)
     e(n) = s(n + o -1) - s_(n + o - 1);
     
     % Kalman gain
-    K(n, :) = (P_ * Y(n,:)' ./ (R + Y(n,:)*P_*Y(n,:)'))';
+    K(n, :) = (Y(n,:) * P_ ./ (R + Y(n,:)*P_*Y(n,:)'))';
     
     % correction
     W(n,:) = W(n - 1) + K(n,:) * e(n);
-    P = (eye(o) - K(n,:)' * Y(n,:)) * P;
+    P = (eye(o) - K(n,:) * Y(n,:)') * P;
     
     n = n + 1;
 end

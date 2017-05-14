@@ -115,7 +115,7 @@ grid on;
 E = zeros(numel(2:N), 1);
 i = 1;
 for o=2:N
-    [Y, W, e, K, A, Q, P, s_] = kalman(s, o, alpha, R);
+    [~, ~, e, ~, ~, ~, ~, ~] = kalman(s, o, alpha, R);
     
     E(i) = sum(abs(e));
     i = i + 1;
