@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 20:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 21:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1022,45 +1022,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<kalman-autoreg-pred.png, id=20, 507.39563pt x 380.17032pt>
+<kalman-autoreg-pred.png, id=4, 507.39563pt x 380.17032pt>
 File: kalman-autoreg-pred.png Graphic file (type png)
 
 <use kalman-autoreg-pred.png>
 Package pdftex.def Info: kalman-autoreg-pred.png used on input line 104.
 (pdftex.def)             Requested size: 256.55872pt x 192.23103pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 2884) in paragraph at lines 109--110
+[][]\OT1/cmr/m/n/10.95 The in-put at each point in time is past $\OML/cmm/m/it/
+10.95 o$
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 in-dex val-ues. Ob-ser-va-tion noise $\OML/cmm/m/it/10.95 R$
+ \OT1/cmr/m/n/10.95 is taken
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 as the resid-ual vari-ance from an au-tore-gres-
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 tem Iden-ti-fi-ca-tion Tool-box. Pro-cess noise co-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 vari-ance needed to be tuned via $\OML/cmm/m/it/10.95 $\OT1
+/cmr/m/n/10.95 . Fig-ure
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 2a[] (where I have plot-ted the cu-mu-la-tive sum
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 of pre-dic-tion er-ror as a func-tion of $\OML/cmm/m/it/10.9
+5 $ \OT1/cmr/m/n/10.95 for a
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 son-able value for $\OML/cmm/m/it/10.95 $\OT1/cmr/m/n/10.95
+ . Un-less oth-er-wise spec-i-
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<kalman-autoreg-error.png, id=21, 507.39563pt x 380.17032pt>
-File: kalman-autoreg-error.png Graphic file (type png)
 
-<use kalman-autoreg-error.png>
-Package pdftex.def Info: kalman-autoreg-error.png used on input line 116.
-(pdftex.def)             Requested size: 230.90128pt x 173.00096pt.
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
-<kalman-autoreg-error-boxplot.png, id=22, 507.39563pt x 380.17032pt>
-File: kalman-autoreg-error-boxplot.png Graphic file (type png)
+ []
 
-<use kalman-autoreg-error-boxplot.png>
-Package pdftex.def Info: kalman-autoreg-error-boxplot.png used on input line 12
-2.
-(pdftex.def)             Requested size: 215.50838pt x 161.46872pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
 
 <error-vs-alpha-order-3.png, id=23, 507.39563pt x 380.17032pt>
 File: error-vs-alpha-order-3.png Graphic file (type png)
 
 <use error-vs-alpha-order-3.png>
-Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 133.
+Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 119.
 (pdftex.def)             Requested size: 153.9368pt x 115.33397pt.
 
 <kalman-parameter-converge-artificial.png, id=24, 502.87875pt x 376.40625pt>
@@ -1068,53 +1102,71 @@ File: kalman-parameter-converge-artificial.png Graphic file (type png)
 
 <use kalman-parameter-converge-artificial.png>
 Package pdftex.def Info: kalman-parameter-converge-artificial.png used on input
- line 139.
+ line 125.
 (pdftex.def)             Requested size: 153.9368pt x 115.22014pt.
 
 <kalman-parameter-converge.png, id=25, 507.39563pt x 380.17032pt>
 File: kalman-parameter-converge.png Graphic file (type png)
 
 <use kalman-parameter-converge.png>
-Package pdftex.def Info: kalman-parameter-converge.png used on input line 145.
+Package pdftex.def Info: kalman-parameter-converge.png used on input line 131.
 (pdftex.def)             Requested size: 153.9368pt x 115.33397pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+<kalman-autoreg-error.png, id=26, 507.39563pt x 380.17032pt>
+File: kalman-autoreg-error.png Graphic file (type png)
+
+<use kalman-autoreg-error.png>
+Package pdftex.def Info: kalman-autoreg-error.png used on input line 146.
+(pdftex.def)             Requested size: 230.90128pt x 173.00096pt.
+
+<kalman-autoreg-error-boxplot.png, id=27, 507.39563pt x 380.17032pt>
+File: kalman-autoreg-error-boxplot.png Graphic file (type png)
+
+<use kalman-autoreg-error-boxplot.png>
+Package pdftex.def Info: kalman-autoreg-error-boxplot.png used on input line 15
+2.
+(pdftex.def)             Requested size: 215.50838pt x 161.46872pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[2 <./kalman-autoreg-pred.png (PNG copy)> <./kalman-autoreg-error.png (PNG copy
-)> <./kalman-autoreg-error-boxplot.png (PNG copy)>]
+[2 <./kalman-autoreg-pred.png (PNG copy)> <./error-vs-alpha-order-3.png (PNG co
+py)> <./kalman-parameter-converge-artificial.png (PNG copy)> <./kalman-paramete
+r-converge.png (PNG copy)>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [3 <./error-vs-alpha-order-3.png (PNG copy)> <./kalman-parameter-converge-arti
-ficial.png (PNG copy)> <./kalman-parameter-converge.png (PNG copy)>] (./comp-fi
-n-lab-4.aux) ) 
+ [3 <./kalman-autoreg-error.png (PNG copy)> <./kalman-autoreg-error-boxplot.png
+ (PNG copy)>] (./comp-fin-lab-4.aux) ) 
 Here is how much of TeX's memory you used:
- 30618 strings out of 493013
- 729064 string characters out of 6139317
- 965247 words of memory out of 5000000
- 33630 multiletter control sequences out of 15000+600000
- 16934 words of font info for 63 fonts, out of 8000000 for 9000
+ 30620 strings out of 493013
+ 729081 string characters out of 6139317
+ 964247 words of memory out of 5000000
+ 33631 multiletter control sequences out of 15000+600000
+ 17233 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on comp-fin-lab-4.pdf (3 pages, 276597 bytes).
+</usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cmextra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on comp-fin-lab-4.pdf (3 pages, 294365 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
