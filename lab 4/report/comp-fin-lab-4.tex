@@ -104,41 +104,10 @@ In a Kalman Filter, we may assume a process $\bm{\omega}_n = \bm{A}\bm{\omega}_{
   	\includegraphics[width=0.5\textwidth]{kalman-autoreg-pred.png}
 	\caption{Kalman \& Autoregression Prediction}
 	\label{fig:kalman-autoreg-pred}
+	\vspace{-1cm}
 \end{wrapfigure}
 
 The input at each point in time is past $o$ index values. Observation noise $R$ is taken as the residual variance from an autoregression model using \texttt{ar} function of Matlab's System Identification Toolbox. Process noise covariance needed to be tuned via $\alpha$. Figure \ref{fig:error-vs-alpha-order-3} (where I have plotted the cumulative sum of prediction error as a function of $\alpha$ for a 3rd order filter), indicates that $10^{-3}$ is a reasonable value for $\alpha$. Unless otherwise specified, it can be assumed that a 3rd order filter and autoregression was in use. The parameters were initialised in Line 10 and covariance in Line 14.\\
-
-I began by generating an artificial time series using white Gaussian noise (Matlab's \texttt{wgn} function) and $(0.5, 0.6, 0.1)$ weights. The kalman filter quickly stabilises on this data at the expected weights (Figure \ref{fig:kalman-parameter-converge-artificial}). After confirming the correctness of the kalman filter, I applied it to real data.\\
-
-Figure \ref{fig:kalman-autoreg-pred} is showing the monthly index values, as well as prediction made from an autoregression and the implemented Kalman filter. Clearly both are very close to the true values of the index. We can also see from Figure \ref{fig:kalman-autoreg-error} that both methods produce very similar error patterns. Figure \ref{fig:kalman-autoreg-error-boxplot} shows that the errors have very similar spread.\\
-
-
-\begin{figure}[!h]
-    \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{error-vs-alpha-order-3.png}
-	\caption{$\bm{e}$ = $f(\alpha)$}
-	\label{fig:error-vs-alpha-order-3}
-    \end{subfigure}
-    ~ 
-	\begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{kalman-parameter-converge-artificial.png}
-	\caption{Artifical Convergence}
-	\label{fig:kalman-parameter-converge-artificial}
-    \end{subfigure}
-    ~ 
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{kalman-parameter-converge.png}
-		\caption{Parameter Convergence}
-		\label{fig:kalman-parameter-converge}
-    \end{subfigure}
-    \caption{Cumulative Absolute Error as a function of $o$ and $\alpha$}
-	\label{fig:o-alpha-error}
-\end{figure}
-
-Now we can also observe from Figure \ref{fig:error-vs-alpha-order-3} that error changes as the choice of $\alpha$ changes. The $\alpha$ choice is rather arbritrary and needs tuning. As I mentioned earlier, I chose $\alpha$ = $10^{-3}$ for all orders, since it seemed reasonable at most orders.\\
-
-Figure \ref{fig:kalman-parameter-converge} shows the convergence of the parameters on real data. It demonstrates the recursive correction of weights.
 
 \begin{figure}[!h]
     \centering
@@ -157,6 +126,54 @@ Figure \ref{fig:kalman-parameter-converge} shows the convergence of the paramete
 	\label{fig:prediction-error}
 \end{figure}
 
+I began by generating an artificial time series using white Gaussian noise (Matlab's \texttt{wgn} function) and $(0.5, 0.6, 0.1)$ weights. The kalman filter quickly stabilises on this data at the expected weights (Figure \ref{fig:kalman-parameter-converge-artificial}). After confirming the correctness of the kalman filter, I applied it to real data.\\
+
+Figure \ref{fig:kalman-autoreg-pred} is showing the monthly index values, as well as prediction made from an autoregression and the implemented Kalman filter. Clearly both are very close to the true values of the index. We can also see from Figure \ref{fig:kalman-autoreg-error} that both methods produce very similar error patterns. Figure \ref{fig:kalman-autoreg-error-boxplot} shows that the errors have very similar spread.\\
+
+
+\begin{figure}[!h]
+    \centering
+	\begin{subfigure}[b]{0.28\textwidth}
+        \includegraphics[width=\textwidth]{kalman-parameter-converge-artificial.png}
+	\caption{Artifical}
+	\label{fig:kalman-parameter-converge-artificial}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.28\textwidth}
+        \includegraphics[width=\textwidth]{kalman-parameter-converge.png}
+		\caption{$R \approx 53$}
+		\label{fig:kalman-parameter-converge}
+    \end{subfigure}
+	~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{kalman-parameter-converge-r-420.png}
+		\caption{$R$ = $420$}
+		\label{fig:kalman-parameter-converge-r-420}
+    \end{subfigure}
+    \caption{Parameter Convergence}
+	\label{fig:o-alpha-error}
+\end{figure}
+
+Figure \ref{fig:kalman-parameter-converge} shows the convergence of the parameters on real data. It demonstrates the recursive correction of weights.\\
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{error-vs-alpha-order-3.png}
+	\caption{$\bm{e}$ = $f(\alpha)$}
+	\label{fig:error-vs-alpha-order-3}
+    \end{subfigure}
+    ~ 
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{error-vs-r.png}
+	\caption{$\bm{e}$ = $f(R)$}
+	\label{fig:error-vs-r}
+    \end{subfigure}
+	\caption{Tuning $\alpha$ and $R$}
+	\label{fig:tuning-alpha-r}
+\end{figure}
+
+Now we can also observe from Figure \ref{fig:error-vs-alpha-order-3} that error changes as the choice of $\alpha$ changes. The $\alpha$ choice is rather arbritrary and needs tuning. As I mentioned earlier, I chose $\alpha$ = $10^{-3}$ for all orders, since it seemed reasonable at most orders. Similarly, I plotted the error by varying $R$ = $(20:200:2000)$. Figure \ref{fig:error-vs-r} shows the effect of tuning $R$. I have chosen the noise variance of an autoregression model to be the effective $R$ after this observation.\\
 
 
 \begin{thebibliography}{9}
