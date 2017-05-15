@@ -192,6 +192,10 @@ Now we can also observe from Figure \ref{fig:error-vs-alpha-order-3} that error 
 	\label{fig:kalman-parameter}
 \end{figure}
 
+Finally, from Figure \ref{fig:kalman-parameter}, we can clearly see the updates on the parameters. This diagram shows the spread of the parameters at the start and at the end of the kalman filter. We can clearly see how the spread has been shrinked into the final shape from the initial uniform shape. This is exactly as expected.\\
+
+Overall, the benefit of building a kalman filter to deal with financial time series is that we can isolate the noise and tune the process of doing so. At the same time we receive a distribution of our solution, which tells us the confidence in the parameters. This way we may be able to make better judgements. However, we are yet to explain the residual noise.
+
 \begin{thebibliography}{9}
 \bibitem{mahler} 
 N. Mahler, "Modeling the S \& P 500 index using the Kalman filter and the LagLasso," in \textit{Machine Learning for Signal Processing, 2009. MLSP 2009. IEEE International Workshop on, Sept 2009}, pp. 1–6.
