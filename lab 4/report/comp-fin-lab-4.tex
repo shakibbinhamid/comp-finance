@@ -111,7 +111,7 @@ Here the input at each point in time is past $o \in {2, ..., N-1}$ index values.
 
 Figure \ref{fig:kalman-autoreg-pred} is showing the monthly index values, as well as prediction made from an autoregression and the implemented Kalman filter. Clearly both are very close to the true values of the index. We can also see from Figure \ref{fig:kalman-autoreg-error} that both methods produce very similar error patterns. Figure \ref{fig:kalman-autoreg-error-boxplot} shows that the errors have very similar spread. The Kalman filter has a few more outliers.\\
 
-I also wanted to explore how the window size affects the performance of the filter. While all other parameters were kept constant, we can see from Figure \ref{fig:kalman-error-vs-window} that the error goes to 0 as we make the window larger. This is as expected. The slight abruptions are, I assume, caused by the other parameter initilisation, which may not be the optimum one at different windows. But overall, the larger the window, the better the prediction, regardless of other parameters.
+Now we can also observe from Figure \ref{fig:error-vs-alpha-order-3} that the choice of $\alpha$ changes with order,$o$. This choice is rather arbritrary and needs tuning. As I mentioned earlier, I chose $\alpha$ = $10^{-3}$ for all orders, since it seemed reasonable at orders.
 
 \begin{figure}[!h]
     \centering
@@ -130,8 +130,6 @@ I also wanted to explore how the window size affects the performance of the filt
 	\label{fig:prediction-error}
 \end{figure}
 
-Now we can also observe from Figure \ref{fig:error-alpha-order-2} that the choice of $\alpha$ changes with order,$o$. This choice is rather arbritrary and needs tuning. As I mentioned earlier, I chose $\alpha$ = $10^{-3}$ for all orders, since it seemed reasonable at orders.
-
 \begin{figure}[!h]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -141,15 +139,15 @@ Now we can also observe from Figure \ref{fig:error-alpha-order-2} that the choic
     \end{subfigure}
     ~ 
 	\begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{error_alpha_order_2.png}
+        \includegraphics[width=\textwidth]{kalman-parameter-converge-artificial.png}
 	\caption{Cumulative Absolute Error as a Function of $\alpha$ order 2}
-	\label{fig:error-alpha-order-2}
+	\label{fig:kalman-parameter-converge-artificial}
     \end{subfigure}
     ~ 
     \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{kalman-error-vs-window.png}
+        \includegraphics[width=\textwidth]{kalman-parameter-converge.png}
 		\caption{Index Prediction Error Comparison}
-		\label{fig:kalman-error-vs-window}
+		\label{fig:kalman-parameter-converge}
     \end{subfigure}
     \caption{Cumulative Absolute Error as a function of $o$ and $\alpha$}
 	\label{fig:o-alpha-error}
