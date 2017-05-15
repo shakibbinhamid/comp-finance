@@ -122,28 +122,28 @@ ylabel('Parameter Component Value');
 xlabel('Time');
 
 %%
-N = 1000;
-
-ts = zeros(N, 1);
-noise = wgn(N, 1, 20);
-
-ts(1:3) = ones(3, 1) * 2000;
-for n = 4:N
-    ts(n) = 0.5 * ts(n - 1) + 0.6 * ts(n - 2) - 0.1 * ts(n - 3) + noise(n);
-end
-
-[~, R, ~, ~] = autoRegression(ts, 3);
-
-[Y, W, e, K, Q, P, s_] = kalman(ts, 3, 0.000000001);
-
-figure; clf; hold on; grid on;
-
-for i=1:3
-   
-    plot(W(:,i), 'Linewidth', 1.5);
-    
-end
-
-title('Parameters Converging');
-ylabel('Parameter Component Value');
-xlabel('Time');
+% N = 1000;
+% 
+% ts = zeros(N, 1);
+% noise = wgn(N, 1, 20);
+% 
+% ts(1:3) = ones(3, 1) * 2000;
+% for n = 4:N
+%     ts(n) = 0.5 * ts(n - 1) + 0.6 * ts(n - 2) - 0.1 * ts(n - 3) + noise(n);
+% end
+% 
+% [~, R, ~, ~] = autoRegression(ts, 3);
+% 
+% [Y, W, e, K, Q, P, s_] = kalman(ts, 3, 0.000000001);
+% 
+% figure; clf; hold on; grid on;
+% 
+% for i=1:3
+%    
+%     plot(W(:,i), 'Linewidth', 1.5);
+%     
+% end
+% 
+% title('Parameters Converging');
+% ylabel('Parameter Component Value');
+% xlabel('Time');

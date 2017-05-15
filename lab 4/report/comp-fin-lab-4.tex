@@ -52,46 +52,43 @@ In a Kalman Filter, we may assume a process $\bm{\omega}_n = \bm{A}\bm{\omega}_{
 \label{alg:kalman}
 \begin{algorithmic}
 
-\Procedure{Kalman}{$\bm{s}, o, \alpha, R$} 
+\Procedure{Kalman}{$\bm{s}, o, \alpha$} \Comment{$\bm{s}$ = index, $o$ = order, $\alpha$ = is a constant}
 
-\State \Comment{$\bm{s}$ = index, $o$ = order, $\alpha$ = is a constant, R = observation noise variance}
+\State
 
 \State $N$ = $size(\bm{s}, 1)$; \Comment{Number of months}
+\State $m$ = $ar(s, o)$; \Comment{Matlab's autoregression function}
+\State $R$ = $m.NoiseVariance$; \Comment{Observation noise variance}
 \State $\bm{Y}$ = $zeros(N - o + 1, o)$; \Comment{Input data in $o$ order windows}
-\State $\bm{W}$ = $zeros(N - o + 1, o)$; \Comment{Weights at every point}
+\State $\bm{W}$ = $zeros(N, o)$; \Comment{Weights at every point}
+\State $\bm{w}$ = $(m.a(2:o+1) \times -1)^t$; \Comment{Current weight}
 \State $\bm{e}$ = $zeros(N - o + 1, 1)$; \Comment{Prediction error at every point}
-\State $\bm{K}$ = $zeros(N - o + 1, o)$; \Comment{Kalman gain at every point}
 
 \State
 
 \State $\bm{A}$ = $\bm{I}_o$ \Comment{$\bm{I}_o$ is the $o$ order Identity}
 \State $\bm{Q}$ = $\alpha\bm{I}_o$ \Comment{Process noise covariance}
+\State $\bm{P}$ = $I_o$ \Comment{Inital value of $\bm{P}$}
 
 \State
 
-\State $\bm{P}$ = $ones(o)$ \Comment{Inital value of $\bm{P}$}
-\State $\bm{W}(1,:)$ = $o^{-1}ones(1,o)$
+\For {$n \gets o + 1,N$}
 
-\State
-
-\For {$i \gets 1,N-o$}
-
-	\State $\bm{Y}(n, :)$ = $\bm{s}(i:i+o-1)$ \Comment{Input is last $o$ months' index}
+	\State $\bm{y}_n$ = $\bm{Y}(n, :)$ = $\bm{s}(n - o:n - 1)$ \Comment{Input is last $o$ months' index}
 
 	\State
 
-	\State $\hat{\bm{w}}$ = $\bm{A}\bm{W}(n-1, :)^t$ \Comment{Prediction}
-	\State $\hat{\bm{P}}$ = $\bm{A}\bm{P}\bm{A}^t$ + $\bm{Q}$ 
+	\State $\bm{P}$ = $\bm{A}\bm{P}\bm{A}^t$ + $\bm{Q}$ \Comment{Uncertainity on parameters increases}
 
 	\State
 	
-	\State $\bm{e}(n)$ = $\bm{s}(n+o-1)$ - $\bm{Y}(n, :)\hat{\bm{w}}$ \Comment{Prediction Error}
-	\State $\bm{K}(n,:)$ = $(\hat{\bm{P}}\bm{Y}(n, :)^t)/(R + \bm{Y}(n, :)\hat{\bm{P}}\bm{Y}(n, :)^t)$ \Comment{Kalman Gain}
+	\State $\bm{e}(n)$ = $\bm{s}(n)$ - $\bm{w}^t\bm{y}_n$ \Comment{Prediction Error}
+	\State $\bm{K}$ = $\bm{P}\bm{y}_n/(R + \bm{y}_n^t\bm{P}\bm{y}_n)$ \Comment{Kalman Gain}
 
 	\State
 
-	\State $\bm{W}(n, :)$ = $\bm{W}(n-1, :) + \bm{K}(n,:)\bm{e}(n)$ \Comment{Correction}
-	\State $\bm{P}$ = $(\bm{I}_o - \bm{K}(n,:)^t\bm{Y}(n, :))\bm{P}$ 
+	\State $\bm{w} = \bm{W}(n, :)$ = $\bm{w} + \bm{K}\bm{e}(n)$ \Comment{Correction}
+	\State $\bm{P}$ = $(\bm{I}_o - \bm{K}\bm{y}_n^t)\bm{P}$ 
 
 \EndFor
 

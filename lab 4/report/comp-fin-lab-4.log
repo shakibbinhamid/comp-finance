@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 20:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 20:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1023,7 +1023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
@@ -1034,10 +1034,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 File: kalman-autoreg-pred.png Graphic file (type png)
 
 <use kalman-autoreg-pred.png>
-Package pdftex.def Info: kalman-autoreg-pred.png used on input line 107.
+Package pdftex.def Info: kalman-autoreg-pred.png used on input line 104.
 (pdftex.def)             Requested size: 256.55872pt x 192.23103pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
@@ -1045,7 +1045,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
 File: kalman-autoreg-error.png Graphic file (type png)
 
 <use kalman-autoreg-error.png>
-Package pdftex.def Info: kalman-autoreg-error.png used on input line 119.
+Package pdftex.def Info: kalman-autoreg-error.png used on input line 116.
 (pdftex.def)             Requested size: 230.90128pt x 173.00096pt.
 
 <kalman-autoreg-error-boxplot.png, id=22, 507.39563pt x 380.17032pt>
@@ -1053,14 +1053,14 @@ File: kalman-autoreg-error-boxplot.png Graphic file (type png)
 
 <use kalman-autoreg-error-boxplot.png>
 Package pdftex.def Info: kalman-autoreg-error-boxplot.png used on input line 12
-5.
+2.
 (pdftex.def)             Requested size: 215.50838pt x 161.46872pt.
 
 <error-vs-alpha-order-3.png, id=23, 507.39563pt x 380.17032pt>
 File: error-vs-alpha-order-3.png Graphic file (type png)
 
 <use error-vs-alpha-order-3.png>
-Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 136.
+Package pdftex.def Info: error-vs-alpha-order-3.png used on input line 133.
 (pdftex.def)             Requested size: 153.9368pt x 115.33397pt.
 
 <kalman-parameter-converge-artificial.png, id=24, 502.87875pt x 376.40625pt>
@@ -1068,14 +1068,14 @@ File: kalman-parameter-converge-artificial.png Graphic file (type png)
 
 <use kalman-parameter-converge-artificial.png>
 Package pdftex.def Info: kalman-parameter-converge-artificial.png used on input
- line 142.
+ line 139.
 (pdftex.def)             Requested size: 153.9368pt x 115.22014pt.
 
 <kalman-parameter-converge.png, id=25, 507.39563pt x 380.17032pt>
 File: kalman-parameter-converge.png Graphic file (type png)
 
 <use kalman-parameter-converge.png>
-Package pdftex.def Info: kalman-parameter-converge.png used on input line 148.
+Package pdftex.def Info: kalman-parameter-converge.png used on input line 145.
 (pdftex.def)             Requested size: 153.9368pt x 115.33397pt.
 
 
@@ -1111,7 +1111,7 @@ st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on comp-fin-lab-4.pdf (3 pages, 275877 bytes).
+Output written on comp-fin-lab-4.pdf (3 pages, 276597 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
