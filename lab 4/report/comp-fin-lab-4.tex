@@ -175,6 +175,22 @@ Figure \ref{fig:kalman-parameter-converge} shows the convergence of the paramete
 
 Now we can also observe from Figure \ref{fig:error-vs-alpha-order-3} that error changes as the choice of $\alpha$ changes. The $\alpha$ choice is rather arbritrary and needs tuning. As I mentioned earlier, I chose $\alpha$ = $10^{-3}$ for all orders, since it seemed reasonable at most orders. Similarly, I plotted the error by varying $R$ = $(20:200:2000)$. Figure \ref{fig:error-vs-r} shows the effect of tuning $R$. I have chosen the noise variance of an autoregression model to be the effective $R$ after this observation.\\
 
+\begin{figure}[!h]
+    \centering
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{kalman-parameter-contour-initial.png}
+	\caption{$\bm{e}$ = $f(R)$}
+	\label{fig:kalman-parameter-contour-initial}
+    \end{subfigure}
+    ~ 
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{kalman-parameter-contour.png}
+	\caption{2nd Order Parameter Contour}
+	\label{fig:kalman-parameter-contour}
+    \end{subfigure}
+	\caption{Tuning $\alpha$ and $R$}
+	\label{fig:kalman-parameter}
+\end{figure}
 
 \begin{thebibliography}{9}
 \bibitem{mahler} 
