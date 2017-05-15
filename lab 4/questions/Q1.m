@@ -2,13 +2,12 @@ clc;
 
 % load data
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/stockIndex.mat');
-
 %%
 
 s = stockIndex(:,4);
 alpha = 10^-3;
 N = size(s, 1);
-o = 2;
+o = 3;
 
 [index_pred_autoReg, R, e_autoReg, arParams] = autoRegression(s, o);
 
@@ -54,7 +53,7 @@ xlabel('Time');
 
 %%
 
-figure; clf;
+figure(2); clf;
 hold on; grid on;
 
 plot(s(o:end), 'g', 'Linewidth', 2);
@@ -72,7 +71,7 @@ ylabel('Index Value');
 legend('Actual Index', 'Kalman Prediction', 'Autoregression Prediction');
 
 %%
-figure; clf;
+figure(3); clf;
 boxplot([abs(e_kalman(o:end)), abs(e_autoReg)], 'Labels', {'Kalman Filter', 'Autoregression'}, 'Colors', 'bm');
 title('Absolute Error in S&P Index Prediction', 'Fontsize', 15);
 ylabel('Absolute Error')
@@ -81,26 +80,24 @@ ylabel('Absolute Error')
 
 X = mvnrnd(W(end,:), P, 500);
 if (o == 3)
-    figure(4); clf;
+    figure; clf;
     grid on;
     
     h = scatter3(X(:,1), X(:,2), X(:,3), ones(500, 1) * 10, ones(500, 1));
     h.MarkerFaceColor = [0 0.5 0.5];
     
-    title('Gaussian Distribution \mu=W_n \Sigma=Q');
+    title('Gaussian Distribution \mu=W_n \Sigma=P');
 elseif (o == 2)
-    figure(4); clf; hold on;
+    figure; clf; hold on;
     grid on;
     
-    h = scatter(X(:,1), X(:,2), ones(500, 1) * 10, ones(500, 1));
-    h.MarkerFaceColor = [0 0.5 0.5];
-    x1 = linspace(min(W(:, 1)), max(W(:, 1))); x2 = linspace(min(W(:, 2)), max(W(:, 2)));
+    x1 = linspace(W(end,1) - 0.5, W(end,1) + 0.5); x2 = linspace(W(end, 2) - 0.5, W(end, 2) + 0.5);
     [X1,X2] = meshgrid(x1,x2);
-    F = mvnpdf([X1(:) X2(:)], W(end,:), Q);
+    F = mvnpdf([X1(:) X2(:)], W(end,:), P);
     F = reshape(F,length(x2),length(x1));
     contour(x1,x2,F);
     
-    title('Gaussian Distribution \mu=W_n \Sigma=Q');
+    title('Gaussian Distribution \mu=W_n \Sigma=P');
 end
 %%
 figure; clf;
@@ -110,6 +107,20 @@ xlabel('\alpha');
 ylabel('Sum of Absolute Error');
 set(gca, 'XScale', 'log');
 grid on;
+
+%%
+figure; clf; hold on; grid on;
+
+for i=1:o
+   
+    plot(W(:,i), 'Linewidth', 1.5);
+    
+end
+
+title('Parameters Converging');
+ylabel('Parameter Component Value');
+xlabel('Time');
+
 %%
 N = 1000;
 
@@ -125,17 +136,14 @@ end
 
 [Y, W, e, K, Q, P, s_] = kalman(ts, 3, 0.000000001);
 
-figure;
-plot(ts);
-title('Time series');
-xlabel('n');
-ylabel('y(n)');
+figure; clf; hold on; grid on;
 
-figure;
-hold on;
-plot(e);
-plot(noise);
-title('Residual');
-xlabel('n');
-ylabel('e(n)');
-legend('Residual', 'Known random variance');
+for i=1:3
+   
+    plot(W(:,i), 'Linewidth', 1.5);
+    
+end
+
+title('Parameters Converging');
+ylabel('Parameter Component Value');
+xlabel('Time');
