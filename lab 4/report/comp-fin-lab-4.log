@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  15 MAY 2017 22:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1156,16 +1156,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-<kalman-parameter-contour.png, id=30, 508.90125pt x 380.17032pt>
+<kalman-parameter-contour-initial.png, id=30, 509.65407pt x 347.79938pt>
+File: kalman-parameter-contour-initial.png Graphic file (type png)
+
+<use kalman-parameter-contour-initial.png>
+Package pdftex.def Info: kalman-parameter-contour-initial.png used on input lin
+e 181.
+(pdftex.def)             Requested size: 153.9368pt x 105.05174pt.
+
+<kalman-parameter-contour.png, id=31, 508.90125pt x 380.17032pt>
 File: kalman-parameter-contour.png Graphic file (type png)
 
 <use kalman-parameter-contour.png>
-Package pdftex.def Info: kalman-parameter-contour.png used on input line 181.
+Package pdftex.def Info: kalman-parameter-contour.png used on input line 187.
 (pdftex.def)             Requested size: 153.9368pt x 114.99751pt.
-File: error-vs-r.png Graphic file (type png)
- <use error-vs-r.png>
-Package pdftex.def Info: error-vs-r.png used on input line 187.
-(pdftex.def)             Requested size: 153.9368pt x 105.05174pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1178,36 +1182,34 @@ Missing character: There is no “ in font cmr10!
  [3 <./kalman-parameter-converge-artificial.png (PNG copy)> <./kalman-parameter
 -converge.png (PNG copy)> <./kalman-parameter-converge-r-420.png (PNG copy)> <.
 /error-vs-alpha-order-3.png (PNG copy)> <./error-vs-r.png (PNG copy)> <./kalman
--parameter-contour.png (PNG copy)>] (./comp-fin-lab-4.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+-parameter-contour-initial.png (PNG copy)> <./kalman-parameter-contour.png (PNG
+ copy)>]
+(./comp-fin-lab-4.aux) ) 
 Here is how much of TeX's memory you used:
- 30649 strings out of 493013
- 729954 string characters out of 6139317
+ 30660 strings out of 493013
+ 730372 string characters out of 6139317
  964247 words of memory out of 5000000
- 33657 multiletter control sequences out of 15000+600000
+ 33667 multiletter control sequences out of 15000+600000
  17233 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb>
-Output written on comp-fin-lab-4.pdf (3 pages, 352451 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on comp-fin-lab-4.pdf (3 pages, 373763 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
