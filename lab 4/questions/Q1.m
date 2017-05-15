@@ -17,12 +17,12 @@ alphas = zeros(100, 1);
 errors = zeros(100, 1);
 for i = 1:100
     alphas(i) = 10^-(i/10);
-    [~, ~, e_kalman, ~, ~, ~, ~, ~] = kalman(s, o, alphas(i), R);
+    [~, ~, e_kalman, ~, ~, ~, ~] = kalman(s, o, alphas(i));
     
     errors(i) = sum(abs(e_kalman));
 end
 
-[Y, W, e_kalman, K, A, Q, P, index_pred_kalman] = kalman(s, o, alpha, R);
+[Y, W, e_kalman, K, Q, P, index_pred_kalman] = kalman(s, o, alpha);
 
 e_autoReg = e_autoReg(o:end);
 %%
@@ -54,7 +54,7 @@ xlabel('Time');
 
 %%
 
-figure(2); clf;
+figure; clf;
 hold on; grid on;
 
 plot(s(o:end), 'g', 'Linewidth', 2);
@@ -72,14 +72,14 @@ ylabel('Index Value');
 legend('Actual Index', 'Kalman Prediction', 'Autoregression Prediction');
 
 %%
-figure(3); clf;
-boxplot([abs(e_kalman), abs(e_autoReg)], 'Labels', {'Kalman Filter', 'Autoregression'}, 'Colors', 'bm');
+figure; clf;
+boxplot([abs(e_kalman(o:end)), abs(e_autoReg)], 'Labels', {'Kalman Filter', 'Autoregression'}, 'Colors', 'bm');
 title('Absolute Error in S&P Index Prediction', 'Fontsize', 15);
 ylabel('Absolute Error')
 
 %%
 
-X = mvnrnd(W(end,:), Q, 500);
+X = mvnrnd(W(end,:), P, 500);
 if (o == 3)
     figure(4); clf;
     grid on;
@@ -103,29 +103,39 @@ elseif (o == 2)
     title('Gaussian Distribution \mu=W_n \Sigma=Q');
 end
 %%
-figure(8); clf;
+figure; clf;
 plot(alphas, errors);
 title('Absolute Error as a Function of \alpha', 'Fontsize', 15);
 xlabel('\alpha');
 ylabel('Sum of Absolute Error');
 set(gca, 'XScale', 'log');
 grid on;
-
 %%
-E = zeros(numel(2:N), 1);
-i = 1;
-for o=2:N
-    [~, ~, e, ~, ~, ~, ~, ~] = kalman(s, o, alpha, R);
-    
-    E(i) = sum(abs(e));
-    i = i + 1;
+N = 1000;
+
+ts = zeros(N, 1);
+noise = wgn(N, 1, 20);
+
+ts(1:3) = ones(3, 1) * 2000;
+for n = 4:N
+    ts(n) = 0.5 * ts(n - 1) + 0.6 * ts(n - 2) - 0.1 * ts(n - 3) + noise(n);
 end
 
-%%
-figure(9); clf;
-grid on;
+[~, R, ~, ~] = autoRegression(ts, 3);
 
-plot(E, 'Linewidth', 2);
-title('Cumulative Absolute Error in Kalman Filter as Window Increases');
-ylabel('Cumulative Absolute Error');
-xlabel('Window Size')
+[Y, W, e, K, Q, P, s_] = kalman(ts, 3, 0.000000001);
+
+figure;
+plot(ts);
+title('Time series');
+xlabel('n');
+ylabel('y(n)');
+
+figure;
+hold on;
+plot(e);
+plot(noise);
+title('Residual');
+xlabel('n');
+ylabel('e(n)');
+legend('Residual', 'Known random variance');
