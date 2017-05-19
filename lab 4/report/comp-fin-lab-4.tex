@@ -207,7 +207,9 @@ The paper tries to explain the residual in the Kalman filter by the following va
 	\label{fig:decay-lasso}
 \end{figure}
 
-Matlab's \texttt{lasso} function was used to run a lasso regularisation with 5 fold validation. The input was a 7 column matrix with the features mentioned in the last paragraph. The target output was the residual from a 2nd order Kalman Filter index prediction. It ran a lasso regularisation by solving the optimisation $min_{w_0, w}(\frac{1}{2N}\Sigma_{i=1}^N(y_i - w_0 - x_i^Tw)^2 + \lambda\Sigma_{j=1}^p|w_j|)$. The optimisation was done for $\lambda$ in range of $(0,0.5)$ for 100 values. As expected (from Figure \ref{fig:decay-lasso}), the number of non-zero weights for the features reduced as $\lambda$ or the penalty increased. It seems that it was most stable for 1 or 2 features. From Figure \ref{fig:decay-lasso} left, we can see that PMI and CORP PROFIT were the last two features to be eliminated. Also, from Figure \ref{fig:error-vs-lambda} we can see that, the least error was when $\lambda$ was set to 0, i.e. we only wanted to match the target residual. As usual the choice of $\lambda$ is one of tuning. If we want the weights to be sparse (as we do), we would like to choose a $\lambda$ that will set all but 2 or 3 weights to 0.\\
+Matlab's \texttt{lasso} function was used to run a lasso regularisation with 5 fold validation. The input was a 7 column matrix with the features mentioned in the last paragraph. The target output was the residual from a 2nd order Kalman Filter index prediction. It ran a lasso regularisation by solving the optimisation $min_{w_0, w}(\frac{1}{2N}\Sigma_{i=1}^N(y_i - w_0 - x_i^Tw)^2 + \lambda\Sigma_{j=1}^p|w_j|)$. The optimisation was done for $\lambda$ in range of $(0,0.5)$ for 100 values. The values for $w_0$ were approximately $10^{-6}$. So, its effect can be ignored.\\
+
+As expected (from Figure \ref{fig:decay-lasso}), the number of non-zero weights for the features reduced as $\lambda$ or the regularisation penalty increased. It seems that it was most stable for 1 or 2 features. From Figure \ref{fig:decay-lasso} left, we can see that PMI and CORP PROFIT were the last two features to be eliminated. Also, from Figure \ref{fig:error-vs-lambda} we can see that, the least error was when $\lambda$ was set to 0, i.e. we only wanted to match the target residual. As usual the choice of $\lambda$ is one of tuning. If we want the weights to be sparse (as we do), we would like to choose a $\lambda$ that will set all but 2 or 3 weights to 0.\\
 
 \begin{figure}[!h]
     \centering
@@ -243,7 +245,7 @@ However, our final goal is to not just to run the lasso regression on all of the
 	\label{fig:laglasso}
 \end{figure}
 
-Just as expected, the weights for the features for each month were sparse, leaving only 1-3 non-zero values - the PMI, CORP PROFIT and PER. I added the predicted residual to Kalman Filter's index prediction. Finally I plotted the actual index values and all the predictions in Figure \ref{fig:laglasso}. It still predicts fairly well. However, it has to be noted that the residual matching is sensitive around extreme times. Take the crests in time series for example. At the extremes when we see upward trends for extended periods, it does not forecast well (consider the end of the time series). This precisely coincides with the claim made in the paper. It is more prominent if we use, for each month, all previous features data as input to the lasso regularisation in Figure \ref{fig:laglasso-all}.
+Just as expected, the weights for the features for each month were sparse, leaving only 1-3 non-zero values - the PMI, CORP PROFIT and PER. I added the predicted residual to Kalman Filter's index prediction. Finally I plotted the actual index values and all the predictions in Figure \ref{fig:laglasso}. It still predicts fairly well. However, it has to be noted that the residual matching is sensitive around extreme times. Take the crests in time series for example. At the extremes when we see upward trends for extended periods, it does not forecast well (consider the end of the time series). This precisely coincides with the claim made in the paper. It is more prominent if we use, for each month, all previous features data as input to the lasso regularisation in Figure \ref{fig:laglasso-all}. I believe at that point the exogenous features  try to overtake the index data in the recent window, i.e. it amplifies the 'good fortune'. We would need to be cautionary in these cases.
 
 \begin{figure}[!h]
     \centering
@@ -251,6 +253,8 @@ Just as expected, the weights for the features for each month were sparse, leavi
 	\caption{All Previous Months' Features are Used in Residual Forecast}
 	\label{fig:laglasso-all}
 \end{figure}
+
+Finally, it can be said that we can efficiently forecast the S\&P 500 index from a recent window of previous index data. When a Kalman Filter is used, we can also try to model the residual using exogenous financial data, so that we can have more information in making financial decision. It must be said that the methods require regular tuning of certain parameters and may not work well in extreme upheavals. But it does give us a mathematical framework in efficiently explaining the financial markets. This is the point of computational finance.
 
 \begin{thebibliography}{9}
 \bibitem{mahler} 
