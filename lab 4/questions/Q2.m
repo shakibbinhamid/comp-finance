@@ -115,7 +115,7 @@ index_pred_kalman = zscore(index_pred_kalman);
 
 % estimate of the index using LagLasso
 yEstmLL = stockIndex;
-lagWindow = 3;
+lagWindow = 2;
 
 lambdas = zeros(length(lagWindow+1:size(stockIndex, 1)), 1);
 
@@ -142,7 +142,6 @@ for i=lagWindow+1:size(stockIndex, 1)
     lambdas(i) = lassoLambda(minErrorIdx);
     % estimate current stock index
     yEstmLL(i) = index_pred_kalman(i) + normFeatures(i,:) * lassoWeights(:, minErrorIdx);
-    lassoWeights(:, lambdaIdx(1))
 end
 
 %%
@@ -151,13 +150,12 @@ figure(10); clf;
 hold on;
 grid on;
 box on;
-plot(abs(yEstmLL-stockIndex), 'LineWidth', 2);
-xlabel('Lasso Regulariser', 'FontSize', 16);
-ylabel('Error', 'FontSize', 16);
-title('Error (Absolute) of Lasso Regression', 'FontSize', 16);
+plot(abs(yEstmLL-stockIndex), 'LineWidth', 1.5);
+xlabel('Time');
+ylabel('Index Prediction Error');
+title('Error (Absolute) of Lasso Regression');
 
 % plot the AR/Kalman/LagLasso estimates vs the training
-coloMap = lines(30);
 colorGreen = [0 0.7 0.2];
 %%
 figure(11); clf;
@@ -168,7 +166,8 @@ plot(stockIndex, 'LineWidth', 1, 'Color', 'k');
 plot(index_pred_autoReg, 'LineWidth', 1, 'Color', 'r');
 plot(index_pred_kalman, 'LineWidth', 1, 'Color', 'b');
 plot(yEstmLL, 'LineWidth', 1, 'Color', colorGreen);
-xlabel('Time (month)', 'FontSize', 16);
-ylabel('Value', 'FontSize', 16);
-title('Index Prediction using Kalman and AR', 'FontSize', 16);
+xlim([1 N]);
+xlabel('Time');
+ylabel('Normalised Value');
+title('Index Prediction using Kalman and AR');
 legend('Index', 'Autoregression', 'Kalman Filter', 'Residual Accounted');
