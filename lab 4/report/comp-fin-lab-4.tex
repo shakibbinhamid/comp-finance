@@ -196,6 +196,38 @@ Finally, from Figure \ref{fig:kalman-parameter}, we can clearly see the updates 
 
 Overall, the benefit of building a kalman filter to deal with financial time series is that we can isolate the noise and tune the process of doing so. At the same time we receive a distribution of our solution, which tells us the confidence in the parameters. This way we may be able to make better judgements. However, we are yet to explain the residual noise.
 
+\section{Predicting the Residual in Kalman Filter}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{decay-lasso.png}
+	\caption{Decaying Features in Lasso Regulariser}
+	\label{fig:decay-lasso}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{error-vs-lambda.png}
+	\caption{Lambda vs Noise Prediction Error}
+	\label{fig:error-vs-lambda}
+    \end{subfigure}
+    ~ 
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{noise-prediction.png}
+	\caption{Kalman Noise Prediction by Lasso}
+	\label{fig:noise-prediction}
+    \end{subfigure}
+ 	~ 
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{mse-lasso.png}
+	\caption{Lasso Plot with Cross-Validated Fits}
+	\label{fig:mse-lasso}
+    \end{subfigure}
+	\caption{Lasso Plots}
+	\label{fig:lasso-figs}
+\end{figure}
+
 \begin{thebibliography}{9}
 \bibitem{mahler} 
 N. Mahler, "Modeling the S \& P 500 index using the Kalman filter and the LagLasso," in \textit{Machine Learning for Signal Processing, 2009. MLSP 2009. IEEE International Workshop on, Sept 2009}, pp. 1–6.

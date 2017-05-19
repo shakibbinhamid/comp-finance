@@ -36,7 +36,7 @@ lassoTarget = zscore(stockIndex - index_pred_kalman);
 feature_names = {'PRE','OIL','PMI','INCOME','CORP PROFIT', 'POPULATION', 'UNEMPLOYED'};
 
 % lasso regression
-[lassoWeights,lassoInfo] = lasso(normFeatures,lassoTarget, 'CV',10, 'PredictorNames', feature_names);
+[lassoWeights,lassoInfo] = lasso(normFeatures,lassoTarget, 'CV',5, 'PredictorNames', feature_names);
 lassoLambda = lassoInfo.Lambda;
 
 % find the best set of weights by calculating the error
@@ -49,47 +49,46 @@ end
 %
 numberOfNnz = lassoInfo.DF;
 
-%%
-% plot the errors of lasso
+%% plot the errors of lasso
 figure(1); clf;
 hold on;
 grid on;
 box on;
 plot(lassoLambda, lassoErrors, 'LineWidth', 2);
-xlabel('Lasso Regulariser', 'FontSize', 16);
-ylabel('Error', 'FontSize', 16);
-title('Error (Absolute) of Lasso Regression', 'FontSize', 16);
+xlabel('Lasso Regulariser');
+ylabel('Mean Absoute Normalised Noise Prediction Error');
+xlim([min(lassoLambda), max(lassoLambda)]);
+title('Mean Absolute Error vs Lasso Regression');
+
+%% plot the weights
+figure(2); clf;
+subplot(1,2,1);
+colorMap = lines(10);
+hold on;
+grid on;
+box on;
+plot(lassoLambda, lassoWeights', 'LineWidth', 2);
+xlabel('Lasso Regulariser');
+ylabel('Weight Value');
+xlim([min(lassoLambda), max(lassoLambda)]);
+title('Decay of Feature Weights in Lasso Regression');
+plot_legend = legend('PER','OIL','PMI','INCOME','CORP PROFIT','POPULATION','UNEMPLOYMENT', 'Location', 'SE');
+set(plot_legend, 'FontSize', 10);
+
+subplot(1,2,2);
+plot(lassoLambda, numberOfNnz, 'LineWidth', 1.5);
+title('#(Non Zero Coefficients) as f(Lasso Regularizer)');
+xlabel('Lasso Regularizer');
+ylabel('#(Non Zero Coefficients)');
+xlim([min(lassoLambda), max(lassoLambda)]);
+grid on;
+
+%% plot the AR/Kalman estimates vs the training
 
 % use the weights of the smallest error
 % it is chosen imperically
 lassoResult = normFeatures * lassoWeights(:, 81);
 
-% plot the weights
-figure(2); clf;
-colorMap = lines(10);
-subplot(2,1,1);
-hold on;
-grid on;
-box on;
-plot(lassoLambda, lassoWeights', 'LineWidth', 2);
-ylabel('Weight Value', 'FontSize', 16);
-title('Decay of Feature Weights in Lasso Regression', 'FontSize', 16);
-plot_legend = legend('BER','OIL','PMI','INCOME','PROFIT','POP','UNEMP', 'Location', 'SE');
-set(plot_legend, 'FontSize', 10);
-subplot(2,1,2);
-colorMap = lines(10);
-hold on;
-grid on;
-box on;
-plot(lassoLambda, lassoWeights', 'LineWidth', 2);
-xlabel('Lasso Regulariser', 'FontSize', 16);
-ylabel('Weight Value', 'FontSize', 16);
-plot_legend = legend('BER','OIL','PMI','INCOME','PROFIT','POP','UNEMP', 'Location', 'SE');
-set(plot_legend, 'FontSize', 10);
-
-return;
-
-% plot the AR/Kalman estimates vs the training
 coloMap = lines(30);
 colorGreen = [0 0.7 0.2];
 figure(3); clf;
@@ -98,17 +97,12 @@ grid on;
 box on;
 plot1 = plot(lassoTarget, 'LineWidth', 1, 'Color', 'b');
 plot2 = plot(lassoResult, 'LineWidth', 1, 'Color', 'r');
-xlabel('Time (month)', 'FontSize', 16);
-ylabel('Value', 'FontSize', 16);
-title('Index Prediction using Kalman and AR', 'FontSize', 16);
+xlabel('Time');
+ylabel('Normalised Noise');
+xlim([1 N]);
+title('Kalman Actual Residual and Predicted Residual');
+plot_legend = legend('Actual Noise', 'Predicted Noise');
 
 %%
 lassoPlot(lassoWeights, lassoInfo,'PlotType','CV');
-
-%%
-figure(4); clf; 
-plot(lassoLambda, numberOfNnz, 'LineWidth', 1.5);
-title('#(Non Zero Coefficients) as f(Lasso Regularizer)');
-xlabel('Lasso Regularizer');
-ylabel('#(Non Zero Coefficients)');
 grid on;
