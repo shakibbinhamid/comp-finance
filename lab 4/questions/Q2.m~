@@ -109,6 +109,6 @@ lassoPlot(lassoWeights, lassoInfo,'PlotType','CV');
 figure(4); clf; 
 plot(lassoLambda, numberOfNnz, 'LineWidth', 1.5);
 title('#(Non Zero Coefficients) as f(Lasso Regularizer)');
-xlabel('Lasso Regularizer');
-ylabel('#(Non Zero Coefficients)');
+xlabel('Lasso Regula
+ylabel('#(Non Zero Coefficients');
 grid on;
