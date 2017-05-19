@@ -8,11 +8,13 @@ clc;
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/features');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/stockIndex');
 load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/kalman_estimate');
+load('/home/shakib/Documents/MATLAB/comp-finance/lab 4/data/autoreg_estimate');
 
 %%
 
 N = size(data, 1);
 index_pred_kalman = index_pred_kalman(4:N);
+index_pred_autoReg = index_pred_autoReg(4:N);
 stockIndex = stockIndex(4:N)';
 data = data(4:end,:);
 N = N - 3;
