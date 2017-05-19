@@ -243,7 +243,14 @@ However, our final goal is to not just to run the lasso regression on all of the
 	\label{fig:laglasso}
 \end{figure}
 
-Just as expected, the weights for the features for each month were sparse, leaving only 1-3 non-zero values - the PMI, CORP PROFIT and PER. I added the predicted residual to Kalman Filter's index prediction. Finally I plotted the actual index values and all the predictions in Figure \ref{fig:laglasso}. It still predicts fairly well. However, it has to be noted that
+Just as expected, the weights for the features for each month were sparse, leaving only 1-3 non-zero values - the PMI, CORP PROFIT and PER. I added the predicted residual to Kalman Filter's index prediction. Finally I plotted the actual index values and all the predictions in Figure \ref{fig:laglasso}. It still predicts fairly well. However, it has to be noted that the residual matching is sensitive around extreme times. Take the crests in time series for example. At the extremes when we see upward trends for extended periods, it does not forecast well (consider the end of the time series). This precisely coincides with the claim made in the paper. It is more prominent if we use, for each month, all previous features data as input to the lasso regularisation in Figure \ref{fig:laglasso-all}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{laglasso_all.png}
+	\caption{All Previous Months' Features are Used in Residual Forecast}
+	\label{fig:laglasso-all}
+\end{figure}
 
 \begin{thebibliography}{9}
 \bibitem{mahler} 

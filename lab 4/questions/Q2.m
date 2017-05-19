@@ -124,8 +124,8 @@ for i=lagWindow+1:size(stockIndex, 1)
     
     windowStart = i-lagWindow;
     windowEnd = i-1;
-    lassoTarget = stockIndex(windowStart:windowEnd);
-    lassoFeatures = normFeatures(windowStart:windowEnd,:);
+    lassoTarget = stockIndex(1:windowEnd);
+    lassoFeatures = normFeatures(1:windowEnd,:);
        
     % lasso regression
     [lassoWeights, lassoInfo] = lasso(lassoFeatures, lassoTarget);
