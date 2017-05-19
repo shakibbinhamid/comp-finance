@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  19 MAY 2017 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.23)  19 MAY 2017 18:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1181,83 +1181,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
 [2 <./kalman-autoreg-pred.png (PNG copy)> <./kalman-autoreg-error.png (PNG copy
 )> <./kalman-autoreg-error-boxplot.png (PNG copy)>]
-<decay-lasso.png, id=36, 704.6325pt x 225.84375pt>
-File: decay-lasso.png Graphic file (type png)
- <use decay-lasso.png>
-Package pdftex.def Info: decay-lasso.png used on input line 203.
-(pdftex.def)             Requested size: 410.49551pt x 131.56839pt.
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<error-vs-lambda.png, id=37, 421.575pt x 316.18124pt>
-File: error-vs-lambda.png Graphic file (type png)
-
-<use error-vs-lambda.png>
-Package pdftex.def Info: error-vs-lambda.png used on input line 211.
-(pdftex.def)             Requested size: 153.9368pt x 115.45102pt.
-
-<noise-prediction.png, id=38, 427.5975pt x 319.94531pt>
-File: noise-prediction.png Graphic file (type png)
-
-<use noise-prediction.png>
-Package pdftex.def Info: noise-prediction.png used on input line 217.
-(pdftex.def)             Requested size: 153.9368pt x 115.18022pt.
- <mse-lasso.png, id=39, 433.62pt x 323.70938pt>
-File: mse-lasso.png Graphic file (type png)
-
-<use mse-lasso.png>
-Package pdftex.def Info: mse-lasso.png used on input line 223.
-(pdftex.def)             Requested size: 153.9368pt x 114.9201pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<laglasso.png, id=40, 327.47343pt x 234.8775pt>
-File: laglasso.png Graphic file (type png)
- <use laglasso.png>
-Package pdftex.def Info: laglasso.png used on input line 233.
-(pdftex.def)             Requested size: 256.55872pt x 184.01367pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ []
 
 [3 <./kalman-parameter-converge-artificial.png (PNG copy)> <./kalman-parameter-
 converge.png (PNG copy)> <./kalman-parameter-converge-r-420.png (PNG copy)> <./
 error-vs-alpha-order-3.png (PNG copy)> <./error-vs-r.png (PNG copy)> <./kalman-
 parameter-contour-initial.png (PNG copy)> <./kalman-parameter-contour.png (PNG 
-copy)>]
+copy)>] <decay-lasso.png, id=39, 704.6325pt x 225.84375pt>
+File: decay-lasso.png Graphic file (type png)
+
+<use decay-lasso.png>
+Package pdftex.def Info: decay-lasso.png used on input line 205.
+(pdftex.def)             Requested size: 410.49551pt x 131.56839pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+<error-vs-lambda.png, id=40, 421.575pt x 316.18124pt>
+File: error-vs-lambda.png Graphic file (type png)
+
+<use error-vs-lambda.png>
+Package pdftex.def Info: error-vs-lambda.png used on input line 215.
+(pdftex.def)             Requested size: 153.9368pt x 115.45102pt.
+
+<noise-prediction.png, id=41, 427.5975pt x 319.94531pt>
+File: noise-prediction.png Graphic file (type png)
+
+<use noise-prediction.png>
+Package pdftex.def Info: noise-prediction.png used on input line 221.
+(pdftex.def)             Requested size: 153.9368pt x 115.18022pt.
+ <mse-lasso.png, id=42, 433.62pt x 323.70938pt>
+File: mse-lasso.png Graphic file (type png)
+
+<use mse-lasso.png>
+Package pdftex.def Info: mse-lasso.png used on input line 227.
+(pdftex.def)             Requested size: 153.9368pt x 114.9201pt.
+ <laglasso.png, id=43, 327.47343pt x 234.8775pt>
+File: laglasso.png Graphic file (type png)
+
+<use laglasso.png>
+Package pdftex.def Info: laglasso.png used on input line 239.
+(pdftex.def)             Requested size: 256.55872pt x 184.01367pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./decay-lasso.png (PNG copy)> <./error-vs-lambda.png (PNG copy)> <./noise-p
+rediction.png (PNG copy)> <./mse-lasso.png (PNG copy)>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [4 <./decay-lasso.png (PNG copy)> <./error-vs-lambda.png (PNG copy)> <./noise-
-prediction.png (PNG copy)> <./mse-lasso.png (PNG copy)> <./laglasso.png (PNG co
-py)>] (./comp-fin-lab-4.aux) ) 
+ [5 <./laglasso.png (PNG copy)>] (./comp-fin-lab-4.aux) ) 
 Here is how much of TeX's memory you used:
- 30703 strings out of 493013
- 731257 string characters out of 6139317
+ 30704 strings out of 493013
+ 731262 string characters out of 6139317
  964247 words of memory out of 5000000
- 33705 multiletter control sequences out of 15000+600000
+ 33706 multiletter control sequences out of 15000+600000
  17233 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,120p,851b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-extra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on comp-fin-lab-4.pdf (4 pages, 481129 bytes).
+ 69i,8n,120p,1195b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on comp-fin-lab-4.pdf (5 pages, 496511 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
