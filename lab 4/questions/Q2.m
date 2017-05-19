@@ -106,3 +106,69 @@ plot_legend = legend('Actual Noise', 'Predicted Noise');
 %%
 lassoPlot(lassoWeights, lassoInfo,'PlotType','CV');
 grid on;
+
+%%
+
+stockIndex = zscore(stockIndex);
+index_pred_autoReg = zscore(index_pred_autoReg);
+index_pred_kalman = zscore(index_pred_kalman);
+
+% estimate of the index using LagLasso
+yEstmLL = stockIndex;
+lagWindow = 3;
+
+lambdas = zeros(length(lagWindow+1:size(stockIndex, 1)), 1);
+
+%lassoTarget is the sliding window of stock index
+for i=lagWindow+1:size(stockIndex, 1)
+    
+    windowStart = i-lagWindow;
+    windowEnd = i-1;
+    lassoTarget = stockIndex(windowStart:windowEnd);
+    lassoFeatures = normFeatures(windowStart:windowEnd,:);
+       
+    % lasso regression
+    [lassoWeights, lassoInfo] = lasso(lassoFeatures, lassoTarget);
+    lassoLambda = lassoInfo.Lambda;
+    
+    % find the best set of weights by calculating the error
+    lassoErrors = zeros(length(lassoInfo.Lambda),1);
+    for j=1:length(lassoErrors)
+        lassoResult = lassoFeatures * lassoWeights(:, j);
+        lassoErrors(j) = mean(abs(lassoResult-lassoTarget));
+    end
+    
+    [~,minErrorIdx] = min(lassoErrors);
+    lambdas(i) = lassoLambda(minErrorIdx);
+    % estimate current stock index
+    yEstmLL(i) = index_pred_kalman(i) + normFeatures(i,:) * lassoWeights(:, minErrorIdx);
+    lassoWeights(:, lambdaIdx(1))
+end
+
+%%
+% plot regression error
+figure(10); clf;
+hold on;
+grid on;
+box on;
+plot(abs(yEstmLL-stockIndex), 'LineWidth', 2);
+xlabel('Lasso Regulariser', 'FontSize', 16);
+ylabel('Error', 'FontSize', 16);
+title('Error (Absolute) of Lasso Regression', 'FontSize', 16);
+
+% plot the AR/Kalman/LagLasso estimates vs the training
+coloMap = lines(30);
+colorGreen = [0 0.7 0.2];
+%%
+figure(11); clf;
+hold on;
+grid on;
+box on;
+plot(stockIndex, 'LineWidth', 1, 'Color', 'k');
+plot(index_pred_autoReg, 'LineWidth', 1, 'Color', 'r');
+plot(index_pred_kalman, 'LineWidth', 1, 'Color', 'b');
+plot(yEstmLL, 'LineWidth', 1, 'Color', colorGreen);
+xlabel('Time (month)', 'FontSize', 16);
+ylabel('Value', 'FontSize', 16);
+title('Index Prediction using Kalman and AR', 'FontSize', 16);
+legend('Index', 'Autoregression', 'Kalman Filter', 'Residual Accounted');
